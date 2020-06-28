@@ -50,6 +50,14 @@ CSetDIBitsToDeviceApp::CSetDIBitsToDeviceApp()
 
 	// TODO: 在此处添加构造代码，
 	// 将所有重要的初始化放置在 InitInstance 中
+	// Shared Image Buff
+	for(int i=0; i<SharedImageBuffCounts; i++ )
+		m_pSharedImageBuff[i] = NULL;
+	// Diag/Logging Graph
+	for(int i=0; i<GraphDataBuffGroups; i++ )
+		m_pGraphDataBuff[i] = NULL;
+	for(int i=0; i<GraphDataBuffGroups; i++ )
+		m_pDiffGraphDataBuff[i] = NULL;
 }
 
 // 唯一的一个 CSetDIBitsToDeviceApp 对象

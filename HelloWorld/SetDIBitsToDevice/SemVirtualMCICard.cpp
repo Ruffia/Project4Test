@@ -111,7 +111,7 @@ BOOL CSemVirtualMCICard::Close( )
 
 BOOL CSemVirtualMCICard::Reset( CWnd* pWnd )
 {
-	Close( );
+	//Close( );
 
 	m_pMCICard = new CMCICard();
 

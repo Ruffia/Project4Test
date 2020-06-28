@@ -58,7 +58,8 @@
     <Link>
       <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>ddraw.lib;dxguid.lib;winmm.lib;vfw32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>ddraw.lib;dxguid.lib;winmm.lib;vfw32.lib;wininet.lib;Ws2_32.lib;Version.lib;png.lib;mng.lib;jasper.lib;jpeg.lib;zlib.lib;tiff.lib;libdcr.lib;cximage.lib;AutoBC.lib;AutoFocus.lib;AutoStigmator.lib;AutoFilament.lib;LanguageManager.lib;htmlhelp.lib;hid.lib;setupapi.lib;dmc32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>..\Bin;..\Common\Lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
     <Midl>
       <MkTypLibCompatible>false</MkTypLibCompatible>

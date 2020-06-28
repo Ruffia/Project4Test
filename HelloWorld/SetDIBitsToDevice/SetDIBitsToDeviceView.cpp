@@ -11,10 +11,215 @@
 
 #include "SetDIBitsToDeviceDoc.h"
 #include "SetDIBitsToDeviceView.h"
+#include "MainFrm.h"
 
 #ifdef _DEBUG
 #define new DEBUG_NEW
 #endif
+
+int ReadInOneLine(TCHAR *path, TCHAR *Section, TCHAR *Entry, UINT uDataStyle, int nTotal, void* pData, TCHAR Separator=',')
+{
+	TCHAR szBuf1[255];
+	TCHAR szBuf2[255];
+	int* pint = (int*) pData;
+	double* pdouble = (double*)pData;
+	long* plong = (long*)pData;
+	CString* pstr = (CString*)pData;
+	int i = 0;
+	if(GetPrivateProfileString(Section, Entry, _T(""), szBuf1, 255, path) != 0)
+	{
+		for(i=0; i<nTotal; i++)
+		{
+			_tcscpy(szBuf2, szBuf1);
+			if(_tcschr(szBuf2, Separator) != NULL)
+			{
+				_tcscpy(szBuf1, _tcschr(szBuf2, Separator)+1);
+				*_tcschr(szBuf2, Separator) = '\0';
+				switch( uDataStyle )
+				{
+				case	INTSTYLE:
+					pint[i] = _ttoi(szBuf2);
+					break;
+				case	DOUBLESTYLE:
+					pdouble[i] = _ttof(szBuf2);
+					break;
+				case	LONGSTYLE:
+					plong[i] = _ttol(szBuf2);
+					break;
+				case	STRSTYLE:
+					pstr[i] = szBuf2;
+					break;
+				default:
+					return 0;
+				}
+			}
+			else
+			{
+				// This is the last data.
+				switch( uDataStyle )
+				{
+				case	INTSTYLE:
+					pint[i] = _ttoi(szBuf2);
+					break;
+				case	DOUBLESTYLE:
+					pdouble[i] = _ttof(szBuf2);
+					break;
+				case	LONGSTYLE:
+					plong[i] = _ttol(szBuf2);
+					break;
+				case	STRSTYLE:
+					pstr[i] = szBuf2;
+					break;
+				default:
+					return 0;
+				}
+				if(i == nTotal-1)
+				{
+					nTotal = i+1;
+				}
+				else
+				{
+					nTotal = i;
+				}
+				break;
+			}
+		}
+	}
+	return i+1;
+}
+
+
+void CSetDIBitsToDeviceView::ReadFooter_TimeFormat( TCHAR* buf )
+{
+	// buf = "Time=Y/m/d H/M"
+	TCHAR szBuf[100], szBuf1[20], szPer, ch;
+	_tcscpy( szBuf1, buf );
+	_tcscpy(szBuf, _tcschr(szBuf1, '=')+1);	// szBuf中是日期格式字符串
+
+	szPer = '%';
+	_stprintf( szBuf1, _T("") );
+	int len = _tcslen( szBuf );
+	int index = 0;
+	for( int i=0; i<len; i++ )
+	{
+		ch = szBuf[i];
+		if(ch >='a' && ch<='z' ||  ch >='A' && ch<='Z')
+		{
+			szBuf1[index] = szPer;
+			index++;
+		}
+		szBuf1[index] = ch;
+		index++;
+	}
+	szBuf1[index] = '\0';
+	m_footerOpt.opt[0].strDisp = szBuf1;
+}
+
+int CSetDIBitsToDeviceView::ReadFooterSettings( TCHAR* path )
+{
+	int i=0;
+	for( i=0; i<11; i++)
+	{
+		m_footerOpt.opt[i].bVisible	= FALSE;
+	}
+
+	TCHAR szBuf[20], szBuf1[255], szBuf2[255], szBuf3[50];
+	int nLines = 0;
+	if(GetPrivateProfileString( _T("FooterSettings"), _T("Lines"), _T(""), szBuf, 10, path) != 0 )
+		nLines = _ttoi(szBuf);
+	if( nLines < 1 )
+		return -1;
+	int nPos = 0;
+	for( i=0; i<nLines; i++ )
+	{
+		_stprintf(szBuf, _T("MacroLine%d"), i+1);
+		if(GetPrivateProfileString(_T("FooterSettings"), szBuf, _T(""), szBuf1, 255, path) != 0 )
+		{
+			_tcscpy(szBuf2, szBuf1);
+			while(_tcschr(szBuf2, '}') != NULL)
+			{
+				_tcscpy(szBuf1, _tcschr(szBuf2, '}')+1);	// szBuf1中是该行剩余字符串
+				*_tcschr(szBuf2, '}') = '\0';			// szBuf2中是字符串{HV;x=0
+				_tcscpy(szBuf3, szBuf2+1);				// szBuf3中是当前字符串HV;x=0
+				_tcscpy(szBuf2, _tcschr(szBuf3, '=')+1);	// szBuf2中是当前字符串的位置
+				nPos = _ttoi(szBuf2);
+				*_tcschr(szBuf3, ';') = '\0';			// szBuf3中是带标识的当前字符串的内容
+				_tcscpy(szBuf2, szBuf3+1);				// szBuf2中是当前字符串的内容
+				switch(szBuf3[0])
+				{
+				case	't':	// Time
+					m_footerOpt.opt[0].bVisible	= TRUE;
+					m_footerOpt.opt[0].ptPos.x	= nPos;
+					m_footerOpt.opt[0].ptPos.y	= i+1;
+					ReadFooter_TimeFormat(szBuf2);
+					break;
+				case	'h':	// HV
+					m_footerOpt.opt[1].bVisible	= TRUE;
+					m_footerOpt.opt[1].ptPos.x	= nPos;
+					m_footerOpt.opt[1].ptPos.y	= i+1;
+					m_footerOpt.opt[1].strDisp	= szBuf2;
+					break;
+				case	'w':	// WD
+					m_footerOpt.opt[2].bVisible	= TRUE;
+					m_footerOpt.opt[2].ptPos.x	= nPos;
+					m_footerOpt.opt[2].ptPos.y	= i+1;
+					m_footerOpt.opt[2].strDisp	= szBuf2;
+					break;
+				case	'm':	// Mag
+					m_footerOpt.opt[3].bVisible	= TRUE;
+					m_footerOpt.opt[3].ptPos.x	= nPos;
+					m_footerOpt.opt[3].ptPos.y	= i+1;
+					m_footerOpt.opt[3].strDisp	= szBuf2;
+					break;
+				case	'd':	// DET
+					m_footerOpt.opt[4].bVisible	= TRUE;
+					m_footerOpt.opt[4].ptPos.x	= nPos;
+					m_footerOpt.opt[4].ptPos.y	= i+1;
+					m_footerOpt.opt[4].strDisp	= szBuf2;
+					break;
+				case	'l':	// Logo
+					m_footerOpt.opt[5].bVisible	= TRUE;
+					m_footerOpt.opt[5].ptPos.x	= nPos;
+					m_footerOpt.opt[5].ptPos.y	= i+1;
+					m_footerOpt.opt[5].strDisp	= szBuf2;
+					break;
+				case	'u':	// uBar
+					m_footerOpt.opt[6].bVisible	= TRUE;
+					m_footerOpt.opt[6].ptPos.x	= nPos;
+					m_footerOpt.opt[6].ptPos.y	= i+1;
+					m_footerOpt.opt[6].strDisp	= szBuf2;
+					break;
+				case	'n':	// Note
+					m_footerOpt.opt[7].bVisible	= TRUE;
+					m_footerOpt.opt[7].ptPos.x	= nPos;
+					m_footerOpt.opt[7].ptPos.y	= i+1;
+					m_footerOpt.opt[7].strDisp	= szBuf2;
+					break;
+				case	'v':	// Vac
+					m_footerOpt.opt[8].bVisible	= TRUE;
+					m_footerOpt.opt[8].ptPos.x	= nPos;
+					m_footerOpt.opt[8].ptPos.y	= i+1;
+					m_footerOpt.opt[8].strDisp	= szBuf2;
+					break;
+				case	'e':	// EMI
+					m_footerOpt.opt[9].bVisible	= TRUE;
+					m_footerOpt.opt[9].ptPos.x	= nPos;
+					m_footerOpt.opt[9].ptPos.y	= i+1;
+					m_footerOpt.opt[9].strDisp	= szBuf2;
+					break;
+				case	's':	// Speed
+					m_footerOpt.opt[10].bVisible	= TRUE;
+					m_footerOpt.opt[10].ptPos.x	= nPos;
+					m_footerOpt.opt[10].ptPos.y	= i+1;
+					m_footerOpt.opt[10].strDisp	= szBuf2;
+					break;
+				}
+				_tcscpy(szBuf2, szBuf1);
+			}
+		}
+	}
+	return 0;
+}
 
 
 // CSetDIBitsToDeviceView
@@ -28,6 +233,7 @@ BEGIN_MESSAGE_MAP(CSetDIBitsToDeviceView, CView)
 	ON_COMMAND(ID_FILE_PRINT_PREVIEW, &CSetDIBitsToDeviceView::OnFilePrintPreview)
 	ON_WM_CONTEXTMENU()
 	ON_WM_RBUTTONUP()
+	ON_WM_CREATE()
 END_MESSAGE_MAP()
 
 // CSetDIBitsToDeviceView 构造/析构
@@ -124,4 +330,231 @@ CSetDIBitsToDeviceDoc* CSetDIBitsToDeviceView::GetDocument() const // 非调试版本
 #endif //_DEBUG
 
 
+void CSetDIBitsToDeviceView::SetFooterSettingsDefault()
+{
+	// Time
+	m_footerOpt.opt[0].bVisible	= TRUE;
+	m_footerOpt.opt[0].ptPos.x	= 75;
+	m_footerOpt.opt[0].ptPos.y	= 1;
+	m_footerOpt.opt[0].strDisp	= _T("%Y.%m.%d %H:%M");
+	// HV
+    m_footerOpt.opt[1].bVisible	= TRUE;
+	m_footerOpt.opt[1].ptPos.x	= 2;
+	m_footerOpt.opt[1].ptPos.y	= 1;
+	m_footerOpt.opt[1].strDisp	= _T("HV");
+	// WD
+	m_footerOpt.opt[2].bVisible	= TRUE;
+	m_footerOpt.opt[2].ptPos.x	= 2;
+	m_footerOpt.opt[2].ptPos.y	= 2;
+	m_footerOpt.opt[2].strDisp	= _T("WD");
+	// Mag
+	m_footerOpt.opt[3].bVisible	= TRUE;
+	m_footerOpt.opt[3].ptPos.x	= 25;
+	m_footerOpt.opt[3].ptPos.y	= 1;
+	m_footerOpt.opt[3].strDisp	= _T("MAG");
+	// DET
+	m_footerOpt.opt[4].bVisible	= TRUE;
+	m_footerOpt.opt[4].ptPos.x	= 25;
+	m_footerOpt.opt[4].ptPos.y	= 2;
+	m_footerOpt.opt[4].strDisp	= _T("DET");
+	// Logo
+	m_footerOpt.opt[5].bVisible	= TRUE;
+	m_footerOpt.opt[5].ptPos.x	= 50;
+	m_footerOpt.opt[5].ptPos.y	= 2;
+	m_footerOpt.opt[5].strDisp	= _T("Logo");
+	// uBar
+	m_footerOpt.opt[6].bVisible	= TRUE;
+	m_footerOpt.opt[6].ptPos.x	= 50;
+	m_footerOpt.opt[6].ptPos.y	= 1;
+	m_footerOpt.opt[6].strDisp	= _T("uBar");
+	// Note
+	m_footerOpt.opt[7].bVisible	= TRUE;
+	m_footerOpt.opt[7].ptPos.x	= 75;
+	m_footerOpt.opt[7].ptPos.y	= 2;
+	m_footerOpt.opt[7].strDisp	= _T("Note");
+	// Vac
+	m_footerOpt.opt[8].bVisible	= FALSE;
+	m_footerOpt.opt[8].ptPos.x	= 0;
+	m_footerOpt.opt[8].ptPos.y	= 0;
+	m_footerOpt.opt[8].strDisp	= _T("Vac");
+	// EMI
+	m_footerOpt.opt[9].bVisible	= FALSE;
+	m_footerOpt.opt[9].ptPos.x	= 0;
+	m_footerOpt.opt[9].ptPos.y	= 0;
+	m_footerOpt.opt[9].strDisp	= _T("EMI");
+	// Speed
+	m_footerOpt.opt[10].bVisible	= FALSE;
+	m_footerOpt.opt[10].ptPos.x	= 0;
+	m_footerOpt.opt[10].ptPos.y	= 0;
+	m_footerOpt.opt[10].strDisp	= _T("Speed");
+}
+
 // CSetDIBitsToDeviceView 消息处理程序
+int CSetDIBitsToDeviceView::OnCreate(LPCREATESTRUCT lpCreateStruct) 
+{
+	if (CScrollView::OnCreate(lpCreateStruct) == -1)
+		return -1;
+
+	CMainFrame* frame = (CMainFrame *)theApp.GetMainWnd();
+
+
+
+	SetScrollSizes( MM_TEXT, m_sizeReso );
+	m_szTotalLog = m_sizeReso;
+
+	///////////////////////////////////////////////////////
+	// 读取各参数
+	// 获取工作路径
+	TCHAR path[256];
+	::GetModuleFileName(0, path, 255);
+	TCHAR *exd = _tcschr(path, (int)'\\');
+	if(exd != NULL)
+		*exd = '\0';
+	_tcscat(path, _T("\\KYKYcfg.ini"));
+
+	///////////////////////////////////////////////////////
+	// 读颜色值
+	int i;
+	long* pnColor = new long[10];
+	if(ReadInOneLine(path, _T("Options"), _T("Colors"), LONGSTYLE, 10, pnColor) == 10 )
+	{
+		for( i=0; i<10; i++ )
+		{
+			m_sysOpt.color[i]	= pnColor[i];
+			theApp.m_ImageCard.SetColor( i, pnColor[i] );
+		}
+	}
+	delete [] pnColor;
+	TCHAR szBuf[20];
+	m_sysOpt.nLineWidth = 3;
+	if(GetPrivateProfileString(_T("Options"), _T("LineWidth"), _T("3"), szBuf, 10, path) != 0 )
+		m_sysOpt.nLineWidth = _ttoi( szBuf );
+	theApp.m_ImageCard.SetParams( 10, m_sysOpt.nLineWidth );
+	///////////////////////////////////////////////////////
+	// 读字体参数
+	CString* pstrName = new CString[3];
+	if(ReadInOneLine(path, _T("Options"), _T("FontNames"), STRSTYLE, 3, pstrName) == 3 )
+	{
+		for( i=0; i<3; i++ )
+		{
+			m_sysOpt.fName[i]	= pstrName[i];
+			theApp.m_ImageCard.SetFontName( i, pstrName[i] );
+		}
+	}
+	delete [] pstrName;
+	int* pnSize = new int[3];
+	if( ReadInOneLine(path, _T("Options"), _T("FontSizes"), INTSTYLE, 3, pnSize) == 3 )
+	{
+		for( i=0; i<3; i++ )
+		{
+			m_sysOpt.fSize[i]	= pnSize[i];
+			theApp.m_ImageCard.SetFontSize( i, pnSize[i] );
+		}
+	}
+	delete [] pnSize;
+	///////////////////////////////////////////////////////
+	// 显示参数
+	m_sysOpt.nShowParams[SysOpt_showLabelTrans]	= 1;
+	m_sysOpt.nShowParams[SysOpt_showScrMag]		= 1;
+	m_sysOpt.nShowParams[SysOpt_showDate]		= 0;
+	m_sysOpt.nShowParams[SysOpt_showNote]		= 0;
+	m_sysOpt.nShowParams[SysOpt_showCCD]			= 1;
+	int* pnShow = new int[5];
+	if(ReadInOneLine(path, _T("Options"), _T("ShowParams"), INTSTYLE, 5, pnShow) == 5 )
+	{
+		for( i=0; i<5; i++ )
+			m_sysOpt.nShowParams[i]	= pnShow[i];
+	}
+	delete [] pnShow;
+	theApp.m_ImageCard.SetTransparent( m_sysOpt.nShowParams[SysOpt_showLabelTrans] );
+	m_bDate = m_sysOpt.nShowParams[SysOpt_showDate];
+	m_bNote = m_sysOpt.nShowParams[SysOpt_showNote];
+	///////////////////////////////////////////////////////
+	// 其它系统参数
+	CString strLo1, strLo2, strLo3, strLo4;
+	if(GetPrivateProfileString(_T("Options2"), _T("Lo1"), _T("EM"), szBuf, 10, path) != 0 )
+		strLo1 = szBuf;
+	if(GetPrivateProfileString(_T("Options2"),_T("Lo2"), _T("62"), szBuf, 10, path) != 0 )
+		strLo2 = szBuf;
+	if(GetPrivateProfileString(_T("Options2"), _T("Lo3"), _T("00"), szBuf, 10, path) != 0 )
+		strLo3 = szBuf;
+	if(GetPrivateProfileString(_T("Options2"), _T("Lo4"), _T(""), szBuf, 10, path) != 0 )
+		strLo4 = szBuf;
+	///////////////////////////////////////////////////////
+	// 底标参数
+	if( ReadFooterSettings( path ) < 0 )
+		SetFooterSettingsDefault();
+	for( i=0; i<11; i++ )
+	{
+		theApp.m_ImageCard.UpdateFooter( i, m_footerOpt.opt[i].bVisible, m_footerOpt.opt[i].ptPos );
+		theApp.m_ImageCard.UpdateFooterText( i,m_footerOpt.opt[i].strDisp );
+	}
+	// 19.06.19 扫描区域显示像素
+	m_nDispPixel = 1024;
+	if(GetPrivateProfileString( _T("Hardware"), _T("DispP"), _T("1024"), szBuf, 10, path) != 0 )
+		m_nDispPixel = _ttoi(szBuf);
+
+	m_scanParamLive.nScan_Type		= 1;
+	m_scanParamLive.nScan_Speed		= 1;	// 500ns
+	m_scanParamLive.nSync_Speed		= m_nusbPhotoPixRate;
+	m_scanParamLive.nScan_ResoX		= 512;	// 512*384
+	m_scanParamLive.nScan_ResoY		= 384;
+	m_scanParamLive.nScan_left		= 0;
+	m_scanParamLive.nScan_top		= 0;
+	m_scanParamLive.nScan_right		= 512;
+	m_scanParamLive.nScan_bottom	= 384;
+	m_scanParamLive.nSplit			= 0;
+	m_scanParamLive.nDet2			= 0;
+	m_scanParamLive.nStoreMode		= 1;
+
+	theApp.m_ImageCard.SetZoom( 1.0 );
+//	theApp.m_ImageCard.SetResolution(RESO_1024_768);
+	theApp.m_ImageCard.SetResolution(m_sizeReso);
+	theApp.m_ImageCard.Reset( this );
+	theApp.m_ImageCard.ShowLabel( m_bLabel );
+	theApp.m_ImageCard.SetParams( 4, 0 );	// 默认显示偶数通道图像数据
+
+	//======2006.11.22_3200与3900采集屏显示兼容============
+	// 修改标示：2006.11.22_3200与3900采集屏显示兼容
+	// 修改日期：2006.11.22
+	// 修改人  ：J.Y.Ma
+	// 修改原因：合并程序后，使各主程序均能调用同一动态链接库
+
+	// 本次修改前代码副本
+	/*----------------------------------------------------- 
+	-----------------------------------------------------*/
+	
+	// 本次修改后代码
+	//-----------------------------------------------------
+	theApp.m_ImageCard.SetScanScreenMode( TRUE );
+	theApp.m_ImageCard.SetProductLogo( _T("Draw Device"));
+	//-----------------------------------------------------
+	//======2006.11.22_3200与3900采集屏显示兼容============
+
+	///////////////////////////////////////////////////////
+
+	///////////////////////////////////////////////////////
+
+	///////////////////////////////////////////////////////
+	// 分配多个内存段，并通知SemScan和VirtualMCICard
+	for( i=0; i<SharedImageBuffCounts; i++ )
+	{
+		theApp.m_pSharedImageBuff[i] = new unsigned short[LOOP_COUNTS * 40960];
+		//theApp.m_SemCtrl.m_SemScan.USB_SetSharedImageBuff( i, theApp.m_pSharedImageBuff[i] );
+		theApp.m_ImageCard.SetSharedImageBuff( i, theApp.m_pSharedImageBuff[i] );
+	}
+	// 按最快100ms一个数据计算，1秒10个，1分钟600个，1小时36000个，10小时360000个
+	for( i=0; i<GraphDataBuffGroups; i++ )
+	{
+		theApp.m_pGraphDataBuff[i] = new double[GraphDataBuffCounts];
+		ZeroMemory( theApp.m_pGraphDataBuff[i], sizeof(double)*GraphDataBuffCounts );
+	}
+	for( i=0; i<GraphDataBuffGroups; i++ )
+	{
+		theApp.m_pDiffGraphDataBuff[i] = new double[GraphDataBuffCounts];
+		ZeroMemory( theApp.m_pDiffGraphDataBuff[i], sizeof(double)*GraphDataBuffCounts );
+	}
+	///////////////////////////////////////////////////////
+
+	return 0;
+}
