@@ -1,7 +1,6 @@
 #include <stdlib.h>
 #include <iostream>
 using namespace std;
-#include <windef.h>
 
 ////http://lostphp.com/hexconvert/
 
@@ -12,18 +11,6 @@ char* Float2HexString(const float f)
 	memset(sHex,0,9);
 	sprintf(sHex,"%02X%02X%02X%02X",hex[0],hex[1],hex[2],hex[3]);
 	return sHex;
-}
-
-DWORD Float2DWORD(const float f) 
-{
-	unsigned char *hex = (unsigned char *)&f;
-	char* sHex = new char[9];
-	memset(sHex,0,9);
-	sprintf(sHex,"%02X%02X%02X%02X",hex[0],hex[1],hex[2],hex[3]);
-	DWORD dValue = (DWORD)strtoul(sHex, NULL, 16);
-	delete sHex;
-	sHex = NULL;
-	return dValue;
 }
 
 
@@ -38,12 +25,12 @@ int main()
 		printf("\n");
 	}
 
-	{
-		float f = 1.0625f;
-		char* sHex = Float2Hex(f);
-		printf(sHex);
-		printf("\n");
-	}
+	//{
+	//	float f = 1.0625f;
+	//	char* sHex = Float2Hex(f);
+	//	printf(sHex);
+	//	printf("\n");
+	//}
 
 
 	{
