@@ -1,0 +1,38 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: FastProcessing - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\DOCUME~1\sai\LOCALS~1\Temp\RSP328.tmp" with contents
+[
+/nologo /MDd /W3 /Gm /GX /ZI /Od /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /D "_AFXDLL" /D "_MBCS" /Fp"Debug/FastProcessing.pch" /Yu"stdafx.h" /Fo"Debug/" /Fd"Debug/" /FD /GZ /c 
+"C:\VC++ 19 Days\FastProcessing\FastProcessingDlg.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\sai\LOCALS~1\Temp\RSP328.tmp" 
+Creating temporary file "C:\DOCUME~1\sai\LOCALS~1\Temp\RSP329.tmp" with contents
+[
+/nologo /subsystem:windows /incremental:yes /pdb:"Debug/FastProcessing.pdb" /debug /machine:I386 /out:"Debug/FastProcessing.exe" /pdbtype:sept 
+".\Debug\FastProcessing.obj"
+".\Debug\FastProcessingDlg.obj"
+".\Debug\StdAfx.obj"
+".\Debug\FastProcessing.res"
+]
+Creating command line "link.exe @C:\DOCUME~1\sai\LOCALS~1\Temp\RSP329.tmp"
+<h3>Output Window</h3>
+Compiling...
+FastProcessingDlg.cpp
+C:\VC++ 19 Days\FastProcessing\FastProcessingDlg.cpp(271) : warning C4101: 'B' : unreferenced local variable
+C:\VC++ 19 Days\FastProcessing\FastProcessingDlg.cpp(271) : warning C4101: 'R' : unreferenced local variable
+C:\VC++ 19 Days\FastProcessing\FastProcessingDlg.cpp(271) : warning C4101: 'G' : unreferenced local variable
+Linking...
+
+
+
+<h3>Results</h3>
+FastProcessing.exe - 0 error(s), 3 warning(s)
+</pre>
+</body>
+</html>
