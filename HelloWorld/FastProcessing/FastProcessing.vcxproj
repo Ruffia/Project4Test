@@ -151,6 +151,7 @@
     <ClInclude Include="StdAfx.h" />
   </ItemGroup>
   <ItemGroup>
+    <Image Include="res\bitmap2.bmp" />
     <Image Include="res\FastProcessing.ico" />
     <Image Include="res\sonali07t.bmp" />
   </ItemGroup>

@@ -345,9 +345,9 @@ void CMCICard::KillThread()
 	VERIFY(SetEvent(m_hEventKill));
 
 	// allow thread to run at higher priority during kill process
-	SetThreadPriority(THREAD_PRIORITY_ABOVE_NORMAL);
-	WaitForSingleObject(m_hEventDead, INFINITE);
-	WaitForSingleObject(m_hThread, INFINITE);
+	//SetThreadPriority(THREAD_PRIORITY_NORMAL);
+	//WaitForSingleObject(m_hEventDead, INFINITE);
+	//WaitForSingleObject(m_hThread, INFINITE);
 
 	// now delete CWinThread object since no longer necessary
 	delete this;
@@ -491,7 +491,7 @@ BOOL CMCICard::Reset( CWnd* pWnd )
     DDSURFACEDESC			ddsd;
     HRESULT					ddrval;
 
-	Close();
+	//Close();
 
 	m_pScreenWnd = pWnd;
 
@@ -2541,8 +2541,6 @@ long CMCICard::UpdateImageLay()
 				m_lpDDSImageLay->ReleaseDC(hdc);
 			}
 		}
-
-		Sleep(1);
 	}
 
 	m_mutexImageDib.Unlock();

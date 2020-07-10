@@ -183,36 +183,36 @@ UINT imgArr[500][500];
 
 void *imageData;
 BITMAPINFO BitmapInfo;
-CDC me1;
-CBitmap ma1;
-BITMAP info1;
+CDC dc1;
+CBitmap cbp1;
+BITMAP bp1;
 
-CDC me3;
-CBitmap ma3;
-BITMAP info3;
+CDC dc3;
+CBitmap cbp3;
+BITMAP bp3;
 void CFastProcessingDlg::OnOK() 
 {
 	// TODO: Add extra validation here
 	
 	CDC *dc=GetDC();
-	ma1.DeleteObject();
-	ma3.DeleteObject();
+	cbp1.DeleteObject();
+	cbp3.DeleteObject();
 
-	me1.DeleteDC();
-	me3.DeleteDC();
+	dc1.DeleteDC();
+	dc3.DeleteDC();
 
-	ma1.LoadBitmap(IDB_BITMAP1);
-	me1.CreateCompatibleDC(dc);
-	ma1.GetBitmap(&info1);
-	me1.SelectObject(ma1);
+	cbp1.LoadBitmap(IDB_BITMAP1);
+	dc1.CreateCompatibleDC(dc);
+	cbp1.GetBitmap(&bp1);
+	dc1.SelectObject(cbp1);
 	
 	
-	me3.CreateCompatibleDC(dc);
-	ma3.CreateCompatibleBitmap(dc,1000,1000);
-	me3.SelectObject(ma3);
-	me3.BitBlt(0,0,1000,1000,dc,0,0,SRCCOPY);
+	dc3.CreateCompatibleDC(dc);
+	cbp3.CreateCompatibleBitmap(dc,1000,1000);
+	dc3.SelectObject(cbp3);
+	dc3.BitBlt(0,0,1000,1000,dc,0,0,SRCCOPY);
 
-	me3.BitBlt(0,0,info1.bmWidth,info1.bmHeight,&me1,0,0,SRCCOPY);
+	dc3.BitBlt(0,0,bp1.bmWidth,bp1.bmHeight,&dc1,0,0,SRCCOPY);
 
 
 	HBITMAP hbm=NULL;
@@ -221,9 +221,9 @@ void CFastProcessingDlg::OnOK()
 	HDC hdc=::CreateCompatibleDC(DeskHdc);
 	
 	BitmapInfo.bmiHeader.biSize=sizeof(BITMAPINFOHEADER);
-	BitmapInfo.bmiHeader.biWidth=info1.bmWidth;
-	BitmapInfo.bmiHeader.biHeight=info1.bmHeight;
-	BitmapInfo.bmiHeader.biSizeImage=(((info1.bmWidth * 32 + 31) & ~31) >> 3) * info1.bmHeight;
+	BitmapInfo.bmiHeader.biWidth=bp1.bmWidth;
+	BitmapInfo.bmiHeader.biHeight=bp1.bmHeight;
+	BitmapInfo.bmiHeader.biSizeImage=(((bp1.bmWidth * 32 + 31) & ~31) >> 3) * bp1.bmHeight;
 	BitmapInfo.bmiHeader.biCompression=BI_RGB ;
 	BitmapInfo.bmiHeader.biXPelsPerMeter=0;
 	BitmapInfo.bmiHeader.biYPelsPerMeter =0; 
@@ -242,7 +242,7 @@ void CFastProcessingDlg::OnOK()
 		m_hbmOld = (HBITMAP)::SelectObject(hdc,hbm);
 	} 
 
-	::BitBlt(hdc,0,0,info1.bmWidth,info1.bmHeight,me3.m_hDC,0,0,SRCCOPY); 
+	::BitBlt(hdc,0,0,bp1.bmWidth,bp1.bmHeight,dc3.m_hDC,0,0,SRCCOPY); 
 	SetTimer(0,10,0);
 	//while (true)
 	//{
@@ -257,10 +257,10 @@ void CFastProcessingDlg::OnTimer(UINT nIDEvent)
 	if(r==0)
 	{
 		memcpy(p,imageData,BitmapInfo.bmiHeader.biSizeImage);
-		for(int j=0;j<=info1.bmHeight;j++)
-		for(int k=0;k<=info1.bmWidth;k++)
+		for(int j=0;j<=bp1.bmHeight;j++)
+		for(int k=0;k<=bp1.bmWidth;k++)
 		{
-			imgArr[j][k]=p[j*info1.bmWidth+k];
+			imgArr[j][k]=p[j*bp1.bmWidth+k];
 		}
 		r=1;
 
@@ -269,8 +269,8 @@ void CFastProcessingDlg::OnTimer(UINT nIDEvent)
 	//KillTimer(0);
 	
 
-	//for(int k=0;k<=info1.bmHeight;k++)
-	//for(int f=0;f<=info1.bmWidth;f++)
+	//for(int k=0;k<=bp1.bmHeight;k++)
+	//for(int f=0;f<=bp1.bmWidth;f++)
 	//{
 	//	int R,G,B;
 	//	int Rx,Gx;
@@ -281,7 +281,7 @@ void CFastProcessingDlg::OnTimer(UINT nIDEvent)
 	//	Rx=rand()%(int)3+k;
 	//	Gx=rand()%(int)3+f;
 
-	//	p[k*info1.bmWidth+f]=imgArr[Rx][Gx];
+	//	p[k*bp1.bmWidth+f]=imgArr[Rx][Gx];
 	//	
 	//}
 	
@@ -289,18 +289,18 @@ void CFastProcessingDlg::OnTimer(UINT nIDEvent)
 	m-=.5;
 	if(m<1)
 		m=20;
-	if(r>info1.bmWidth)
+	if(r>bp1.bmWidth)
 		r=0;
 	HDC dc = ::GetDC(m_hWnd);
 	SetDIBitsToDevice(/*::GetDC(NULL)*/dc,
 				  10,
 				  10,
-				  info1.bmWidth,
-				  info1.bmHeight,
+				  bp1.bmWidth,
+				  bp1.bmHeight,
 				  0,
 				  0,
 				  0,
-				  info1.bmHeight,
+				  bp1.bmHeight,
 				  p,
 				  //imageData,
 				  &BitmapInfo,

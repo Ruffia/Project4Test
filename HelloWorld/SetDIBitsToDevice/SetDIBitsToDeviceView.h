@@ -149,6 +149,9 @@ protected:
 	// 19.06.19 扫描区域显示像素
 	int			m_nDispPixel;
 
+	LPBYTE		m_bImageBuff;
+	int			m_nLoop;
+
 // 重写
 public:
 	virtual void OnDraw(CDC* pDC);  // 重写以绘制该视图

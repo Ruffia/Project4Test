@@ -458,7 +458,7 @@ typedef struct tagCCDVideoConfig{
 
 // 5. 其它参数
 typedef struct tagPublic_Other{
-	CString		strChnName1;
+	CString		strChnNadc1;
 	CString		strChnName2;
 	UINT		nChnIndex1;
 	UINT		nChnIndex2;

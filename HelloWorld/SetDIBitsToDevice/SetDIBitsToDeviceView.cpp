@@ -242,6 +242,134 @@ CSetDIBitsToDeviceView::CSetDIBitsToDeviceView()
 {
 	// TODO: 在此处添加构造代码
 
+	//	SetScrollSizes(MM_TEXT, CSize(0, 0));
+	// 2005-1-17_液晶屏幕XY比例问题
+	VERIFY(m_brHatch.CreateHatchBrush(HS_DIAGCROSS, RGB(191, 191, 191)));	// 09.12.02改回diagcross
+	//	VERIFY(m_brHatch.CreateSolidBrush( gc_crScreenColor ));
+
+	m_bCatch = FALSE;
+
+	m_bUScaleHitTest		= FALSE;
+	m_bOscillographHitTest	= FALSE;
+	//LMH//////////////////////////////////
+
+	m_nAdjustorSort			= SORT_OBJECTIVE_LENS;	//调节器类型为对比度调节
+	m_nCondenserSort		= 0;					//聚光镜调节类型为粗调
+	m_nObjectiveSort		= 0;					//物镜调节类型为粗调
+
+	m_bAbc					= FALSE;	//不进行字符编辑
+	m_bLabel				= TRUE;		//显示底标
+	m_bUScale				= FALSE;	//隐藏活动标尺
+	m_bDate					= FALSE;	//隐藏日期
+	m_bNote					= FALSE;	//隐藏备注
+	m_bWobbler				= FALSE;	//物镜摇摆关
+	m_bLean					= FALSE;	//倾斜补偿关
+	m_bDynFocus				= FALSE;	//动态聚焦关
+	m_bSacp					= FALSE;	//通道花样关
+	m_bRobinson				= FALSE;	//Robinson探头关
+	m_bOscillograph			= FALSE;	//隐藏示波器
+	m_bFrameRate			= FALSE;	//隐藏标准框
+
+	m_bCondRev				= FALSE;	//聚光镜反转关
+	m_bObjectiveRev			= FALSE;	//物镜反转关
+	m_bAuxStig				= FALSE;	//辅助消像散关
+
+	m_bPreview				= FALSE;	//非照相预览
+	m_bZoomFit				= FALSE;
+	m_bLive					= FALSE;	//快速扫描
+	m_bSplit				= FALSE;	//非分割像
+	m_bSplitZoom			= FALSE;	//分割像不放大显示
+	m_bOnlyDet2				= FALSE;	//显示第一探测器图像
+
+	m_boolScreenFull		= FALSE;
+
+	m_bStopPhoto			= FALSE;	// 2004-5-12_照相编号自动增加
+	m_bStopScan				= TRUE;		// 2005-1-17_0.0KV问题
+
+
+	m_nusbScanResoIndex	= 4;
+	m_nusbPixRate		= 2;					// 1us
+	m_nusbPixRateIndex	= 1;					// 扫描速度为1档
+	m_nusbPhotoPixRate	= 128;					// 64us
+	m_nusbPhotoPixRateIndex	= 4;//11;			// pix clk = 20us, actual dwell time = 80us
+	//	m_usbParam			= ;
+	m_nusbScanStoreMode	= 1;					// XYZ存储方式
+	m_nusbScanDetMode	= 0;					// 12.02.15 单探测器模式
+	m_nCLgrade			= -1;
+	///////////////////////////////////////////////////////////
+
+	//	USB_GetResoSize( m_nusbScanResoIndex );
+	m_dResoRate = 1.0;
+	m_sizeReso = CSize(1024,768);
+
+	///////////////////////////////////////////////////////////
+	m_nLineScanParam = m_sizeReso.cy / 2;
+
+	m_ptPointScanParam.x = m_sizeReso.cx / 2;
+	m_ptPointScanParam.y = m_sizeReso.cy / 2;
+
+	//	1024	512		256
+	//	 768	384		192
+	m_rcAreaScanParam.left		= 256;
+	m_rcAreaScanParam.top		= 192;
+	m_rcAreaScanParam.right		= 256 + 512;
+	m_rcAreaScanParam.bottom	= 192 + 384;
+
+	//	1024	512		256
+	//	 768	384		192
+	m_rcStaticAreaScanParam.left	= 256;
+	m_rcStaticAreaScanParam.top		= 192;
+	m_rcStaticAreaScanParam.right	= 256 + 512;
+	m_rcStaticAreaScanParam.bottom	= 192 + 384;
+
+	//	1024	512		256
+	//	 768	384		192
+	m_rcAutoBCAreaScanParam.left	= (1024 - 512) / 2;
+	m_rcAutoBCAreaScanParam.top		= (768 - 384) / 2;
+	m_rcAutoBCAreaScanParam.right	= 512 + m_rcAutoBCAreaScanParam.left;
+	m_rcAutoBCAreaScanParam.bottom	= 384 + m_rcAutoBCAreaScanParam.top;
+
+	//	1024	512		256
+	//	 768	384		192
+	m_rcAutoFocusAreaScanParam.left		= (1024 - 256) / 2;
+	m_rcAutoFocusAreaScanParam.top		= (768 - 256) / 2;
+	m_rcAutoFocusAreaScanParam.right	= 256 + m_rcAutoFocusAreaScanParam.left;
+	m_rcAutoFocusAreaScanParam.bottom	= 256 + m_rcAutoFocusAreaScanParam.top;
+
+	//	1024	512		256
+	//	 768	384		192
+	m_rcAutoAstigmatAreaScanParam.left		= (1024 - 256) / 2;
+	m_rcAutoAstigmatAreaScanParam.top		= (768 - 256) / 2;
+	m_rcAutoAstigmatAreaScanParam.right		= 256 + m_rcAutoAstigmatAreaScanParam.left;
+	m_rcAutoAstigmatAreaScanParam.bottom	= 256 + m_rcAutoAstigmatAreaScanParam.top;
+
+	//	1024	512		256
+	//	 768	384		192
+	m_rcDualMagParam.left	= 128;
+	m_rcDualMagParam.top	= 192;
+	m_rcDualMagParam.right	= 128 + 256;
+	m_rcDualMagParam.bottom	= 192 + 384;
+	///////////////////////////////////////////////////////////
+
+	//--Auto Functions---------------------------------------//
+	m_bImageBuff			= new BYTE[256*256];//bAutoBUFF;
+	//--Auto Functions---------------------------------------//
+
+	//	gpScanView = this;
+
+	// 07.07---07.08加入任意方向标尺
+	m_ptMobileUScale	= CPoint(100,400);
+	m_ptMobileUScale2	= CPoint(400,400);
+
+	// 16.06.12 多移动标尺实验
+	for( int i=0; i<MobileUScaleCounts; i++ )
+	{
+		//		m_nMobileUScalePixelNumArray[i]	= ;
+		m_ptMobileUScaleArray[i]		= CPoint( -1, -1 );
+		m_ptMobileUScaleArray2[i]		= CPoint( -1, -1 );
+		m_bUScaleHitTestArray[i]		= FALSE;
+	}
+	m_nMobileUScaleCounts	= 0;
 }
 
 CSetDIBitsToDeviceView::~CSetDIBitsToDeviceView()
