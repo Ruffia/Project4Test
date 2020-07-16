@@ -21,6 +21,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Minidump", "Minidump\Minidu
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DDraw01", "DDraw01\DDraw01.vcxproj", "{AD3C5670-89ED-4703-A5AF-676FF734DF9E}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ddsamp", "ddsamp\ddsamp.vcxproj", "{C2998B7A-ECF1-4A4B-91A2-BA55F559D661}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Win32 = Debug|Win32
@@ -88,6 +90,12 @@ Global
 		{AD3C5670-89ED-4703-A5AF-676FF734DF9E}.Release|Win32.Build.0 = Release|Win32
 		{AD3C5670-89ED-4703-A5AF-676FF734DF9E}.Template|Win32.ActiveCfg = Release|Win32
 		{AD3C5670-89ED-4703-A5AF-676FF734DF9E}.Template|Win32.Build.0 = Release|Win32
+		{C2998B7A-ECF1-4A4B-91A2-BA55F559D661}.Debug|Win32.ActiveCfg = Debug|Win32
+		{C2998B7A-ECF1-4A4B-91A2-BA55F559D661}.Debug|Win32.Build.0 = Debug|Win32
+		{C2998B7A-ECF1-4A4B-91A2-BA55F559D661}.Release|Win32.ActiveCfg = Release|Win32
+		{C2998B7A-ECF1-4A4B-91A2-BA55F559D661}.Release|Win32.Build.0 = Release|Win32
+		{C2998B7A-ECF1-4A4B-91A2-BA55F559D661}.Template|Win32.ActiveCfg = Release|Win32
+		{C2998B7A-ECF1-4A4B-91A2-BA55F559D661}.Template|Win32.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
