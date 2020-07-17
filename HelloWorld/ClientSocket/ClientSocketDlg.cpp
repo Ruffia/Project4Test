@@ -65,6 +65,7 @@ void CClientSocketDlg::DoDataExchange(CDataExchange* pDX)
 	DDX_Text(pDX, IDC_Port, m_nPort);
 	DDX_Text(pDX, IDC_Txt2Send, m_strTxt2Send);
 	DDV_MaxChars(pDX, m_strTxt2Send, 2048);
+	DDX_Control(pDX, IDC_LIST_RECV, m_lstRecv);
 }
 
 BEGIN_MESSAGE_MAP(CClientSocketDlg, CDialogEx)
@@ -174,7 +175,7 @@ HCURSOR CClientSocketDlg::OnQueryDragIcon()
 
 void CClientSocketDlg::OnReceive(CString sText)
 {
-	m_strTxt2Send = sText;
+	m_lstRecv.AddString(sText);
 	UpdateData(FALSE);
 }
 
@@ -189,6 +190,7 @@ void CClientSocketDlg::OnBnClickedBtnconnect()
 {
 	// TODO: 在此添加控件通知处理程序代码
 	UpdateData(TRUE);
+	DWORD dwErr = 0;
 	BOOL bCreate = m_pSocket->Create();
 	if (!bCreate)
 	{
@@ -201,6 +203,11 @@ void CClientSocketDlg::OnBnClickedBtnconnect()
 
 	m_pSocket->Init(m_strServerIP,m_nPort);
 	BOOL bConnect = m_pSocket->Connect((LPCTSTR)m_strServerIP,m_nPort);
+	if (!bConnect)
+	{
+		dwErr = GetLastError();
+		return;
+	}
 	OnConnect(bConnect);
 }
 
@@ -219,9 +226,19 @@ void CClientSocketDlg::OnBnClickedBtnsend()
 {
 	// TODO: 在此添加控件通知处理程序代码
 	if(!m_pSocket) return;
-	char* pBuff = (LPSTR)(LPCTSTR)m_strTxt2Send;
-	int nLen = sizeof(pBuff);
-	m_pSocket->Send(pBuff,nLen);
+	UpdateData(TRUE);
+
+	char* src =(LPSTR)(LPCTSTR)m_strTxt2Send;
+	char* sz = new char[1024];
+	memcpy(sz,src,strlen(src)+ 1);
+	int nRet = m_pSocket->Send(m_strTxt2Send.GetBuffer(0),m_strTxt2Send.GetLength());
+	if (-1 == nRet)
+	{
+		char szError[256] = {0};
+		sprintf_s(szError, 256,"Send Faild: %d", GetLastError());
+		MessageBox(szError);
+		return;
+	}
 }
 
 

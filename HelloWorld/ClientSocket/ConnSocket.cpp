@@ -42,5 +42,4 @@ void CConnSocket::OnReceive(int nErrorCode)
 	CClientSocketDlg *pDlg= (CClientSocketDlg*)AfxGetMainWnd();
 	CString strReceive(sz);
 	pDlg->OnReceive(strReceive);//调用自定义函数，把s传过去
-	CSocket::OnReceive(nErrorCode);
 }

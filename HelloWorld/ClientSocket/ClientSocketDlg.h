@@ -5,6 +5,7 @@
 #pragma once
 #include "Resource.h"
 #include "ConnSocket.h"
+#include "afxwin.h"
 
 // CClientSocketDlg ¶Ô»°¿ò
 class CClientSocketDlg : public CDialogEx
@@ -43,4 +44,5 @@ public:
 public:
 	void OnReceive(CString sText);
 	void OnConnect(bool bConnect);
+	CListBox m_lstRecv;
 };
