@@ -220,21 +220,20 @@ void CFastProcessingDlg::OnOK()
 	HDC DeskHdc=::GetDC(NULL);
 	HDC hdc=::CreateCompatibleDC(DeskHdc);
 	
-	BitmapInfo.bmiHeader.biSize=sizeof(BITMAPINFOHEADER);
-	BitmapInfo.bmiHeader.biWidth=bp1.bmWidth;
-	BitmapInfo.bmiHeader.biHeight=bp1.bmHeight;
-	BitmapInfo.bmiHeader.biSizeImage=(((bp1.bmWidth * 32 + 31) & ~31) >> 3) * bp1.bmHeight;
-	BitmapInfo.bmiHeader.biCompression=BI_RGB ;
-	BitmapInfo.bmiHeader.biXPelsPerMeter=0;
-	BitmapInfo.bmiHeader.biYPelsPerMeter =0; 
+	BitmapInfo.bmiHeader.biSize = sizeof(BITMAPINFOHEADER);
+	BitmapInfo.bmiHeader.biWidth = bp1.bmWidth;
+	BitmapInfo.bmiHeader.biHeight = bp1.bmHeight;
+	BitmapInfo.bmiHeader.biSizeImage = (((bp1.bmWidth * 32 + 31) & ~31) >> 3) * bp1.bmHeight;
+	BitmapInfo.bmiHeader.biCompression = BI_RGB ;
+	BitmapInfo.bmiHeader.biXPelsPerMeter = 0;
+	BitmapInfo.bmiHeader.biYPelsPerMeter = 0; 
 	BitmapInfo.bmiHeader.biClrImportant = 0;
 	BitmapInfo.bmiHeader.biClrUsed = 0; // we are not using palette
 	BitmapInfo.bmiHeader.biPlanes = 1; // has to be 1
 	BitmapInfo.bmiHeader.biBitCount = 32; // as we want true-color
 
 	
-	hbm=::CreateDIBSection(GetDesktopWindow()->GetWindowDC()->m_hDC,
-						  &BitmapInfo,DIB_RGB_COLORS,(void**)&imageData,NULL,0);
+	hbm=::CreateDIBSection(GetDesktopWindow()->GetWindowDC()->m_hDC, &BitmapInfo, DIB_RGB_COLORS, (void**)&imageData, NULL, 0);
 	HBITMAP m_hbmOld;
 	
 	if (hbm)
