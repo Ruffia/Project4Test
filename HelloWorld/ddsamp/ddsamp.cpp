@@ -59,7 +59,7 @@ int APIENTRY WinMain(HINSTANCE hInstance,
 	}
 	
 	// Create the main window
-	g_hwndMain = Create( nCmdShow, 800, 600 );
+	g_hwndMain = Create( nCmdShow, nWindowWidth, nWindowHeight );
 	if (!g_hwndMain)
 		return FALSE;  
 	
@@ -222,11 +222,11 @@ void HeartBeat()
 	
 	static int iFoo = 0;
 	// Draw a weird looking color square
-	for ( int r=0; r<64; r++ )
+	for ( int r=0; r<200; r++ )
 	{
-		for ( int g=0; g<64; g++ )
+		for ( int g=0; g<100; g++ )
 		{
-			DDPutPixel( g_pDDSBack, g, r, (r*2+iFoo)%256, (g+iFoo)%256, (63-g)*4 );
+			DDPutPixel( g_pDDSBack, r, g, (r*2+iFoo)%256, (g+iFoo)%256, (100-g)*4 );
 		}
 	}
 	iFoo++;

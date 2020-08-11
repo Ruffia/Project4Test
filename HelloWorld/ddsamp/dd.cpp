@@ -97,8 +97,8 @@ bool DDCreateSurfaces( bool bFullScreen)
 		
 		ddsd.dwFlags = DDSD_WIDTH | DDSD_HEIGHT | DDSD_CAPS;
 		// Make our off-screen surface 320x240
-		ddsd.dwWidth = 320;
-		ddsd.dwHeight = 240;
+		ddsd.dwWidth = nOffScreenWidth;
+		ddsd.dwHeight = nOffScreenHeight;
 		// Create an offscreen surface
 		ddsd.ddsCaps.dwCaps = DDSCAPS_OFFSCREENPLAIN;
 		
@@ -348,6 +348,7 @@ void DDFlip()
 		p.x = 0; p.y = 0;
 		::ClientToScreen(g_hWnd, &p);
 		::GetClientRect(g_hWnd, &rcDest);
+		SetRect(&rcDest,rcDest.left + 50, rcDest.top + 50, rcDest.right - 60,rcDest.bottom -80);
 		OffsetRect(&rcDest, p.x, p.y);
 		SetRect(&rcSrc, 0, 0, 320, 240);
 		hr = g_pDDS->Blt(&rcDest, g_pDDSBack, &rcSrc, DDBLT_WAIT, NULL);
@@ -371,7 +372,7 @@ void DDClear( LPDIRECTDRAWSURFACE pDDS, int x1, int y1, int x2, int y2 )
 	
 	// Initialize the DDBLTFX structure with the pixel color
 	ddbfx.dwSize = sizeof( ddbfx );
-	ddbfx.dwFillColor = (DWORD)CreateRGB( 0, 0, 0 );
+	ddbfx.dwFillColor = (DWORD)CreateRGB( 0, 192, 0 );
 	
 	SetRect( &rcDest, x1, y1, x2, y2 );
 	

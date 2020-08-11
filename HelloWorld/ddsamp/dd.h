@@ -47,6 +47,11 @@ extern void DDFlip();
 extern bool  DDFailedCheck(HRESULT hr, char *szMessage);
 extern char *DDErrorString(HRESULT hr);
 
+const int nWindowWidth = 800;
+const int nWindowHeight = 600;
+const int nOffScreenWidth = 320;
+const int nOffScreenHeight = 240;
+
 /*--------------------------------------------------------------------------*/
 #endif
 /*--------------------------------------------------------------------------*/
