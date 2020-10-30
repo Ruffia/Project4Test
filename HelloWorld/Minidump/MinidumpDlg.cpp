@@ -168,6 +168,16 @@ HCURSOR CMinidumpDlg::OnQueryDragIcon()
 void CMinidumpDlg::OnBnClickedButtonCalc()
 {
 	// TODO: 在此添加控件通知处理程序代码
+	//int a[10] = {0};
+	//for (int i = 0; i <100;i++)
+	//{
+	//	a[11] = 11;
+	//}
+
+	int a = 5;
+	int b = 10/(int)(a-5);
+
+
 	UpdateData(TRUE);
 	CString strOperator = "";
 	m_cmbOperator.GetWindowTextA(strOperator);

@@ -52,6 +52,8 @@ BOOL CMinidumpApp::InitInstance()
 
 	CWinApp::InitInstance();
 
+	TCHAR exeFullPath[255];
+	::GetModuleFileName( NULL, exeFullPath, 255 );
 
 	AfxEnableControlContainer();
 
