@@ -73,8 +73,9 @@ void CFastProcessingDlg::DoDataExchange(CDataExchange* pDX)
 {
 	CDialog::DoDataExchange(pDX);
 	//{{AFX_DATA_MAP(CFastProcessingDlg)
-		// NOTE: the ClassWizard will add DDX and DDV calls here
+	// NOTE: the ClassWizard will add DDX and DDV calls here
 	//}}AFX_DATA_MAP
+	DDX_Control(pDX, IDC_BUTTON_Color, m_btnColor);
 }
 
 BEGIN_MESSAGE_MAP(CFastProcessingDlg, CDialog)
@@ -84,6 +85,8 @@ BEGIN_MESSAGE_MAP(CFastProcessingDlg, CDialog)
 	ON_WM_QUERYDRAGICON()
 	ON_WM_TIMER()
 	//}}AFX_MSG_MAP
+	ON_BN_CLICKED(IDC_BUTTON_SetText, &CFastProcessingDlg::OnBnClickedButtonSettext)
+	ON_BN_CLICKED(IDC_BUTTON3, &CFastProcessingDlg::OnBnClickedButton3)
 END_MESSAGE_MAP()
 
 /////////////////////////////////////////////////////////////////////////////
@@ -307,4 +310,21 @@ void CFastProcessingDlg::OnTimer(UINT nIDEvent)
 	
 	//SetTimer(0,30,0);
 	CDialog::OnTimer(nIDEvent);
+}
+
+
+void CFastProcessingDlg::OnBnClickedButtonSettext()
+{
+	// TODO: 在此添加控件通知处理程序代码
+	static int i = 1;
+	CString strText;
+	strText.Format("%d");
+	m_btnColor.SetWindowTextA(strText);
+}
+
+
+void CFastProcessingDlg::OnBnClickedButton3()
+{
+	// TODO: 在此添加控件通知处理程序代码
+	//m_btnColor.SetColor(CButtonST::BTNST_COLOR_BK_IN, RGB(255,0,0));
 }

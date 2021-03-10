@@ -1,6 +1,7 @@
 // FastProcessingDlg.h : header file
 //
 
+#include "afxwin.h"
 #if !defined(AFX_FASTPROCESSINGDLG_H__BBCE1750_5560_4863_BB2F_FF61437B2131__INCLUDED_)
 #define AFX_FASTPROCESSINGDLG_H__BBCE1750_5560_4863_BB2F_FF61437B2131__INCLUDED_
 
@@ -43,6 +44,10 @@ protected:
 	afx_msg void OnTimer(UINT nIDEvent);
 	//}}AFX_MSG
 	DECLARE_MESSAGE_MAP()
+public:
+	CButton m_btnColor;
+	afx_msg void OnBnClickedButtonSettext();
+	afx_msg void OnBnClickedButton3();
 };
 
 //{{AFX_INSERT_LOCATION}}
