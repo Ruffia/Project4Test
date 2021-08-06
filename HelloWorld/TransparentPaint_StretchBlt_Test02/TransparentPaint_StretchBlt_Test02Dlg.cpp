@@ -170,7 +170,7 @@ void CTransparentPaint_StretchBlt_Test02Dlg::OnPaint()
 	}
 	else
 	{
-		PaintTransparentBmp(m_hWnd);
+		PaintTransparentBmp("image\\1.bmp");
 		CDialogEx::OnPaint();
 	}
 }
@@ -182,3 +182,57 @@ HCURSOR CTransparentPaint_StretchBlt_Test02Dlg::OnQueryDragIcon()
 	return static_cast<HCURSOR>(m_hIcon);
 }
 
+// CTransparentPaint_StretchBlt_Test02Dlg 对话框
+BOOL CTransparentPaint_StretchBlt_Test02Dlg::PaintTransparentBmp(char* sImage)
+{
+	// 获取窗口的客户区域的显示设备上下文环境的句柄
+	CPaintDC dcPaint(this);
+	CRect rcClient;
+	GetClientRect( &rcClient );
+
+	HDC hDC = ::GetDC(m_hWnd);
+	// 创建一个与hDC兼容的内存设备上下文环境
+	HDC hBuf = ::CreateCompatibleDC(dcPaint);
+
+	CDC dcBuf;
+	dcBuf.CreateCompatibleDC(&dcPaint);
+
+	CString strImage = CString(sImage);
+	USES_CONVERSION;
+	LPCWSTR wszClassName = new WCHAR[strImage.GetLength()+1];
+	wcscpy((LPWSTR)wszClassName,T2W((LPWSTR)strImage.GetBuffer(NULL)));
+	strImage.ReleaseBuffer();
+
+	// 加载位图, 获取位图句柄
+	HBITMAP hBmp1 = (HBITMAP)::LoadImage(NULL, strImage, IMAGE_BITMAP, 0, 0, LR_LOADFROMFILE);
+
+
+
+
+	HBITMAP hBmp2 = (HBITMAP)::LoadImage(NULL, _T("image\\2.bmp"), IMAGE_BITMAP, 0, 0, LR_LOADFROMFILE);
+
+	CBitmap MaskBitmap;
+	MaskBitmap.CreateBitmap( rcClient.Width(), rcClient.Height(), 1, 1, NULL );
+
+	// 选择位图句柄到hBuf中, 并获取返回的原来位图句柄
+	HBITMAP hOldBmp = (HBITMAP)::SelectObject(hBuf, hBmp1);
+	// "与"操作绘制
+	::StretchBlt(hDC, 260, 170, 200, 200, hBuf, 0, 0, 101, 121, SRCAND);
+
+	// 选择位图句柄到hBuf中
+	::SelectObject(hBuf, hBmp2);
+	// "或"操作绘制
+	::StretchBlt(hDC, 260, 170, 200, 200, hBuf, 0, 0, 101, 121, SRCPAINT);
+
+	// 还原位图对象
+	::SelectObject(hBuf, hOldBmp);
+	// 释放位图
+	::DeleteObject(hBmp1);
+	::DeleteObject(hBmp2);
+	// 释放兼容的内存设备上下文环境
+	::DeleteDC(hBuf);
+	// 释放设备上下文环境
+	::ReleaseDC(m_hWnd, hDC);
+
+	return TRUE;
+}

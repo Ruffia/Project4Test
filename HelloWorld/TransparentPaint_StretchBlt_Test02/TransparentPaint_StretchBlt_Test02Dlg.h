@@ -11,6 +11,7 @@ class CTransparentPaint_StretchBlt_Test02Dlg : public CDialogEx
 // 构造
 public:
 	CTransparentPaint_StretchBlt_Test02Dlg(CWnd* pParent = NULL);	// 标准构造函数
+	BOOL PaintTransparentBmp(char* sImage);
 
 // 对话框数据
 	enum { IDD = IDD_TRANSPARENTPAINT_STRETCHBLT_TEST02_DIALOG };
