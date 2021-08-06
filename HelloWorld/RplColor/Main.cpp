@@ -248,6 +248,7 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
 			GetObject(hBmp, sizeof(bm), &bm);			
 			HIMAGELIST ImgList=ImageList_Create(bm.bmWidth,bm.bmHeight,ILC_COLOR32|ILC_MASK,8,8);
 			ImageList_Add(ImgList,hBmp2,NULL);	// original image
+			ImageList_Add(ImgList,hBmp,NULL);	// original image
 			//ImageList_AddMasked(ImgList,hBmp,0xff00ff);		
 			//DeleteObject(hBmp);
 			//hBmp = ReplaceColor(hBmp2,0x0000ff,0x00ff00);	// replace red by green
@@ -271,7 +272,7 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
 				
 				RECT Rect;
 				GetClientRect(hWnd,&Rect);
-				HGDIOBJ PreviousObj=SelectObject(hdc,CreateHatchBrush(HS_BDIAGONAL,0x0));
+				HGDIOBJ PreviousObj = SelectObject(hdc,CreateHatchBrush(HS_BDIAGONAL,0x0));
 				PatBlt(hdc,Rect.left,Rect.top,Rect.right,Rect.bottom,PATCOPY);
 				SelectObject(hdc,PreviousObj);
 

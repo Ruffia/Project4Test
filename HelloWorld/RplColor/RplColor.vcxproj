@@ -142,10 +142,14 @@
     <ResourceCompile Include="RplColor.rc" />
   </ItemGroup>
   <ItemGroup>
+    <Image Include="..\TransparentBitmap_ReplaceColor\res\bmp_PneumaticDiagram.bmp" />
     <Image Include="samplebi.bmp" />
   </ItemGroup>
   <ItemGroup>
     <Text Include="ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="resource.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
