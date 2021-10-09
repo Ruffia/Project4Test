@@ -73,12 +73,12 @@ int CMainFrame::OnCreate(LPCREATESTRUCT lpCreateStruct)
 
 	m_dlgTransparentBltTest.ShowWindow(SW_SHOW);
 
-	if (!m_dlgTransparentBltTest02.Create( CTransparentBltTestDlg02::IDD, this ))
-	{
-		return -1;       // fail to create
-	}
+	//if (!m_dlgTransparentBltTest02.Create( CTransparentBltTestDlg02::IDD, this ))
+	//{
+	//	return -1;       // fail to create
+	//}
 
-	m_dlgTransparentBltTest02.ShowWindow(SW_SHOW);
+	//m_dlgTransparentBltTest02.ShowWindow(SW_SHOW);
 
 	return 0;
 }
@@ -133,20 +133,20 @@ void CMainFrame::AdjustPanelPos()
 	m_dlgTransparentBltTest.GetClientRect(&clientRect); 
 	m_dlgTransparentBltTest.MoveWindow(rect.right - clientRect.Width() - 5, rect.top + rcToolBar.Height() + 5, clientRect.Width(), clientRect.Height(), TRUE);
 
-	DWORD dwStyle = GetWindowLong(m_dlgTransparentBltTest02.m_hWnd,GWL_STYLE);
-	if(dwStyle && WS_CHILD)
-	{
-		//dwStyle &= ~WS_CHILD;// 去掉WS_CHILD风格
-		//dwStyle |= WS_POPUP;// 设置WS_POPUP风格
-	}
-	else
-	{
-		dwStyle &= ~WS_POPUP;
-		dwStyle |= WS_CHILD;
-	}
-	SetWindowLong(m_dlgTransparentBltTest02.m_hWnd,GWL_STYLE,dwStyle);
+	//DWORD dwStyle = GetWindowLong(m_dlgTransparentBltTest02.m_hWnd,GWL_STYLE);
+	//if(dwStyle && WS_CHILD)
+	//{
+	//	//dwStyle &= ~WS_CHILD;// 去掉WS_CHILD风格
+	//	//dwStyle |= WS_POPUP;// 设置WS_POPUP风格
+	//}
+	//else
+	//{
+	//	dwStyle &= ~WS_POPUP;
+	//	dwStyle |= WS_CHILD;
+	//}
+	//SetWindowLong(m_dlgTransparentBltTest02.m_hWnd,GWL_STYLE,dwStyle);
 
-	CRect clientRect02; 
-	m_dlgTransparentBltTest02.GetClientRect(&clientRect02); 
-	m_dlgTransparentBltTest02.MoveWindow(rect.right - clientRect.Width() - clientRect02.Width() - 5 - 5, rect.top + rcToolBar.Height() + 5, clientRect02.Width(), clientRect02.Height(), TRUE);
+	//CRect clientRect02; 
+	//m_dlgTransparentBltTest02.GetClientRect(&clientRect02); 
+	//m_dlgTransparentBltTest02.MoveWindow(rect.right - clientRect.Width() - clientRect02.Width() - 5 - 5, rect.top + rcToolBar.Height() + 5, clientRect02.Width(), clientRect02.Height(), TRUE);
 }

@@ -85,6 +85,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "TransparentBitmap_Bitblt02"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "TransparentPaint_StretchBlt_Test02", "TransparentPaint_StretchBlt_Test02\TransparentPaint_StretchBlt_Test02.vcxproj", "{FB7882E6-1A2A-40F7-A8F3-8E07D263CA45}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SQLite01", "SQLite01\SQLite01.vcxproj", "{C834B8EC-07AF-4375-9287-0467B2DDD8AA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug Unicode|Win32 = Debug Unicode|Win32
@@ -769,6 +771,22 @@ Global
 		{FB7882E6-1A2A-40F7-A8F3-8E07D263CA45}.Unicode_Debug|Win32.Build.0 = Debug|Win32
 		{FB7882E6-1A2A-40F7-A8F3-8E07D263CA45}.Unicode_Release|Win32.ActiveCfg = Release|Win32
 		{FB7882E6-1A2A-40F7-A8F3-8E07D263CA45}.Unicode_Release|Win32.Build.0 = Release|Win32
+		{C834B8EC-07AF-4375-9287-0467B2DDD8AA}.Debug Unicode|Win32.ActiveCfg = Debug|Win32
+		{C834B8EC-07AF-4375-9287-0467B2DDD8AA}.Debug Unicode|Win32.Build.0 = Debug|Win32
+		{C834B8EC-07AF-4375-9287-0467B2DDD8AA}.Debug|Win32.ActiveCfg = Debug|Win32
+		{C834B8EC-07AF-4375-9287-0467B2DDD8AA}.Debug|Win32.Build.0 = Debug|Win32
+		{C834B8EC-07AF-4375-9287-0467B2DDD8AA}.Release Unicode|Win32.ActiveCfg = Release|Win32
+		{C834B8EC-07AF-4375-9287-0467B2DDD8AA}.Release Unicode|Win32.Build.0 = Release|Win32
+		{C834B8EC-07AF-4375-9287-0467B2DDD8AA}.Release|Win32.ActiveCfg = Release|Win32
+		{C834B8EC-07AF-4375-9287-0467B2DDD8AA}.Release|Win32.Build.0 = Release|Win32
+		{C834B8EC-07AF-4375-9287-0467B2DDD8AA}.ReleaseStatic|Win32.ActiveCfg = Release|Win32
+		{C834B8EC-07AF-4375-9287-0467B2DDD8AA}.ReleaseStatic|Win32.Build.0 = Release|Win32
+		{C834B8EC-07AF-4375-9287-0467B2DDD8AA}.Template|Win32.ActiveCfg = Release|Win32
+		{C834B8EC-07AF-4375-9287-0467B2DDD8AA}.Template|Win32.Build.0 = Release|Win32
+		{C834B8EC-07AF-4375-9287-0467B2DDD8AA}.Unicode_Debug|Win32.ActiveCfg = Debug|Win32
+		{C834B8EC-07AF-4375-9287-0467B2DDD8AA}.Unicode_Debug|Win32.Build.0 = Debug|Win32
+		{C834B8EC-07AF-4375-9287-0467B2DDD8AA}.Unicode_Release|Win32.ActiveCfg = Release|Win32
+		{C834B8EC-07AF-4375-9287-0467B2DDD8AA}.Unicode_Release|Win32.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

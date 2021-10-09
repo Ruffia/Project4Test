@@ -33,27 +33,65 @@ END_MESSAGE_MAP()
 
 void CTransparentImage::OnPaint() 
 {
-	// 获取窗口的客户区域的显示设备上下文环境的句柄
-	HDC hDC = ::GetDC(m_hWnd);
-	// 创建一个与hDC兼容的内存设备上下文环境
-	HDC hBuf = ::CreateCompatibleDC(hDC);
-	// 加载位图, 获取位图句柄
-	HBITMAP hBmp = GetBitmap();
-	// 选择位图句柄到hBuf中, 并获取返回的原来位图句柄
-	HBITMAP hOldBmp = (HBITMAP)::SelectObject(hBuf, hBmp);
+	// TODO: Add your message handler code here
+	HBITMAP l_hbmpBitmap = GetBitmap() ;
 
-	BITMAP bm;
-	GetObject(hBmp, sizeof(BITMAP), &bm);
+	if( l_hbmpBitmap == NULL ) 
+	{ 
+		Default() ;
+		return ;
+	} 
+	CPaintDC dc(this); // device context for painting
+	CRect l_rcClient;
+	GetClientRect( &l_rcClient );
+	CDC l_MaskDC;
+	l_MaskDC.CreateCompatibleDC( &dc );
+	CBitmap l_MaskBitmap;
+	l_MaskBitmap.CreateBitmap( l_rcClient.Width(), l_rcClient.Height(), 1, 1, NULL );
+	CBitmap* l_pOldMaskBitmap = l_MaskDC.SelectObject( &l_MaskBitmap );
+	CDC l_MemoryDC;
+	l_MemoryDC.CreateCompatibleDC( &dc );
+	CBitmap* l_pOldMemoryBitmap = l_MemoryDC.SelectObject( CBitmap::FromHandle( l_hbmpBitmap ) );
+	COLORREF l_crOldBack =l_MemoryDC.SetBkColor( RGB(255, 0, 255) );
+	l_MaskDC.BitBlt( 0, 0, l_rcClient.Width(), l_rcClient.Height(), &l_MemoryDC, 0, 0, SRCCOPY );	// src: 直接将源位图拷贝到目的设备上 
+	dc.BitBlt( 0, 0, l_rcClient.Width(), l_rcClient.Height(), &l_MemoryDC, 0, 0, SRCINVERT );		// src XOR dest: 将源插入到目标。二次使用时，将目标恢复到它原来的状态。在某种条件下可以代替SRCPAINT 操作
+	dc.BitBlt( 0, 0, l_rcClient.Width(), l_rcClient.Height(), &l_MaskDC, 0, 0, SRCAND );			// src AND dest: 将目标文件中对应于源文件黑色区域的部分变黑，将对应于白色区域的部分留着不动
+	dc.BitBlt( 0, 0, l_rcClient.Width(), l_rcClient.Height(), &l_MemoryDC, 0, 0, SRCINVERT );
+	l_MemoryDC.SelectObject( l_pOldMemoryBitmap );
+	l_MaskDC.SelectObject( l_pOldMaskBitmap );
+	// Do not call CStatic::OnPaint() for painting messages
 
-	// 透明色为蓝色 绘制
-	::TransparentBlt(hDC, 0, 0, bm.bmWidth, bm.bmHeight, hBuf, 0, 0,  bm.bmWidth, bm.bmHeight, RGB(255, 0, 255));
 
-	// 还原位图对象
-	::SelectObject(hBuf, hOldBmp);
-	// 释放位图
-	::DeleteObject(hBmp);
-	// 释放兼容的内存设备上下文环境
-	::DeleteDC(hBuf);
-	// 释放设备上下文环境
-	::ReleaseDC(m_hWnd, hDC);
+	//HBITMAP hBitmap = GetBitmap();
+
+	//BITMAP bm;
+	//GetObject(hBitmap, sizeof(BITMAP), &bm);
+
+	//CBitmap maskBmp;
+	//maskBmp.CreateBitmap(bm.bmWidth, bm.bmHeight, 1, 1,NULL); 
+
+	//CDC maskDC;                                               //定义掩码DC
+	//maskDC.CreateCompatibleDC(NULL);                          //初始化设备DC
+	//CBitmap *oldMaskBmp = maskDC.SelectObject(&maskBmp);
+
+	//CBitmap* bmpSquare;                                        //定义一个CBitmap对象存储将要绘制的图(ID为IDC_SQUARE)
+	//bmpSquare = CBitmap::FromHandle(hBitmap);                            //加载位图
+
+	//CDC memDC;                                                //创建内存DC
+	//memDC.CreateCompatibleDC(NULL);                           //初始化DC
+	//CBitmap *oldMemBmp = memDC.SelectObject(bmpSquare);      //将位图存入内存DC中,并返回旧的位图
+	//memDC.SetBkColor(RGB(255,0,255));        
+
+	//maskDC.BitBlt(0, 0, bm.bmWidth, bm.bmHeight, &memDC, 0,0, SRCCOPY);
+
+	//CPaintDC dc(this);            //窗口DC
+	//dc.BitBlt(0, 0, bm.bmWidth, bm.bmHeight, &memDC, 0, 0,SRCINVERT);
+
+	//dc.BitBlt(0, 0, bm.bmWidth, bm.bmHeight, &maskDC, 0, 0,SRCAND);
+
+	//dc.BitBlt(0, 0, bm.bmWidth, bm.bmHeight, &memDC, 0, 0,SRCINVERT);
+
+	//maskDC.SelectObject(oldMaskBmp);
+	//memDC.SelectObject(oldMemBmp);
+	//memDC.DeleteDC();
 }
