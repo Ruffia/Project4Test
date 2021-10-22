@@ -1,6 +1,5 @@
 #include "BaseCommand.h"
-#include "QueryCommandBase.h"
-class COperateCommandBase : public IPLCCommand
+class CFunctionKeyCommandBase : public IPLCCommand
 {
 public:
 	virtual bool CheckResponse();
@@ -12,7 +11,4 @@ protected:
 	virtual void _BuildAddress2Send() = 0;
 	virtual void _BuildLength();
 	virtual void _BuildData();
-
-public:
-	CQueryCommandBase*  m_pQueryCommand;
 };

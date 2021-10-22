@@ -119,7 +119,7 @@ void R_ToLoadlock_Positon::_BuildAddress2Send()
 IMPLEMENT_FACTORY(IPLCCommand,X_ToLoadlock_Positon,std::string,"X_ToLoadlock_Positon")
 X_ToLoadlock_Positon::X_ToLoadlock_Positon()
 {
-	strcpy_s(m_szMapAddress,"DM1120");
+	strcpy_s(m_szMapAddress,"DM120");
 }
 
 void X_ToLoadlock_Positon::_BuildAddress2Send()

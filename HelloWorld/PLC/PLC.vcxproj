@@ -108,6 +108,8 @@
     <ClInclude Include="Factory.h" />
     <ClInclude Include="FaultCommand.h" />
     <ClInclude Include="FaultCommandBase.h" />
+    <ClInclude Include="FunctionKeyCommand.h" />
+    <ClInclude Include="FunctionKeyCommandBase.h" />
     <ClInclude Include="OperateCommand.h" />
     <ClInclude Include="OperateCommandBase.h" />
     <ClInclude Include="PLC.h" />
@@ -125,6 +127,8 @@
     <ClCompile Include="DebugCommandBase.cpp" />
     <ClCompile Include="FaultCommand.cpp" />
     <ClCompile Include="FaultCommandBase.cpp" />
+    <ClCompile Include="FunctionKeyCommand.cpp" />
+    <ClCompile Include="FunctionKeyCommandBase.cpp" />
     <ClCompile Include="OperateCommand.cpp" />
     <ClCompile Include="OperateCommandBase.cpp" />
     <ClCompile Include="PLC.cpp" />
