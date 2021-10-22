@@ -13,7 +13,7 @@ void CQueryCommandBase::_Initialize()
 
 bool CQueryCommandBase::CheckResponse()
 {
-	//C0H 00H 02H 00H 0AH	00H 00H	01H	00H 00H	01H 02H	00 00H
+	//C0H 00H 02H 00H 0AH	00H 00H	01H	00H 00H	01H 01H	00 00H 01H
     int nSeq = 0;
 	CHECK_RESP(0xC0)
 	CHECK_RESP(0x00)
@@ -26,9 +26,10 @@ bool CQueryCommandBase::CheckResponse()
 	CHECK_RESP(0x00)
 	CHECK_RESP(0x00)
 	CHECK_RESP(0x01)
-	CHECK_RESP(0x02)
+	CHECK_RESP(0x01)
 	CHECK_RESP(0x00)
 	CHECK_RESP(0x00)
+	CHECK_RESP(0x01)
 	return true;
 }
 

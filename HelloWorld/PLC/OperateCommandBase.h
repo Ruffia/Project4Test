@@ -4,6 +4,7 @@ class COperateCommandBase : public IPLCCommand
 {
 public:
 	virtual bool CheckResponse();
+	~COperateCommandBase();
 
 protected:
 	virtual void _Initialize();

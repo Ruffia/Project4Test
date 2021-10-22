@@ -29,7 +29,7 @@ bool CFaultCommandBase::CheckResponse()
 	CHECK_RESP(0x01)
 	CHECK_RESP(0x00)
 	CHECK_RESP(0x00)
-	CHECK_RESP(0x01)
+	CHECK_RESP(0x00)
 	return true;
 }
 

@@ -1,6 +1,15 @@
 #include "stdafx.h"
 #include "OperateCommandBase.h"
 
+COperateCommandBase::~COperateCommandBase()
+{
+	if (m_pCommand)
+	{
+		delete m_pCommand;
+		m_pCommand = NULL;
+	}
+}
+
 void COperateCommandBase::_Initialize()
 {
 	m_pCommand = new byte[19];
