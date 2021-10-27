@@ -13,6 +13,12 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Command">
+      <UniqueIdentifier>{09708084-9e0d-4ad0-a160-3290b2e83fa7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Thread">
+      <UniqueIdentifier>{6350616c-1c53-46f4-a4f7-b05aff6d8bad}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <Text Include="ReadMe.txt" />
@@ -36,41 +42,47 @@
     <ClInclude Include="ConnSocket.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="BaseCommand.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="OperateCommandBase.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="OperateCommand.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="QueryCommandBase.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="QueryCommand.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="FaultCommandBase.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="FaultCommand.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="DebugCommandBase.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="DebugCommand.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
     <ClInclude Include="Factory.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="FunctionKeyCommandBase.h">
-      <Filter>头文件</Filter>
+    <ClInclude Include="BaseCommand.h">
+      <Filter>Command</Filter>
+    </ClInclude>
+    <ClInclude Include="DebugCommand.h">
+      <Filter>Command</Filter>
+    </ClInclude>
+    <ClInclude Include="DebugCommandBase.h">
+      <Filter>Command</Filter>
+    </ClInclude>
+    <ClInclude Include="FaultCommand.h">
+      <Filter>Command</Filter>
+    </ClInclude>
+    <ClInclude Include="FaultCommandBase.h">
+      <Filter>Command</Filter>
     </ClInclude>
     <ClInclude Include="FunctionKeyCommand.h">
+      <Filter>Command</Filter>
+    </ClInclude>
+    <ClInclude Include="FunctionKeyCommandBase.h">
+      <Filter>Command</Filter>
+    </ClInclude>
+    <ClInclude Include="OperateCommand.h">
+      <Filter>Command</Filter>
+    </ClInclude>
+    <ClInclude Include="OperateCommandBase.h">
+      <Filter>Command</Filter>
+    </ClInclude>
+    <ClInclude Include="ThreadBase.h">
+      <Filter>Thread</Filter>
+    </ClInclude>
+    <ClInclude Include="CommSocket.h">
       <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="PLCResponseReceiveThread.h">
+      <Filter>Thread</Filter>
+    </ClInclude>
+    <ClInclude Include="PLCQueryCommandThread.h">
+      <Filter>Thread</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -87,37 +99,43 @@
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="BaseCommand.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="OperateCommandBase.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="OperateCommand.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="QueryCommandBase.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="QueryCommand.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="FaultCommandBase.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="FaultCommand.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="DebugCommandBase.cpp">
-      <Filter>源文件</Filter>
+      <Filter>Command</Filter>
     </ClCompile>
     <ClCompile Include="DebugCommand.cpp">
-      <Filter>源文件</Filter>
+      <Filter>Command</Filter>
     </ClCompile>
-    <ClCompile Include="FunctionKeyCommandBase.cpp">
-      <Filter>源文件</Filter>
+    <ClCompile Include="DebugCommandBase.cpp">
+      <Filter>Command</Filter>
+    </ClCompile>
+    <ClCompile Include="FaultCommand.cpp">
+      <Filter>Command</Filter>
+    </ClCompile>
+    <ClCompile Include="FaultCommandBase.cpp">
+      <Filter>Command</Filter>
     </ClCompile>
     <ClCompile Include="FunctionKeyCommand.cpp">
+      <Filter>Command</Filter>
+    </ClCompile>
+    <ClCompile Include="FunctionKeyCommandBase.cpp">
+      <Filter>Command</Filter>
+    </ClCompile>
+    <ClCompile Include="OperateCommand.cpp">
+      <Filter>Command</Filter>
+    </ClCompile>
+    <ClCompile Include="OperateCommandBase.cpp">
+      <Filter>Command</Filter>
+    </ClCompile>
+    <ClCompile Include="ThreadBase.cpp">
+      <Filter>Thread</Filter>
+    </ClCompile>
+    <ClCompile Include="CommSocket.cpp">
       <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="PLCResponseReceiveThread.cpp">
+      <Filter>Thread</Filter>
+    </ClCompile>
+    <ClCompile Include="PLCQueryCommandThread.cpp">
+      <Filter>Thread</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

@@ -9,6 +9,7 @@
 #include "BaseCommand.h"
 #include "Factory.h"
 #include <string>
+#include "OperateCommandBase.h"
 
 #ifdef _DEBUG
 #define new DEBUG_NEW
@@ -55,9 +56,12 @@ CPLCDlg::CPLCDlg(CWnd* pParent /*=NULL*/)
 	, m_strServerIP(_T("127.0.0.1"))
 	, m_nPort(5678)
 	, m_strTxt2Send(_T(""))
+	, m_strCurCmd("")
 {
 	m_hIcon = AfxGetApp()->LoadIcon(IDR_MAINFRAME);
-	m_pSocket = new CConnSocket(this);
+	m_pSocket = new CCommSocket();
+	m_pCommThread = new CPLCResponseReceiveThread(m_pSocket);
+	m_pQueryCommandThread = NULL;
 }
 
 CPLCDlg::~CPLCDlg()
@@ -65,6 +69,13 @@ CPLCDlg::~CPLCDlg()
 	if (m_pSocket)
 	{
 		delete m_pSocket;
+	}
+
+	if (m_pCommThread)
+	{
+		m_pCommThread->End();
+		delete m_pCommThread;
+		m_pCommThread = NULL;
 	}
 }
 
@@ -77,6 +88,7 @@ void CPLCDlg::DoDataExchange(CDataExchange* pDX)
 	DDX_Text(pDX, IDC_Txt2Send, m_strTxt2Send);
 	DDV_MaxChars(pDX, m_strTxt2Send, 2048);
 	DDX_Control(pDX, IDC_LIST_RECV, m_lstRecv);
+	DDX_Control(pDX, IDC_COMBO_Wafer, m_comboxWafer);
 }
 
 BEGIN_MESSAGE_MAP(CPLCDlg, CDialogEx)
@@ -87,6 +99,13 @@ BEGIN_MESSAGE_MAP(CPLCDlg, CDialogEx)
 	ON_BN_CLICKED(IDC_BtnReset, &CPLCDlg::OnBnClickedBtnreset)
 	ON_BN_CLICKED(IDC_BtnSend, &CPLCDlg::OnBnClickedBtnsend)
 	ON_BN_CLICKED(IDOK, &CPLCDlg::OnBnClickedOk)
+	ON_MESSAGE(WM_PLC_THREAD_DATA, &CPLCDlg::OnReceiveDataFromPLC)
+	ON_MESSAGE(WM_PLC_THREAD_DATA, &CPLCDlg::OnReceiveDataFromQueryThread)
+	ON_BN_CLICKED(IDC_Btn_Motor_Power_On, &CPLCDlg::OnBnClickedBtnMotorPowerOn)
+	ON_BN_CLICKED(IDC_Btn_SendWafer_Initial, &CPLCDlg::OnBnClickedBtnSendwaferInitial)
+	ON_BN_CLICKED(IDC_Btn_TakingWafer, &CPLCDlg::OnBnClickedBtnTakingwafer)
+	ON_BN_CLICKED(IDC_Btn_Motor_Enable, &CPLCDlg::OnBnClickedBtnMotorEnable)
+	ON_BN_CLICKED(IDC_Btn_Position_parameter_Req, &CPLCDlg::OnBnClickedBtnPositionparameterReq)
 END_MESSAGE_MAP()
 
 
@@ -122,14 +141,15 @@ BOOL CPLCDlg::OnInitDialog()
 	SetIcon(m_hIcon, FALSE);		// 设置小图标
 
 	// TODO: 在此添加额外的初始化代码
-	WSADATA wsaData;
-	int nRet  = WSAStartup(MAKEWORD(2,2),&wsaData);
-	if(nRet != 0)
+	m_comboxWafer.ResetContent();
+	for (int i = 1;i< 12;i++)
 	{
-		TRACE("WSAStartup failed");
-		return FALSE;
+		CString strNumber = _T("");
+		strNumber.Format("%d",i);
+		m_comboxWafer.AddString(strNumber);
 	}
 
+	m_comboxWafer.SetCurSel(0);
 	UpdateData(FALSE);
 	OnConnect(FALSE);
 	return TRUE;  // 除非将焦点设置到控件，否则返回 TRUE
@@ -187,7 +207,7 @@ HCURSOR CPLCDlg::OnQueryDragIcon()
 void CPLCDlg::OnReceive(CString sText)
 {
 	m_lstRecv.AddString(sText);
-	UpdateData(FALSE);
+	//UpdateData(FALSE);
 }
 
 void CPLCDlg::OnConnect(bool bConnect)
@@ -201,33 +221,16 @@ void CPLCDlg::OnBnClickedBtnconnect()
 {
 	// TODO: 在此添加控件通知处理程序代码
 	UpdateData(TRUE);
-	DWORD dwErr = 0;
-	BOOL bCreate = m_pSocket->Create();
-	if (!bCreate)
-	{
-		char szMsg[1024] = {0};
-		sprintf_s(szMsg, 1024,"create faild: %d", m_pSocket->GetLastError());
-		CString sErr(szMsg);
-		MessageBox(sErr);
-		return;
-	}
-
 	m_pSocket->Init(m_strServerIP,m_nPort);
-	BOOL bConnect = m_pSocket->Connect((LPCTSTR)m_strServerIP,m_nPort);
-	if (!bConnect)
-	{
-		dwErr = GetLastError();
-		return;
-	}
-	OnConnect(bConnect);
+	m_pCommThread->Attach(m_hWnd);
+	m_pCommThread->Start();
+	OnConnect(true);
 }
 
 
 void CPLCDlg::OnBnClickedBtnreset()
 {
 	// TODO: 在此添加控件通知处理程序代码
-	if(!m_pSocket) return;
-	m_pSocket->Close();
 	m_strTxt2Send = "";
 	UpdateData(FALSE);
 }
@@ -257,6 +260,7 @@ void CPLCDlg::OnBnClickedBtnsend()
 	char* sCommand = pCommand->GetCommand();
 
 	CString strCommand   =   (CString)(LPCTSTR)sCommand; 
+	_AppendTimePrefix(strCommand);
 	m_lstRecv.AddString(strCommand);
 
 	//byte a = 0xAF;
@@ -265,7 +269,7 @@ void CPLCDlg::OnBnClickedBtnsend()
 	//pCommd[1] = 0xA1;
 	//pCommd[2] = 0x13;
 	//pCommd[3] = 0x88;
-	int nRet = m_pSocket->Send(pCommand->m_pCommand,_msize(pCommand->m_pCommand));
+	int nRet = m_pSocket->Send(pCommand->m_pCommand);
 	if (-1 == nRet)
 	{
 		char szError[256] = {0};
@@ -284,3 +288,161 @@ void CPLCDlg::OnBnClickedOk()
 	// TODO: 在此添加控件通知处理程序代码
 	CDialogEx::OnOK();
 }
+
+
+LRESULT CPLCDlg::OnReceiveDataFromPLC(WPARAM wParam, LPARAM lParam)
+{
+	byte* bData = (byte*)(char*)(WPARAM)wParam;
+	int nLen = (int)lParam;
+	CString sMsg = _T("");
+	for (int i = 0; i < nLen;i++)
+	{
+		CString sByte = _T("");
+		sByte.Format(_T("%X "), bData[i]);
+		sMsg += sByte;
+	}
+
+	if (m_strCurCmd == "SendWafer_Initial")
+	{
+		if (m_pQueryCommand && m_pQueryCommandThread)
+		{
+			m_pQueryCommand->m_pResp = bData;
+			m_pQueryCommandThread->m_bTaskDone = m_pQueryCommand->CheckResponse();
+			if (m_pQueryCommandThread->m_bTaskDone)
+			{
+				Sleep(200);
+				m_pQueryCommandThread->End();
+				delete m_pQueryCommandThread;
+				m_pQueryCommandThread = NULL;
+
+				m_strCurCmd = "SendWafer_PAReady";
+				_SendCommand("m_strCurCmd");
+			}
+		}
+	}
+
+	delete bData;
+	bData = NULL;
+	
+	_AppendTimePrefix(sMsg);
+	OnReceive(sMsg);
+	return 0L;
+}
+
+
+LRESULT CPLCDlg::OnReceiveDataFromQueryThread(WPARAM wParam, LPARAM lParam)
+{
+	byte* bData = (byte*)(char*)(WPARAM)wParam;
+	int nLen = (int)lParam;
+	CString sMsg = _T("");
+	for (int i = 0; i < nLen;i++)
+	{
+		CString sByte = _T("");
+		sByte.Format(_T("%X "), bData[i]);
+		sMsg += sByte;
+	}
+
+	delete bData;
+	bData = NULL;
+
+	_AppendTimePrefix(sMsg);
+	OnReceive(sMsg);
+	return 0L;
+}
+
+
+void CPLCDlg::_AppendTimePrefix( CString& strCommand ) 
+{
+	SYSTEMTIME st;
+	CString strDate,strTime;
+	GetLocalTime(&st);
+	strDate.Format("%4d-%2d-%2d",st.wYear,st.wMonth,st.wDay);
+	strTime.Format("%2d:%2d:%2d",st.wHour,st.wMinute,st.wSecond);
+
+	strCommand = strDate + " " + strTime + "  " + strCommand;
+}
+
+
+void CPLCDlg::_SendCommand(const std::string strCmd )
+{
+	IPLCCommand* pCommand = Factory<IPLCCommand,std::string>::Instance().BuildProduct(strCmd);
+	if (!pCommand) return;
+	pCommand->BuildCommand();
+	char* sCommand = pCommand->GetCommand();
+
+	CString strCommand   =   (CString)(LPCTSTR)sCommand; 
+	_AppendTimePrefix(strCommand);
+	m_lstRecv.AddString(strCommand);
+
+	int nRet = m_pSocket->Send(pCommand->m_pCommand);
+	if (-1 == nRet)
+	{
+		char szError[256] = {0};
+		sprintf_s(szError, 256,"Send Faild: %d", GetLastError());
+		MessageBox(szError);
+		return;
+	}
+
+	_CheckQueyCommand(pCommand);
+
+	delete pCommand;
+	pCommand = NULL;
+}
+
+
+void CPLCDlg::OnBnClickedBtnMotorPowerOn()
+{
+	// TODO: 在此添加控件通知处理程序代码
+	m_strCurCmd = "Motor_Power_On";
+	_SendCommand(m_strCurCmd);
+}
+
+
+void CPLCDlg::OnBnClickedBtnMotorEnable()
+{
+	// TODO: 在此添加控件通知处理程序代码
+	m_strCurCmd = "Motor_Enable";
+	_SendCommand(m_strCurCmd);
+}
+
+
+void CPLCDlg::OnBnClickedBtnPositionparameterReq()
+{
+	// TODO: 在此添加控件通知处理程序代码
+	m_strCurCmd = "Position parameter_Req";
+	_SendCommand(m_strCurCmd);
+}
+
+
+void CPLCDlg::OnBnClickedBtnSendwaferInitial()
+{
+	// TODO: 在此添加控件通知处理程序代码
+	m_strCurCmd = "SendWafer_Initial";
+	_SendCommand(m_strCurCmd);
+}
+
+
+void CPLCDlg::OnBnClickedBtnTakingwafer()
+{
+	// TODO: 在此添加控件通知处理程序代码
+	int nPos = ((CComboBox*)GetDlgItem(IDC_COMBO_Wafer))->GetCurSel();
+	CString strWaferNumber = _T("");
+	strWaferNumber.Format("%d",nPos + 1);
+	strWaferNumber = "TakingWafer_" + strWaferNumber;
+	std::string strCmd(strWaferNumber.GetBuffer(0));
+	_SendCommand(strCmd);
+}
+
+
+void CPLCDlg::_CheckQueyCommand( IPLCCommand* pCommand )
+{
+	COperateCommandBase* pOperateCommand = dynamic_cast<COperateCommandBase*>(pCommand);
+	if(pOperateCommand)
+	{
+		m_pQueryCommand = pOperateCommand->m_pQueryCommand;
+		m_pQueryCommandThread = new CPLCQueryCommandThread(m_pSocket,m_pQueryCommand);
+		m_pQueryCommandThread->Start();
+	}
+}
+
+

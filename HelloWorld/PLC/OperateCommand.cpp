@@ -3,7 +3,7 @@
 #include "Factory.h"
 #include <string>
 
-IMPLEMENT_FACTORY(COperateCommandBase,SendWafer_Initial,std::string,"SendWafer_Initial")
+IMPLEMENT_FACTORY(IPLCCommand,SendWafer_Initial,std::string,"SendWafer_Initial")
 SendWafer_Initial::SendWafer_Initial()
 {
 	strcpy_s(m_szMapAddress,"CIO5000.00");
@@ -22,7 +22,7 @@ void SendWafer_Initial::_BuildAddress2Send()
 }
 
 
-IMPLEMENT_FACTORY(COperateCommandBase,SendWafer_PAReady,std::string,"SendWafer_PAReady")
+IMPLEMENT_FACTORY(IPLCCommand,SendWafer_PAReady,std::string,"SendWafer_PAReady")
 SendWafer_PAReady::SendWafer_PAReady()
 {
 	strcpy_s(m_szMapAddress,"CIO5000.01");
@@ -35,7 +35,7 @@ void SendWafer_PAReady::_BuildAddress2Send()
 	m_pCommand[15] = 0x01;
 }
 
-IMPLEMENT_FACTORY(COperateCommandBase,SendWafer_Cassette2PA,std::string,"SendWafer_Cassette2PA")
+IMPLEMENT_FACTORY(IPLCCommand,SendWafer_Cassette2PA,std::string,"SendWafer_Cassette2PA")
 SendWafer_Cassette2PA::SendWafer_Cassette2PA()
 {
 	strcpy_s(m_szMapAddress,"CIO5000.02");
@@ -53,7 +53,7 @@ void SendWafer_Cassette2PA::_BuildAddress2Send()
 	m_pCommand[15] = 0x02;
 }
 
-IMPLEMENT_FACTORY(COperateCommandBase,SendWafer_LayWaferOnPA,std::string,"SendWafer_LayWaferOnPA")
+IMPLEMENT_FACTORY(IPLCCommand,SendWafer_LayWaferOnPA,std::string,"SendWafer_LayWaferOnPA")
 SendWafer_LayWaferOnPA::SendWafer_LayWaferOnPA()
 {
 	strcpy_s(m_szMapAddress,"CIO5000.03");
@@ -72,7 +72,7 @@ void SendWafer_LayWaferOnPA::_BuildAddress2Send()
 }
 
 
-IMPLEMENT_FACTORY(COperateCommandBase,SendWafer_G2Open_In,std::string,"SendWafer_G2Open_In")
+IMPLEMENT_FACTORY(IPLCCommand,SendWafer_G2Open_In,std::string,"SendWafer_G2Open_In")
 SendWafer_G2Open_In::SendWafer_G2Open_In()
 {
 	strcpy_s(m_szMapAddress,"CIO5000.04");
@@ -92,7 +92,7 @@ void SendWafer_G2Open_In::_BuildAddress2Send()
 }
 
 
-IMPLEMENT_FACTORY(COperateCommandBase,SendWafer_G1Open_In,std::string,"SendWafer_G1Open_In")
+IMPLEMENT_FACTORY(IPLCCommand,SendWafer_G1Open_In,std::string,"SendWafer_G1Open_In")
 SendWafer_G1Open_In::SendWafer_G1Open_In()
 {
 	strcpy_s(m_szMapAddress,"CIO5000.05");
@@ -111,7 +111,7 @@ void SendWafer_G1Open_In::_BuildAddress2Send()
 }
 
 
-IMPLEMENT_FACTORY(COperateCommandBase,SendWafer_StageLiftWafer,std::string,"SendWafer_StageLiftWafer")
+IMPLEMENT_FACTORY(IPLCCommand,SendWafer_StageLiftWafer,std::string,"SendWafer_StageLiftWafer")
 SendWafer_StageLiftWafer::SendWafer_StageLiftWafer()
 {
 	strcpy_s(m_szMapAddress,"CIO5000.06");
@@ -130,7 +130,7 @@ void SendWafer_StageLiftWafer::_BuildAddress2Send()
 }
 
 
-IMPLEMENT_FACTORY(COperateCommandBase,RemoveWafer_CV2SEM,std::string,"RemoveWafer_CV2SEM")
+IMPLEMENT_FACTORY(IPLCCommand,RemoveWafer_CV2SEM,std::string,"RemoveWafer_CV2SEM")
 RemoveWafer_CV2SEM::RemoveWafer_CV2SEM()
 {
 	strcpy_s(m_szMapAddress,"CIO5000.07");
@@ -151,7 +151,7 @@ void RemoveWafer_CV2SEM::_BuildAddress2Send()
 
 
 
-IMPLEMENT_FACTORY(COperateCommandBase,RemoveWafer_ReturnWafer2LoadLock,std::string,"RemoveWafer_ReturnWafer2LoadLock")
+IMPLEMENT_FACTORY(IPLCCommand,RemoveWafer_ReturnWafer2LoadLock,std::string,"RemoveWafer_ReturnWafer2LoadLock")
 RemoveWafer_ReturnWafer2LoadLock::RemoveWafer_ReturnWafer2LoadLock()
 {
 	strcpy_s(m_szMapAddress,"CIO5000.08");
@@ -170,7 +170,7 @@ void RemoveWafer_ReturnWafer2LoadLock::_BuildAddress2Send()
 }
 
 
-IMPLEMENT_FACTORY(COperateCommandBase,RemoveWafer_G2Open,std::string,"RemoveWafer_G2Open")
+IMPLEMENT_FACTORY(IPLCCommand,RemoveWafer_G2Open,std::string,"RemoveWafer_G2Open")
 RemoveWafer_G2Open::RemoveWafer_G2Open()
 {
 	strcpy_s(m_szMapAddress,"CIO5000.09");

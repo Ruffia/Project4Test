@@ -103,6 +103,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="BaseCommand.h" />
+    <ClInclude Include="CommSocket.h" />
     <ClInclude Include="DebugCommand.h" />
     <ClInclude Include="DebugCommandBase.h" />
     <ClInclude Include="Factory.h" />
@@ -115,14 +116,16 @@
     <ClInclude Include="PLC.h" />
     <ClInclude Include="PLCDlg.h" />
     <ClInclude Include="ConnSocket.h" />
-    <ClInclude Include="QueryCommand.h" />
-    <ClInclude Include="QueryCommandBase.h" />
+    <ClInclude Include="PLCQueryCommandThread.h" />
+    <ClInclude Include="PLCResponseReceiveThread.h" />
     <ClInclude Include="Resource.h" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="targetver.h" />
+    <ClInclude Include="ThreadBase.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="BaseCommand.cpp" />
+    <ClCompile Include="CommSocket.cpp" />
     <ClCompile Include="DebugCommand.cpp" />
     <ClCompile Include="DebugCommandBase.cpp" />
     <ClCompile Include="FaultCommand.cpp" />
@@ -134,12 +137,13 @@
     <ClCompile Include="PLC.cpp" />
     <ClCompile Include="PLCDlg.cpp" />
     <ClCompile Include="ConnSocket.cpp" />
-    <ClCompile Include="QueryCommand.cpp" />
-    <ClCompile Include="QueryCommandBase.cpp" />
+    <ClCompile Include="PLCQueryCommandThread.cpp" />
+    <ClCompile Include="PLCResponseReceiveThread.cpp" />
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
     </ClCompile>
+    <ClCompile Include="ThreadBase.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="PLC.rc" />
