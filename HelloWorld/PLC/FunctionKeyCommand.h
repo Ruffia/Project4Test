@@ -1,3 +1,4 @@
+#pragma once
 #include "FunctionKeyCommandBase.h"
 
 class TakingWafer_1 : public CFunctionKeyCommandBase

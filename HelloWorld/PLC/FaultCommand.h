@@ -1,3 +1,4 @@
+#pragma once
 #include "FaultCommandBase.h"
 
 //DD马达过电流信号

@@ -106,6 +106,7 @@
     <ClInclude Include="CommSocket.h" />
     <ClInclude Include="DebugCommand.h" />
     <ClInclude Include="DebugCommandBase.h" />
+    <ClInclude Include="DumpFile.h" />
     <ClInclude Include="Factory.h" />
     <ClInclude Include="FaultCommand.h" />
     <ClInclude Include="FaultCommandBase.h" />
@@ -118,6 +119,8 @@
     <ClInclude Include="ConnSocket.h" />
     <ClInclude Include="PLCQueryCommandThread.h" />
     <ClInclude Include="PLCResponseReceiveThread.h" />
+    <ClInclude Include="QueryCommand.h" />
+    <ClInclude Include="QueryCommandBase.h" />
     <ClInclude Include="Resource.h" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="targetver.h" />
@@ -139,6 +142,8 @@
     <ClCompile Include="ConnSocket.cpp" />
     <ClCompile Include="PLCQueryCommandThread.cpp" />
     <ClCompile Include="PLCResponseReceiveThread.cpp" />
+    <ClCompile Include="QueryCommand.cpp" />
+    <ClCompile Include="QueryCommandBase.cpp" />
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>

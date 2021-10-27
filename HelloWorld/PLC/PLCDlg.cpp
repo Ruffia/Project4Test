@@ -409,7 +409,7 @@ void CPLCDlg::OnBnClickedBtnMotorEnable()
 void CPLCDlg::OnBnClickedBtnPositionparameterReq()
 {
 	// TODO: 在此添加控件通知处理程序代码
-	m_strCurCmd = "Position parameter_Req";
+	m_strCurCmd = "Position_parameter_Req";
 	_SendCommand(m_strCurCmd);
 }
 
@@ -437,12 +437,14 @@ void CPLCDlg::OnBnClickedBtnTakingwafer()
 void CPLCDlg::_CheckQueyCommand( IPLCCommand* pCommand )
 {
 	COperateCommandBase* pOperateCommand = dynamic_cast<COperateCommandBase*>(pCommand);
-	if(pOperateCommand)
-	{
-		m_pQueryCommand = pOperateCommand->m_pQueryCommand;
-		m_pQueryCommandThread = new CPLCQueryCommandThread(m_pSocket,m_pQueryCommand);
-		m_pQueryCommandThread->Start();
-	}
+	if(!pOperateCommand) return;
+	
+	m_pQueryCommand = pOperateCommand->m_pQueryCommand;
+	if(!m_pQueryCommand) return;
+
+	m_pQueryCommandThread = new CPLCQueryCommandThread(m_pSocket,m_pQueryCommand);
+	m_pQueryCommandThread->Start();
+	
 }
 
 

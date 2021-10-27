@@ -33,8 +33,8 @@ UINT CPLCQueryCommandThread::WorkThread(LPVOID lpData)
 DWORD CPLCQueryCommandThread::DoJob()
 {
 	if(!m_pSocket) return -1;
+	if(!m_pCommand) return -1;
 
-	m_pCommand->BuildCommand();
 	byte* pData = m_pCommand->m_pCommand;
 	int nLen = _msize(pData);
     PostMessage(m_hWnd,WM_PLC_THREAD_DATA,(WPARAM)pData,(LPARAM)nLen);

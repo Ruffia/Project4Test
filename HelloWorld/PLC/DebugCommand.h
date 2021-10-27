@@ -1,3 +1,4 @@
+#pragma once
 #include "DebugCommandBase.h"
 
 //X取片位置（进入cassette）

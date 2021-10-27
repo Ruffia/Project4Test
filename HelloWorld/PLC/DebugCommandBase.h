@@ -1,3 +1,4 @@
+#pragma once
 #include "BaseCommand.h"
 class CDebugCommandBase : public IPLCCommand
 {

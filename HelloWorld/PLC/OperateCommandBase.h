@@ -1,3 +1,4 @@
+#pragma once
 #include "BaseCommand.h"
 #include "QueryCommandBase.h"
 class COperateCommandBase : public IPLCCommand

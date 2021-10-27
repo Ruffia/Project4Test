@@ -1,3 +1,4 @@
+#pragma once
 #include "QueryCommandBase.h"
 
 class SendWafer_Initial_finished : public CQueryCommandBase

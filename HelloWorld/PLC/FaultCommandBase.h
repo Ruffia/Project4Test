@@ -1,3 +1,4 @@
+#pragma once
 #include "BaseCommand.h"
 class CFaultCommandBase : public IPLCCommand
 {

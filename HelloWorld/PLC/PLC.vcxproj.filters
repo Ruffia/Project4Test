@@ -84,6 +84,15 @@
     <ClInclude Include="PLCQueryCommandThread.h">
       <Filter>Thread</Filter>
     </ClInclude>
+    <ClInclude Include="DumpFile.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="QueryCommand.h">
+      <Filter>Command</Filter>
+    </ClInclude>
+    <ClInclude Include="QueryCommandBase.h">
+      <Filter>Command</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="PLC.cpp">
@@ -136,6 +145,12 @@
     </ClCompile>
     <ClCompile Include="PLCQueryCommandThread.cpp">
       <Filter>Thread</Filter>
+    </ClCompile>
+    <ClCompile Include="QueryCommand.cpp">
+      <Filter>Command</Filter>
+    </ClCompile>
+    <ClCompile Include="QueryCommandBase.cpp">
+      <Filter>Command</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
