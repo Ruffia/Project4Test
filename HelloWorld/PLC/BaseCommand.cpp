@@ -44,8 +44,8 @@ void IPLCCommand::BuildCommand()
 char* IPLCCommand::GetCommand()
 {
 	memset(m_szCommand,0,128);
-	strcat_s(m_szCommand,m_szMapAddress);
-	strcat_s(m_szCommand,": ");
+	//strcat_s(m_szCommand,m_szMapAddress);
+	//strcat_s(m_szCommand,": ");
 
 	int nLength = (int)_msize(m_pCommand);
 	for (int i = 0; i < nLength;i++)
