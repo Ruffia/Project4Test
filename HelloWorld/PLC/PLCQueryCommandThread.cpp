@@ -35,9 +35,10 @@ DWORD CPLCQueryCommandThread::DoJob()
 	if(!m_pSocket) return -1;
 	if(!m_pCommand) return -1;
 
-	byte* pData = m_pCommand->m_pCommand;
-	int nLen = _msize(pData);
-    PostMessage(m_hWnd,WM_PLC_THREAD_DATA,(WPARAM)pData,(LPARAM)nLen);
+	int nLen = _msize(m_pCommand->m_pCommand);
+	byte* pData = new byte[nLen];
+	memcpy(pData,m_pCommand->m_pCommand,nLen);
+    PostMessage(m_hWnd,WM_QUERY_THREAD_DATA,(WPARAM)pData,(LPARAM)nLen);
 
 	int nRet = m_pSocket->Send(m_pCommand->m_pCommand);
 	if (-1 == nRet)

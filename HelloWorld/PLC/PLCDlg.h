@@ -32,6 +32,9 @@ protected:
 
 	// 生成的消息映射函数
 	virtual BOOL OnInitDialog();
+
+	
+
 	afx_msg void OnSysCommand(UINT nID, LPARAM lParam);
 	afx_msg void OnPaint();
 	afx_msg HCURSOR OnQueryDragIcon();
@@ -46,6 +49,14 @@ protected:
 	afx_msg void OnBnClickedBtnPositionparameterReq();
 	afx_msg void OnBnClickedBtnSendwaferInitial();
 	afx_msg void OnBnClickedBtnTakingwafer();
+	afx_msg void OnBnClickedButtonCassette2PA();
+	afx_msg void OnBnClickedButtonLaywaferOnPA();
+	afx_msg void OnBnClickedButtonG2openIn();
+	afx_msg void OnBnClickedButtonG1openIn();
+	afx_msg void OnBnClickedButtonStageLiftWafer();
+	afx_msg void OnBnClickedButtonCV2SEM();
+	afx_msg void OnBnClickedButtonReturnWafer2LoadLock();
+	afx_msg void OnBnClickedButtonG2Open();
 	DECLARE_MESSAGE_MAP()
 
 public:
@@ -59,6 +70,13 @@ private:
 	//部分操作指令需要通过循环查询的方式，根据返回的指令判断
 	//操作指令执行的结果
 	void _CheckQueyCommand( IPLCCommand* pCommand );
+
+	void _CheckResponse( int nLen, byte* bData );
+
+	//创建Log文本
+	void _CreateLogFile();
+
+	void _AddLog( char * szBuff );
 
 public:
 	//Peer IP
@@ -83,4 +101,7 @@ public:
 
 	//当前正在执行的指令
 	std::string  m_strCurCmd;
+
+	//log
+	HANDLE	m_hFileLog;
 };

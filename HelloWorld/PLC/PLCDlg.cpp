@@ -49,8 +49,6 @@ END_MESSAGE_MAP()
 
 // CPLCDlg 对话框
 
-
-
 CPLCDlg::CPLCDlg(CWnd* pParent /*=NULL*/)
 	: CDialogEx(CPLCDlg::IDD, pParent)
 	, m_strServerIP(_T("127.0.0.1"))
@@ -100,12 +98,20 @@ BEGIN_MESSAGE_MAP(CPLCDlg, CDialogEx)
 	ON_BN_CLICKED(IDC_BtnSend, &CPLCDlg::OnBnClickedBtnsend)
 	ON_BN_CLICKED(IDOK, &CPLCDlg::OnBnClickedOk)
 	ON_MESSAGE(WM_PLC_THREAD_DATA, &CPLCDlg::OnReceiveDataFromPLC)
-	ON_MESSAGE(WM_PLC_THREAD_DATA, &CPLCDlg::OnReceiveDataFromQueryThread)
+	ON_MESSAGE(WM_QUERY_THREAD_DATA, &CPLCDlg::OnReceiveDataFromQueryThread)
 	ON_BN_CLICKED(IDC_Btn_Motor_Power_On, &CPLCDlg::OnBnClickedBtnMotorPowerOn)
 	ON_BN_CLICKED(IDC_Btn_SendWafer_Initial, &CPLCDlg::OnBnClickedBtnSendwaferInitial)
 	ON_BN_CLICKED(IDC_Btn_TakingWafer, &CPLCDlg::OnBnClickedBtnTakingwafer)
 	ON_BN_CLICKED(IDC_Btn_Motor_Enable, &CPLCDlg::OnBnClickedBtnMotorEnable)
 	ON_BN_CLICKED(IDC_Btn_Position_parameter_Req, &CPLCDlg::OnBnClickedBtnPositionparameterReq)
+	ON_BN_CLICKED(IDC_BUTTON_Cassette2PA, &CPLCDlg::OnBnClickedButtonCassette2PA)
+	ON_BN_CLICKED(IDC_BUTTON_LayWaferOnPA, &CPLCDlg::OnBnClickedButtonLaywaferOnPA)
+	ON_BN_CLICKED(IDC_BUTTON_G2Open_In, &CPLCDlg::OnBnClickedButtonG2openIn)
+	ON_BN_CLICKED(IDC_BUTTON_G1Open_In, &CPLCDlg::OnBnClickedButtonG1openIn)
+	ON_BN_CLICKED(IDC_BUTTON_StageLiftWafer, &CPLCDlg::OnBnClickedButtonStageLiftWafer)
+	ON_BN_CLICKED(IDC_BUTTON_CV2SEM, &CPLCDlg::OnBnClickedButtonCV2SEM)
+	ON_BN_CLICKED(IDC_BUTTON_ReturnWafer2LoadLock, &CPLCDlg::OnBnClickedButtonReturnWafer2LoadLock)
+	ON_BN_CLICKED(IDC_BUTTON_G2Open, &CPLCDlg::OnBnClickedButtonG2Open)
 END_MESSAGE_MAP()
 
 
@@ -139,6 +145,8 @@ BOOL CPLCDlg::OnInitDialog()
 	//  执行此操作
 	SetIcon(m_hIcon, TRUE);			// 设置大图标
 	SetIcon(m_hIcon, FALSE);		// 设置小图标
+
+	_CreateLogFile();
 
 	// TODO: 在此添加额外的初始化代码
 	m_comboxWafer.ResetContent();
@@ -298,37 +306,17 @@ LRESULT CPLCDlg::OnReceiveDataFromPLC(WPARAM wParam, LPARAM lParam)
 	for (int i = 0; i < nLen;i++)
 	{
 		CString sByte = _T("");
-		sByte.Format(_T("%X "), bData[i]);
+		sByte.Format(_T("%02X "), bData[i]);
 		sMsg += sByte;
 	}
 
-	if (m_strCurCmd == "SendWafer_Initial")
-	{
-		if (m_pQueryCommand && m_pQueryCommandThread)
-		{
-			m_pQueryCommand->m_pResp = new byte[nLen];
-			memcpy(m_pQueryCommand->m_pResp,bData,nLen);
-			m_pQueryCommandThread->m_bTaskDone = m_pQueryCommand->CheckResponse();
-			if (m_pQueryCommandThread->m_bTaskDone)
-			{
-				Sleep(200);
-				m_pQueryCommandThread->End();
-				delete m_pQueryCommandThread;
-				m_pQueryCommandThread = NULL;
-
-				delete m_pQueryCommand;
-				m_pQueryCommand = NULL;
-
-				m_strCurCmd = "SendWafer_PAReady";
-				_SendCommand("m_strCurCmd");
-			}
-		}
-	}
+	_CheckResponse(nLen, bData);
 
 	delete bData;
 	bData = NULL;
 	
 	_AppendTimePrefix(sMsg);
+	_AddLog((LPSTR)(LPCTSTR)sMsg);
 	OnReceive(sMsg);
 	return 0L;
 }
@@ -342,7 +330,7 @@ LRESULT CPLCDlg::OnReceiveDataFromQueryThread(WPARAM wParam, LPARAM lParam)
 	for (int i = 0; i < nLen;i++)
 	{
 		CString sByte = _T("");
-		sByte.Format(_T("%X "), bData[i]);
+		sByte.Format(_T("%02X "), bData[i]);
 		sMsg += sByte;
 	}
 
@@ -350,6 +338,7 @@ LRESULT CPLCDlg::OnReceiveDataFromQueryThread(WPARAM wParam, LPARAM lParam)
 	bData = NULL;
 
 	_AppendTimePrefix(sMsg);
+	_AddLog((LPSTR)(LPCTSTR)sMsg);
 	OnReceive(sMsg);
 	return 0L;
 }
@@ -360,8 +349,8 @@ void CPLCDlg::_AppendTimePrefix( CString& strCommand )
 	SYSTEMTIME st;
 	CString strDate,strTime;
 	GetLocalTime(&st);
-	strDate.Format("%4d-%2d-%2d",st.wYear,st.wMonth,st.wDay);
-	strTime.Format("%2d:%2d:%2d",st.wHour,st.wMinute,st.wSecond);
+	strDate.Format("%04d-%02d-%02d",st.wYear,st.wMonth,st.wDay);
+	strTime.Format("%02d:%02d:%02d",st.wHour,st.wMinute,st.wSecond);
 
 	strCommand = strDate + " " + strTime + "  " + strCommand;
 }
@@ -374,8 +363,9 @@ void CPLCDlg::_SendCommand(const std::string strCmd )
 	pCommand->BuildCommand();
 	char* sCommand = pCommand->GetCommand();
 
-	CString strCommand   =   (CString)(LPCTSTR)sCommand; 
+	CString strCommand = (CString)(LPCTSTR)sCommand; 
 	_AppendTimePrefix(strCommand);
+	_AddLog((LPSTR)(LPCTSTR)strCommand);
 	m_lstRecv.AddString(strCommand);
 
 	int nRet = m_pSocket->Send(pCommand->m_pCommand);
@@ -447,8 +437,169 @@ void CPLCDlg::_CheckQueyCommand( IPLCCommand* pCommand )
 	if(!m_pQueryCommand) return;
 
 	m_pQueryCommandThread = new CPLCQueryCommandThread(m_pSocket,m_pQueryCommand);
+	m_pQueryCommandThread->Attach(m_hWnd);
 	m_pQueryCommandThread->Start();
 	
 }
 
+
+void CPLCDlg::OnBnClickedButtonCassette2PA()
+{
+	// TODO: 在此添加控件通知处理程序代码
+	m_strCurCmd = "SendWafer_Cassette2PA";
+	_SendCommand(m_strCurCmd);
+}
+
+
+void CPLCDlg::OnBnClickedButtonLaywaferOnPA()
+{
+	// TODO: 在此添加控件通知处理程序代码
+	m_strCurCmd = "SendWafer_LayWaferOnPA";
+	_SendCommand(m_strCurCmd);
+}
+
+
+void CPLCDlg::OnBnClickedButtonG2openIn()
+{
+	// TODO: 在此添加控件通知处理程序代码
+	m_strCurCmd = "SendWafer_G2Open_In";
+	_SendCommand(m_strCurCmd);
+}
+
+
+void CPLCDlg::OnBnClickedButtonG1openIn()
+{
+	// TODO: 在此添加控件通知处理程序代码
+	m_strCurCmd = "SendWafer_G1Open_In";
+	_SendCommand(m_strCurCmd);
+}
+
+
+
+void CPLCDlg::OnBnClickedButtonStageLiftWafer()
+{
+	// TODO: 在此添加控件通知处理程序代码
+	m_strCurCmd = "SendWafer_StageLiftWafer";
+	_SendCommand(m_strCurCmd);
+}
+
+
+void CPLCDlg::OnBnClickedButtonCV2SEM()
+{
+	// TODO: 在此添加控件通知处理程序代码
+	m_strCurCmd = "RemoveWafer_CV2SEM";
+	_SendCommand(m_strCurCmd);
+}
+
+
+void CPLCDlg::OnBnClickedButtonReturnWafer2LoadLock()
+{
+	// TODO: 在此添加控件通知处理程序代码
+	m_strCurCmd = "RemoveWafer_ReturnWafer2LoadLock";
+	_SendCommand(m_strCurCmd);
+}
+
+
+void CPLCDlg::OnBnClickedButtonG2Open()
+{
+	// TODO: 在此添加控件通知处理程序代码
+	m_strCurCmd = "RemoveWafer_G2Open";
+	_SendCommand(m_strCurCmd);
+}
+
+
+void CPLCDlg::_CheckResponse( int nLen, byte* bData )
+{
+	if(!bData) return;
+
+	if (m_strCurCmd == "SendWafer_Initial")
+	{
+		if (m_pQueryCommand && m_pQueryCommandThread)
+		{
+			m_pQueryCommand->m_pResp = new byte[nLen];
+			memcpy(m_pQueryCommand->m_pResp,bData,nLen);
+			m_pQueryCommandThread->m_bTaskDone = m_pQueryCommand->CheckResponse();
+			if (m_pQueryCommandThread->m_bTaskDone)
+			{
+				Sleep(200);
+				m_pQueryCommandThread->End();
+				delete m_pQueryCommandThread;
+				m_pQueryCommandThread = NULL;
+
+				delete m_pQueryCommand;
+				m_pQueryCommand = NULL;
+
+				m_strCurCmd = "SendWafer_PAReady";
+				_SendCommand("m_strCurCmd");
+			}
+		}
+
+		return;
+	}
+
+	if (m_strCurCmd == "SendWafer_Cassette2PA"  ||
+		m_strCurCmd == "SendWafer_LayWaferOnPA" ||
+		m_strCurCmd == "SendWafer_G2Open_In"    || 
+		m_strCurCmd == "SendWafer_G1Open_In"    ||
+		m_strCurCmd == "SendWafer_StageLiftWafer"  ||
+		m_strCurCmd == "RemoveWafer_CV2SEM"     ||
+		m_strCurCmd == "RemoveWafer_ReturnWafer2LoadLock" ||
+		m_strCurCmd == "RemoveWafer_G2Open" )
+	{
+		if (m_pQueryCommand && m_pQueryCommandThread)
+		{
+			m_pQueryCommand->m_pResp = new byte[nLen];
+			memcpy(m_pQueryCommand->m_pResp,bData,nLen);
+			m_pQueryCommandThread->m_bTaskDone = m_pQueryCommand->CheckResponse();
+			if (m_pQueryCommandThread->m_bTaskDone)
+			{
+				Sleep(200);
+				m_pQueryCommandThread->End();
+				delete m_pQueryCommandThread;
+				m_pQueryCommandThread = NULL;
+
+				delete m_pQueryCommand;
+				m_pQueryCommand = NULL;
+			}
+		}
+	}
+
+}
+
+
+void CPLCDlg::_CreateLogFile()
+{
+	char szPath[256] = {0};
+	DWORD dwLength = GetModuleFileName(NULL,szPath,MAX_PATH);
+	for (int i = dwLength - 1; i > 0; i-- )
+	{
+		if ( szPath[i] == '\\' )
+		{
+			szPath[i+1] = '\0';
+			break;
+		}
+	}
+	strcat_s( szPath, "Log\\" );
+
+	BOOL bExistPath = PathFileExists(szPath);
+	if(!bExistPath)
+	{
+		CreateDirectory(szPath,NULL);
+	}
+
+	CString str, strTime;
+	CTime	timeCurrent = CTime::GetCurrentTime();
+	strTime = timeCurrent.Format(_T("%Y%m%d-%H%M%S"));
+	str.Format(_T("%sPLC%s.log"), szPath, strTime );
+	m_hFileLog = CreateFile(str, GENERIC_WRITE, FILE_SHARE_READ | FILE_SHARE_WRITE, NULL, CREATE_ALWAYS, 0, NULL);
+}
+
+
+void CPLCDlg::_AddLog( char * szBuff )
+{
+	char szLog2File[256] = {0};
+	sprintf_s(szLog2File,"%s\r\n",szBuff);
+	unsigned long cbRet;
+	WriteFile( m_hFileLog, szLog2File, strlen(szLog2File), &cbRet, NULL );
+}
 

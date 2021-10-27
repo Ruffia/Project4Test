@@ -1,7 +1,8 @@
 #pragma once
 #include <Winsock2.h>
 #pragma comment(lib, "ws2_32.lib")
-#define  WM_PLC_THREAD_DATA  WM_USER + 3001
+#define  WM_PLC_THREAD_DATA    WM_USER + 3001
+#define  WM_QUERY_THREAD_DATA  WM_USER + 3002
 #define  Socket_RecvSize 64
 
 //与PLC通信的Socket
