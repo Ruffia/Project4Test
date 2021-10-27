@@ -306,7 +306,8 @@ LRESULT CPLCDlg::OnReceiveDataFromPLC(WPARAM wParam, LPARAM lParam)
 	{
 		if (m_pQueryCommand && m_pQueryCommandThread)
 		{
-			m_pQueryCommand->m_pResp = bData;
+			m_pQueryCommand->m_pResp = new byte[nLen];
+			memcpy(m_pQueryCommand->m_pResp,bData,nLen);
 			m_pQueryCommandThread->m_bTaskDone = m_pQueryCommand->CheckResponse();
 			if (m_pQueryCommandThread->m_bTaskDone)
 			{
@@ -314,6 +315,9 @@ LRESULT CPLCDlg::OnReceiveDataFromPLC(WPARAM wParam, LPARAM lParam)
 				m_pQueryCommandThread->End();
 				delete m_pQueryCommandThread;
 				m_pQueryCommandThread = NULL;
+
+				delete m_pQueryCommand;
+				m_pQueryCommand = NULL;
 
 				m_strCurCmd = "SendWafer_PAReady";
 				_SendCommand("m_strCurCmd");

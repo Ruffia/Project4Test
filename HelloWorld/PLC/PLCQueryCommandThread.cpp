@@ -5,7 +5,7 @@ CPLCQueryCommandThread::CPLCQueryCommandThread(CCommSocket* pSocket,CQueryComman
 	:m_pSocket(pSocket),m_pCommand(pCommand)
 {
 	m_bTaskDone = false;
-	m_dwSleep = 100;
+	m_dwSleep = 200;
 }
 
 CPLCQueryCommandThread::~CPLCQueryCommandThread()
