@@ -1,5 +1,5 @@
 #pragma once
-#define PLC_Command_Length 
+#define PLC_Command_Length  64
 
 #define CHECK_RESP(HexCode)  \
 	if(m_pResp[nSeq++] != HexCode) return false;
