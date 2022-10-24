@@ -1,5 +1,8 @@
 #pragma once
 #include "BaseCommand.h"
+
+#define Hex_Byte_Length  4
+
 class CDebugCommandBase : public IPLCCommand
 {
 public:

@@ -64,8 +64,9 @@ public:
 	void OnConnect(bool bConnect);
 
 private:
-	void _AppendTimePrefix(CString& strCommand);
+	void _AppendTimePrefix(CString& strCommand,bool bSend);
 	void _SendCommand( const std::string strCmd );
+	void _SendCommand( const std::string strCmd,const int nValue );
 
 	//部分操作指令需要通过循环查询的方式，根据返回的指令判断
 	//操作指令执行的结果
@@ -104,4 +105,13 @@ public:
 
 	//log
 	HANDLE	m_hFileLog;
+	afx_msg void OnBnClickedButtonXWafertakingPositin();
+	afx_msg void OnBnClickedButtonZWafertakingPositin();
+	afx_msg void OnBnClickedButtonRWafertakingPositin();
+	afx_msg void OnBnClickedButtonXTopaPositon();
+	afx_msg void OnBnClickedButtonZTopaPositon();
+	afx_msg void OnBnClickedButtonRtopaPosition();
+	afx_msg void OnBnClickedButtonXToloadlockPositon();
+	afx_msg void OnBnClickedButtonZToloadlockPositon();
+	afx_msg void OnBnClickedButtonRToloadlockPositon();
 };

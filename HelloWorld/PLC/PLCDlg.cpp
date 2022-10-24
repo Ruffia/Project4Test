@@ -10,6 +10,7 @@
 #include "Factory.h"
 #include <string>
 #include "OperateCommandBase.h"
+#include "DebugCommandBase.h"
 
 #ifdef _DEBUG
 #define new DEBUG_NEW
@@ -52,7 +53,7 @@ END_MESSAGE_MAP()
 CPLCDlg::CPLCDlg(CWnd* pParent /*=NULL*/)
 	: CDialogEx(CPLCDlg::IDD, pParent)
 	, m_strServerIP(_T("127.0.0.1"))
-	, m_nPort(5678)
+	, m_nPort(9600)
 	, m_strTxt2Send(_T(""))
 	, m_strCurCmd("")
 {
@@ -112,6 +113,15 @@ BEGIN_MESSAGE_MAP(CPLCDlg, CDialogEx)
 	ON_BN_CLICKED(IDC_BUTTON_CV2SEM, &CPLCDlg::OnBnClickedButtonCV2SEM)
 	ON_BN_CLICKED(IDC_BUTTON_ReturnWafer2LoadLock, &CPLCDlg::OnBnClickedButtonReturnWafer2LoadLock)
 	ON_BN_CLICKED(IDC_BUTTON_G2Open, &CPLCDlg::OnBnClickedButtonG2Open)
+	ON_BN_CLICKED(IDC_BUTTON_X_WaferTaking_Positin, &CPLCDlg::OnBnClickedButtonXWafertakingPositin)
+	ON_BN_CLICKED(IDC_BUTTON_Z_WaferTaking_Positin, &CPLCDlg::OnBnClickedButtonZWafertakingPositin)
+	ON_BN_CLICKED(IDC_BUTTON_R_WaferTaking_Positin, &CPLCDlg::OnBnClickedButtonRWafertakingPositin)
+	ON_BN_CLICKED(IDC_BUTTON_X_ToPA_Positon, &CPLCDlg::OnBnClickedButtonXTopaPositon)
+	ON_BN_CLICKED(IDC_BUTTON_Z_ToPA_Positon, &CPLCDlg::OnBnClickedButtonZTopaPositon)
+	ON_BN_CLICKED(IDC_BUTTON_R_toPA_Position, &CPLCDlg::OnBnClickedButtonRtopaPosition)
+	ON_BN_CLICKED(IDC_BUTTON_X_ToLoadlock_Positon, &CPLCDlg::OnBnClickedButtonXToloadlockPositon)
+	ON_BN_CLICKED(IDC_BUTTON_Z_ToLoadlock_Positon, &CPLCDlg::OnBnClickedButtonZToloadlockPositon)
+	ON_BN_CLICKED(IDC_BUTTON_R_ToLoadlock_Positon, &CPLCDlg::OnBnClickedButtonRToloadlockPositon)
 END_MESSAGE_MAP()
 
 
@@ -268,7 +278,7 @@ void CPLCDlg::OnBnClickedBtnsend()
 	char* sCommand = pCommand->GetCommand();
 
 	CString strCommand   =   (CString)(LPCTSTR)sCommand; 
-	_AppendTimePrefix(strCommand);
+	_AppendTimePrefix(strCommand,true);
 	m_lstRecv.AddString(strCommand);
 
 	//byte a = 0xAF;
@@ -315,7 +325,7 @@ LRESULT CPLCDlg::OnReceiveDataFromPLC(WPARAM wParam, LPARAM lParam)
 	delete bData;
 	bData = NULL;
 	
-	_AppendTimePrefix(sMsg);
+	_AppendTimePrefix(sMsg,false);
 	_AddLog((LPSTR)(LPCTSTR)sMsg);
 	OnReceive(sMsg);
 	return 0L;
@@ -337,14 +347,14 @@ LRESULT CPLCDlg::OnReceiveDataFromQueryThread(WPARAM wParam, LPARAM lParam)
 	delete bData;
 	bData = NULL;
 
-	_AppendTimePrefix(sMsg);
+	_AppendTimePrefix(sMsg,true);
 	_AddLog((LPSTR)(LPCTSTR)sMsg);
 	OnReceive(sMsg);
 	return 0L;
 }
 
 
-void CPLCDlg::_AppendTimePrefix( CString& strCommand ) 
+void CPLCDlg::_AppendTimePrefix( CString& strCommand,bool bSend) 
 {
 	SYSTEMTIME st;
 	CString strDate,strTime;
@@ -352,7 +362,15 @@ void CPLCDlg::_AppendTimePrefix( CString& strCommand )
 	strDate.Format("%04d-%02d-%02d",st.wYear,st.wMonth,st.wDay);
 	strTime.Format("%02d:%02d:%02d",st.wHour,st.wMinute,st.wSecond);
 
-	strCommand = strDate + " " + strTime + "  " + strCommand;
+	if (bSend)
+	{
+		strCommand = "Send  " + strDate + " " + strTime + "  " + strCommand;
+	}
+	else
+	{
+		strCommand = "Recv  " + strDate + " " + strTime + "  " + strCommand;
+	}
+	
 }
 
 
@@ -364,7 +382,7 @@ void CPLCDlg::_SendCommand(const std::string strCmd )
 	char* sCommand = pCommand->GetCommand();
 
 	CString strCommand = (CString)(LPCTSTR)sCommand; 
-	_AppendTimePrefix(strCommand);
+	_AppendTimePrefix(strCommand,true);
 	_AddLog((LPSTR)(LPCTSTR)strCommand);
 	m_lstRecv.AddString(strCommand);
 
@@ -374,6 +392,71 @@ void CPLCDlg::_SendCommand(const std::string strCmd )
 		char szError[256] = {0};
 		sprintf_s(szError, 256,"Send Faild: %d", GetLastError());
 		MessageBox(szError);
+		delete pCommand;
+		pCommand = NULL;
+		return;
+	}
+
+	_CheckQueyCommand(pCommand);
+
+	delete pCommand;
+	pCommand = NULL;
+}
+
+
+
+void CPLCDlg::_SendCommand( const std::string strCmd,const int nValue )
+{
+	IPLCCommand* pCommand = Factory<IPLCCommand,std::string>::Instance().BuildProduct(strCmd);
+	if (!pCommand) return;
+	
+	CDebugCommandBase* pDebugCommand = dynamic_cast<CDebugCommandBase*>(pCommand);
+	if(!pDebugCommand) return;
+
+	byte *hex = (byte *)&nValue;
+	int nCount = 0;
+	for (nCount = 0; nCount < Hex_Byte_Length;nCount++)
+	{
+		if (hex[nCount] == 0)
+		{
+			break;
+		}
+	}
+
+	byte byteHex[Hex_Byte_Length] = {0};
+
+	if (IsLittleEndian())
+	{
+		for (int i = nCount - 1,j = 0;i >=0 && j < Hex_Byte_Length;i--,j++)
+		{
+			byteHex[j] = hex[i];
+		}
+	}
+	else
+	{
+		for (int i = 0,j = 0;i < nCount && j < Hex_Byte_Length;i++,j++)
+		{
+			byteHex[j] = hex[i];
+		}
+	}
+
+	pDebugCommand->SetParameter(byteHex[0],byteHex[1],byteHex[2],byteHex[3]);
+	pDebugCommand->BuildCommand();
+	char* sCommand = pDebugCommand->GetCommand();
+
+	CString strCommand = (CString)(LPCTSTR)sCommand; 
+	_AppendTimePrefix(strCommand,true);
+	_AddLog((LPSTR)(LPCTSTR)strCommand);
+	m_lstRecv.AddString(strCommand);
+
+	int nRet = m_pSocket->Send(pDebugCommand->m_pCommand);
+	if (-1 == nRet)
+	{
+		char szError[256] = {0};
+		sprintf_s(szError, 256,"Send Faild: %d", GetLastError());
+		MessageBox(szError);
+		delete pCommand;
+		pCommand = NULL;
 		return;
 	}
 
@@ -601,5 +684,105 @@ void CPLCDlg::_AddLog( char * szBuff )
 	sprintf_s(szLog2File,"%s\r\n",szBuff);
 	unsigned long cbRet;
 	WriteFile( m_hFileLog, szLog2File, strlen(szLog2File), &cbRet, NULL );
+}
+
+
+
+void CPLCDlg::OnBnClickedButtonXWafertakingPositin()
+{
+	// TODO: 在此添加控件通知处理程序代码
+	m_strCurCmd = "X_WaferTaking_Positin";
+	CString strPosition;
+	GetDlgItem(IDC_X_WaferTaking_Positin)->GetWindowTextA(strPosition);
+	int nValue = atoi(strPosition); 
+	_SendCommand(m_strCurCmd,nValue);
+}
+
+
+void CPLCDlg::OnBnClickedButtonZWafertakingPositin()
+{
+	// TODO: 在此添加控件通知处理程序代码
+	m_strCurCmd = "Z_WaferTaking_Positin";
+	CString strPosition;
+	GetDlgItem(IDC_Z_WaferTaking_Positin)->GetWindowTextA(strPosition);
+	int nValue = atoi(strPosition); 
+	_SendCommand(m_strCurCmd,nValue);
+}
+
+
+void CPLCDlg::OnBnClickedButtonRWafertakingPositin()
+{
+	// TODO: 在此添加控件通知处理程序代码
+	m_strCurCmd = "R_WaferTaking_Positin";
+	CString strPosition;
+	GetDlgItem(IDC_R_WaferTaking_Positin)->GetWindowTextA(strPosition);
+	int nValue = atoi(strPosition); 
+	_SendCommand(m_strCurCmd,nValue);
+}
+
+
+void CPLCDlg::OnBnClickedButtonXTopaPositon()
+{
+	// TODO: 在此添加控件通知处理程序代码
+	m_strCurCmd = "X_ToPA_Positon";
+	CString strPosition;
+	GetDlgItem(IDC_X_ToPA_Positon)->GetWindowTextA(strPosition);
+	int nValue = atoi(strPosition); 
+	_SendCommand(m_strCurCmd,nValue);
+}
+
+
+void CPLCDlg::OnBnClickedButtonZTopaPositon()
+{
+	// TODO: 在此添加控件通知处理程序代码
+	m_strCurCmd = "Z_ToPA_Positon";
+	CString strPosition;
+	GetDlgItem(IDC_Z_ToPA_Positon)->GetWindowTextA(strPosition);
+	int nValue = atoi(strPosition);
+	_SendCommand(m_strCurCmd,nValue);
+}
+
+
+void CPLCDlg::OnBnClickedButtonRtopaPosition()
+{
+	// TODO: 在此添加控件通知处理程序代码
+	m_strCurCmd = "R_toPA_Position";
+	CString strPosition;
+	GetDlgItem(IDC_R_toPA_Position)->GetWindowTextA(strPosition);
+	int nValue = atoi(strPosition);
+	_SendCommand(m_strCurCmd,nValue);
+}
+
+
+void CPLCDlg::OnBnClickedButtonXToloadlockPositon()
+{
+	// TODO: 在此添加控件通知处理程序代码
+	m_strCurCmd = "X_ToLoadlock_Positon";
+	CString strPosition;
+	GetDlgItem(IDC_X_ToLoadlock_Positon)->GetWindowTextA(strPosition);
+	int nValue = atoi(strPosition);
+	_SendCommand(m_strCurCmd,nValue);
+}
+
+
+void CPLCDlg::OnBnClickedButtonZToloadlockPositon()
+{
+	// TODO: 在此添加控件通知处理程序代码
+	m_strCurCmd = "Z_ToLoadlock_Positon";
+	CString strPosition;
+	GetDlgItem(IDC_Z_ToLoadlock_Positon)->GetWindowTextA(strPosition);
+	int nValue = atoi(strPosition);
+	_SendCommand(m_strCurCmd,nValue);
+}
+
+
+void CPLCDlg::OnBnClickedButtonRToloadlockPositon()
+{
+	// TODO: 在此添加控件通知处理程序代码
+	m_strCurCmd = "R_ToLoadlock_Positon";
+	CString strPosition;
+	GetDlgItem(IDC_R_ToLoadlock_Positon)->GetWindowTextA(strPosition);
+	int nValue = atoi(strPosition);
+	_SendCommand(m_strCurCmd,nValue);
 }
 

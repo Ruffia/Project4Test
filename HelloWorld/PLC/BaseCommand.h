@@ -65,3 +65,7 @@ public:
 	char  m_szMapAddress[16];       //映射地址
 	char  m_szCommand[128];         //以字符形式存储16进制指令
 };
+
+
+
+bool IsLittleEndian();

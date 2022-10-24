@@ -13,13 +13,13 @@ IPLCCommand::~IPLCCommand()
 {
 	if(m_pCommand)
 	{
-		delete m_pCommand;
+		delete[] m_pCommand;
 		m_pCommand = NULL;
 	}
 
 	if (m_pResp)
 	{
-		delete m_pResp;
+		delete[] m_pResp;
 		m_pResp = NULL;
 	}
 }
@@ -98,4 +98,18 @@ void IPLCCommand::_BuildFixed3()
 {
 	m_pCommand[8] = 0x00;
 	m_pCommand[9] = 0x00;
+}
+
+
+bool IsLittleEndian()
+{
+	int x = 1;
+	if (*(char*) &x == 1)
+	{
+		return true;
+	}
+	else
+	{
+		return false;
+	}
 }
