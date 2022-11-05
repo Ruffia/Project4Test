@@ -1,0 +1,1674 @@
+﻿生成启动时间为 2022-4-7 17:01:28。
+     1>项目“U:\Project4Test\HelloWorld\CustomTabCtrlDemo\CustomTabCtrlDemoMDI\CustomTabCtrlDemoMDI.vcxproj”在节点 2 上(Build 个目标)。
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /I"C:\Program Files (x86)\Visual Leak Detector\include" /ZI /nologo /W4 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _WINDOWS /D _VC80_UPGRADE=0x0600 /D _MBCS /D _AFXDLL /Gm /EHsc /RTC1 /MDd /GS /Gy- /fp:precise /Zc:wchar_t /Zc:forScope /Yu"stdafx.h" /Fp".\Debug\CustomTabCtrlDemoMDI.pch" /Fo".\Debug\\" /Fd".\Debug\vc110.pdb" /Gd /TP /analyze- /errorReport:prompt ..\CustomTabCtrl.cpp ..\TabMDIFrameWnd.cpp ..\ThemeUtil.cpp ChildFrm.cpp CustomTabCtrlDemoMDI.cpp CustomTabCtrlDemoMDIDoc.cpp CustomTabCtrlDemoMDIView.cpp MainFrm.cpp
+         MainFrm.cpp
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(27): error C2011: “BGTYPE”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vssym32.h(14) : 参见“BGTYPE”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(33): error C2011: “IMAGELAYOUT”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vssym32.h(25) : 参见“IMAGELAYOUT”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(38): error C2011: “BORDERTYPE”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vssym32.h(35) : 参见“BORDERTYPE”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(44): error C2011: “FILLTYPE”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vssym32.h(46) : 参见“FILLTYPE”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(52): error C2011: “SIZINGTYPE”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vssym32.h(59) : 参见“SIZINGTYPE”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(58): error C2011: “HALIGN”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vssym32.h(70) : 参见“HALIGN”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(64): error C2011: “CONTENTALIGNMENT”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vssym32.h(81) : 参见“CONTENTALIGNMENT”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(70): error C2011: “VALIGN”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vssym32.h(92) : 参见“VALIGN”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(76): error C2011: “OFFSETTYPE”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vssym32.h(103) : 参见“OFFSETTYPE”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(93): error C2011: “ICONEFFECT”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vssym32.h(125) : 参见“ICONEFFECT”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(101): error C2011: “TEXTSHADOWTYPE”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vssym32.h(138) : 参见“TEXTSHADOWTYPE”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(107): error C2011: “GLYPHTYPE”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vssym32.h(149) : 参见“GLYPHTYPE”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(113): error C2011: “IMAGESELECTTYPE”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vssym32.h(160) : 参见“IMAGESELECTTYPE”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(119): error C2011: “TRUESIZESCALINGTYPE”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vssym32.h(171) : 参见“TRUESIZESCALINGTYPE”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(125): error C2011: “GLYPHFONTSIZINGTYPE”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vssym32.h(182) : 参见“GLYPHFONTSIZINGTYPE”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(139): error C2059: 语法错误:“常量”
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(139): error C3805: “常量”: 意外标记，应输入“}”或者“,”
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(173): warning C4005: “TMT_LASTFONT”: 宏重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vssym32.h(239) : 参见“TMT_LASTFONT”的前一个定义
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(192): warning C4005: “TMT_LASTSIZE”: 宏重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vssym32.h(254) : 参见“TMT_LASTSIZE”的前一个定义
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(214): warning C4005: “TMT_LASTSTRING”: 宏重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vssym32.h(263) : 参见“TMT_LASTSTRING”的前一个定义
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(410): error C2011: “WINDOWPARTS”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1640) : 参见“WINDOWPARTS”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(454): error C2011: “FRAMESTATES”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1683) : 参见“FRAMESTATES”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(459): error C2011: “CAPTIONSTATES”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1688) : 参见“CAPTIONSTATES”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(465): error C2011: “MAXCAPTIONSTATES”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1694) : 参见“MAXCAPTIONSTATES”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(471): error C2011: “MINCAPTIONSTATES”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1700) : 参见“MINCAPTIONSTATES”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(477): error C2011: “HORZSCROLLSTATES”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1706) : 参见“HORZSCROLLSTATES”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(484): error C2011: “HORZTHUMBSTATES”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1713) : 参见“HORZTHUMBSTATES”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(491): error C2011: “VERTSCROLLSTATES”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1720) : 参见“VERTSCROLLSTATES”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(498): error C2011: “VERTTHUMBSTATES”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1727) : 参见“VERTTHUMBSTATES”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(505): error C2011: “SYSBUTTONSTATES”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1734) : 参见“SYSBUTTONSTATES”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(512): error C2011: “MINBUTTONSTATES”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1741) : 参见“MINBUTTONSTATES”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(519): error C2011: “MAXBUTTONSTATES”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1748) : 参见“MAXBUTTONSTATES”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(526): error C2011: “RESTOREBUTTONSTATES”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1755) : 参见“RESTOREBUTTONSTATES”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(533): error C2011: “HELPBUTTONSTATES”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1762) : 参见“HELPBUTTONSTATES”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(540): error C2011: “CLOSEBUTTONSTATES”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1769) : 参见“CLOSEBUTTONSTATES”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(550): error C2011: “BUTTONPARTS”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(63) : 参见“BUTTONPARTS”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(558): error C2011: “PUSHBUTTONSTATES”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(75) : 参见“PUSHBUTTONSTATES”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(566): error C2011: “RADIOBUTTONSTATES”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(84) : 参见“RADIOBUTTONSTATES”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(577): error C2011: “CHECKBOXSTATES”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(95) : 参见“CHECKBOXSTATES”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(592): error C2011: “GROUPBOXSTATES”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(118) : 参见“GROUPBOXSTATES”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(600): error C2011: “REBARPARTS”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1015) : 参见“REBARPARTS”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(608): error C2011: “CHEVRONSTATES”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1028) : 参见“CHEVRONSTATES”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(617): error C2011: “TOOLBARPARTS”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1379) : 参见“TOOLBARPARTS”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(627): error C2365: “TS_NORMAL”: 重定义；以前的定义是“枚举数”
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1392) : 参见“TS_NORMAL”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(628): error C2365: “TS_HOT”: 重定义；以前的定义是“枚举数”
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1393) : 参见“TS_HOT”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(629): error C2365: “TS_PRESSED”: 重定义；以前的定义是“枚举数”
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1394) : 参见“TS_PRESSED”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(630): error C2365: “TS_DISABLED”: 重定义；以前的定义是“枚举数”
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1395) : 参见“TS_DISABLED”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(631): error C2365: “TS_CHECKED”: 重定义；以前的定义是“枚举数”
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1396) : 参见“TS_CHECKED”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(632): error C2365: “TS_HOTCHECKED”: 重定义；以前的定义是“枚举数”
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1397) : 参见“TS_HOTCHECKED”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(638): error C2011: “STATUSPARTS”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1182) : 参见“STATUSPARTS”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(647): error C2011: “MENUPARTS”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(831) : 参见“MENUPARTS”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(665): error C2011: “LISTVIEWPARTS”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(745) : 参见“LISTVIEWPARTS”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(673): error C2011: “LISTITEMSTATES”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(760) : 参见“LISTITEMSTATES”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(684): error C2011: “HEADERPARTS”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(610) : 参见“HEADERPARTS”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(691): error C2011: “HEADERITEMSTATES”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(627) : 参见“HEADERITEMSTATES”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(697): error C2011: “HEADERITEMLEFTSTATES”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(642) : 参见“HEADERITEMLEFTSTATES”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(703): error C2011: “HEADERITEMRIGHTSTATES”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(648) : 参见“HEADERITEMRIGHTSTATES”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(709): error C2011: “HEADERSORTARROWSTATES”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(654) : 参见“HEADERSORTARROWSTATES”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(716): error C2011: “PROGRESSPARTS”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(962) : 参见“PROGRESSPARTS”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(726): error C2011: “TABPARTS”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1202) : 参见“TABPARTS”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(739): error C2011: “TABITEMSTATES”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1218) : 参见“TABITEMSTATES”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(747): error C2011: “TABITEMLEFTEDGESTATES”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1226) : 参见“TABITEMLEFTEDGESTATES”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(755): error C2011: “TABITEMRIGHTEDGESTATES”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1234) : 参见“TABITEMRIGHTEDGESTATES”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(764): error C2365: “TIBES_NORMAL”: 重定义；以前的定义是“枚举数”
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1243) : 参见“TIBES_NORMAL”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(765): error C2365: “TIBES_HOT”: 重定义；以前的定义是“枚举数”
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1244) : 参见“TIBES_HOT”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(766): error C2365: “TIBES_SELECTED”: 重定义；以前的定义是“枚举数”
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1245) : 参见“TIBES_SELECTED”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(767): error C2365: “TIBES_DISABLED”: 重定义；以前的定义是“枚举数”
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1246) : 参见“TIBES_DISABLED”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(768): error C2365: “TIBES_FOCUSED”: 重定义；以前的定义是“枚举数”
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1247) : 参见“TIBES_FOCUSED”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(771): error C2011: “TOPTABITEMSTATES”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1250) : 参见“TOPTABITEMSTATES”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(779): error C2011: “TOPTABITEMLEFTEDGESTATES”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1258) : 参见“TOPTABITEMLEFTEDGESTATES”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(787): error C2011: “TOPTABITEMRIGHTEDGESTATES”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1266) : 参见“TOPTABITEMRIGHTEDGESTATES”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(796): error C2365: “TTIBES_NORMAL”: 重定义；以前的定义是“枚举数”
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1275) : 参见“TTIBES_NORMAL”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(797): error C2365: “TTIBES_HOT”: 重定义；以前的定义是“枚举数”
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1276) : 参见“TTIBES_HOT”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(798): error C2365: “TTIBES_SELECTED”: 重定义；以前的定义是“枚举数”
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1277) : 参见“TTIBES_SELECTED”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(799): error C2365: “TTIBES_DISABLED”: 重定义；以前的定义是“枚举数”
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1278) : 参见“TTIBES_DISABLED”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(800): error C2365: “TTIBES_FOCUSED”: 重定义；以前的定义是“枚举数”
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1279) : 参见“TTIBES_FOCUSED”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(806): error C2011: “TRACKBARPARTS”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1469) : 参见“TRACKBARPARTS”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(820): error C2365: “TKS_NORMAL”: 重定义；以前的定义是“枚举数”
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1485) : 参见“TKS_NORMAL”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(823): error C2011: “TRACKSTATES”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1488) : 参见“TRACKSTATES”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(827): error C2011: “TRACKVERTSTATES”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1492) : 参见“TRACKVERTSTATES”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(831): error C2011: “THUMBSTATES”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1496) : 参见“THUMBSTATES”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(839): error C2011: “THUMBBOTTOMSTATES”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1504) : 参见“THUMBBOTTOMSTATES”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(847): error C2011: “THUMBTOPSTATES”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1512) : 参见“THUMBTOPSTATES”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(855): error C2011: “THUMBVERTSTATES”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1520) : 参见“THUMBVERTSTATES”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(863): error C2011: “THUMBLEFTSTATES”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1528) : 参见“THUMBLEFTSTATES”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(871): error C2011: “THUMBRIGHTSTATES”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1536) : 参见“THUMBRIGHTSTATES”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(879): error C2011: “TICSSTATES”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1544) : 参见“TICSSTATES”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(883): error C2011: “TICSVERTSTATES”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1548) : 参见“TICSVERTSTATES”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(890): error C2011: “TOOLTIPPARTS”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1414) : 参见“TOOLTIPPARTS”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(898): error C2011: “CLOSESTATES”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1426) : 参见“CLOSESTATES”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(904): error C2011: “STANDARDSTATES”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1432) : 参见“STANDARDSTATES”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(909): error C2011: “BALLOONSTATES”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1437) : 参见“BALLOONSTATES”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(917): error C2011: “TREEVIEWPARTS”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1564) : 参见“TREEVIEWPARTS”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(923): error C2011: “TREEITEMSTATES”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1573) : 参见“TREEITEMSTATES”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(931): error C2011: “GLYPHSTATES”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1582) : 参见“GLYPHSTATES”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(939): error C2011: “SPINPARTS”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1133) : 参见“SPINPARTS”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(946): error C2011: “UPSTATES”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1142) : 参见“UPSTATES”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(953): error C2011: “DOWNSTATES”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1149) : 参见“DOWNSTATES”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(960): error C2011: “UPHORZSTATES”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1156) : 参见“UPHORZSTATES”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(967): error C2011: “DOWNHORZSTATES”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1163) : 参见“DOWNHORZSTATES”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(977): error C2011: “PAGEPARTS”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vssym32.h(499) : 参见“PAGEPARTS”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(989): error C2011: “SCROLLBARPARTS”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1064) : 参见“SCROLLBARPARTS”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(1004): error C2011: “ARROWBTNSTATES”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1079) : 参见“ARROWBTNSTATES”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(1024): error C2365: “SCRBS_NORMAL”: 重定义；以前的定义是“枚举数”
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1103) : 参见“SCRBS_NORMAL”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(1024): fatal error C1003: 错误计数超过 100；正在停止编译
+         CustomTabCtrlDemoMDIView.cpp
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(27): error C2011: “BGTYPE”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vssym32.h(14) : 参见“BGTYPE”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(33): error C2011: “IMAGELAYOUT”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vssym32.h(25) : 参见“IMAGELAYOUT”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(38): error C2011: “BORDERTYPE”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vssym32.h(35) : 参见“BORDERTYPE”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(44): error C2011: “FILLTYPE”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vssym32.h(46) : 参见“FILLTYPE”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(52): error C2011: “SIZINGTYPE”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vssym32.h(59) : 参见“SIZINGTYPE”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(58): error C2011: “HALIGN”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vssym32.h(70) : 参见“HALIGN”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(64): error C2011: “CONTENTALIGNMENT”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vssym32.h(81) : 参见“CONTENTALIGNMENT”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(70): error C2011: “VALIGN”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vssym32.h(92) : 参见“VALIGN”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(76): error C2011: “OFFSETTYPE”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vssym32.h(103) : 参见“OFFSETTYPE”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(93): error C2011: “ICONEFFECT”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vssym32.h(125) : 参见“ICONEFFECT”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(101): error C2011: “TEXTSHADOWTYPE”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vssym32.h(138) : 参见“TEXTSHADOWTYPE”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(107): error C2011: “GLYPHTYPE”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vssym32.h(149) : 参见“GLYPHTYPE”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(113): error C2011: “IMAGESELECTTYPE”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vssym32.h(160) : 参见“IMAGESELECTTYPE”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(119): error C2011: “TRUESIZESCALINGTYPE”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vssym32.h(171) : 参见“TRUESIZESCALINGTYPE”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(125): error C2011: “GLYPHFONTSIZINGTYPE”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vssym32.h(182) : 参见“GLYPHFONTSIZINGTYPE”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(139): error C2059: 语法错误:“常量”
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(139): error C3805: “常量”: 意外标记，应输入“}”或者“,”
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(173): warning C4005: “TMT_LASTFONT”: 宏重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vssym32.h(239) : 参见“TMT_LASTFONT”的前一个定义
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(192): warning C4005: “TMT_LASTSIZE”: 宏重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vssym32.h(254) : 参见“TMT_LASTSIZE”的前一个定义
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(214): warning C4005: “TMT_LASTSTRING”: 宏重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vssym32.h(263) : 参见“TMT_LASTSTRING”的前一个定义
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(410): error C2011: “WINDOWPARTS”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1640) : 参见“WINDOWPARTS”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(454): error C2011: “FRAMESTATES”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1683) : 参见“FRAMESTATES”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(459): error C2011: “CAPTIONSTATES”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1688) : 参见“CAPTIONSTATES”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(465): error C2011: “MAXCAPTIONSTATES”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1694) : 参见“MAXCAPTIONSTATES”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(471): error C2011: “MINCAPTIONSTATES”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1700) : 参见“MINCAPTIONSTATES”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(477): error C2011: “HORZSCROLLSTATES”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1706) : 参见“HORZSCROLLSTATES”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(484): error C2011: “HORZTHUMBSTATES”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1713) : 参见“HORZTHUMBSTATES”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(491): error C2011: “VERTSCROLLSTATES”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1720) : 参见“VERTSCROLLSTATES”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(498): error C2011: “VERTTHUMBSTATES”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1727) : 参见“VERTTHUMBSTATES”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(505): error C2011: “SYSBUTTONSTATES”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1734) : 参见“SYSBUTTONSTATES”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(512): error C2011: “MINBUTTONSTATES”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1741) : 参见“MINBUTTONSTATES”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(519): error C2011: “MAXBUTTONSTATES”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1748) : 参见“MAXBUTTONSTATES”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(526): error C2011: “RESTOREBUTTONSTATES”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1755) : 参见“RESTOREBUTTONSTATES”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(533): error C2011: “HELPBUTTONSTATES”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1762) : 参见“HELPBUTTONSTATES”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(540): error C2011: “CLOSEBUTTONSTATES”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1769) : 参见“CLOSEBUTTONSTATES”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(550): error C2011: “BUTTONPARTS”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(63) : 参见“BUTTONPARTS”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(558): error C2011: “PUSHBUTTONSTATES”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(75) : 参见“PUSHBUTTONSTATES”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(566): error C2011: “RADIOBUTTONSTATES”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(84) : 参见“RADIOBUTTONSTATES”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(577): error C2011: “CHECKBOXSTATES”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(95) : 参见“CHECKBOXSTATES”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(592): error C2011: “GROUPBOXSTATES”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(118) : 参见“GROUPBOXSTATES”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(600): error C2011: “REBARPARTS”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1015) : 参见“REBARPARTS”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(608): error C2011: “CHEVRONSTATES”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1028) : 参见“CHEVRONSTATES”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(617): error C2011: “TOOLBARPARTS”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1379) : 参见“TOOLBARPARTS”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(627): error C2365: “TS_NORMAL”: 重定义；以前的定义是“枚举数”
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1392) : 参见“TS_NORMAL”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(628): error C2365: “TS_HOT”: 重定义；以前的定义是“枚举数”
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1393) : 参见“TS_HOT”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(629): error C2365: “TS_PRESSED”: 重定义；以前的定义是“枚举数”
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1394) : 参见“TS_PRESSED”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(630): error C2365: “TS_DISABLED”: 重定义；以前的定义是“枚举数”
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1395) : 参见“TS_DISABLED”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(631): error C2365: “TS_CHECKED”: 重定义；以前的定义是“枚举数”
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1396) : 参见“TS_CHECKED”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(632): error C2365: “TS_HOTCHECKED”: 重定义；以前的定义是“枚举数”
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1397) : 参见“TS_HOTCHECKED”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(638): error C2011: “STATUSPARTS”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1182) : 参见“STATUSPARTS”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(647): error C2011: “MENUPARTS”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(831) : 参见“MENUPARTS”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(665): error C2011: “LISTVIEWPARTS”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(745) : 参见“LISTVIEWPARTS”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(673): error C2011: “LISTITEMSTATES”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(760) : 参见“LISTITEMSTATES”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(684): error C2011: “HEADERPARTS”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(610) : 参见“HEADERPARTS”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(691): error C2011: “HEADERITEMSTATES”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(627) : 参见“HEADERITEMSTATES”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(697): error C2011: “HEADERITEMLEFTSTATES”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(642) : 参见“HEADERITEMLEFTSTATES”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(703): error C2011: “HEADERITEMRIGHTSTATES”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(648) : 参见“HEADERITEMRIGHTSTATES”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(709): error C2011: “HEADERSORTARROWSTATES”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(654) : 参见“HEADERSORTARROWSTATES”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(716): error C2011: “PROGRESSPARTS”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(962) : 参见“PROGRESSPARTS”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(726): error C2011: “TABPARTS”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1202) : 参见“TABPARTS”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(739): error C2011: “TABITEMSTATES”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1218) : 参见“TABITEMSTATES”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(747): error C2011: “TABITEMLEFTEDGESTATES”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1226) : 参见“TABITEMLEFTEDGESTATES”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(755): error C2011: “TABITEMRIGHTEDGESTATES”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1234) : 参见“TABITEMRIGHTEDGESTATES”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(764): error C2365: “TIBES_NORMAL”: 重定义；以前的定义是“枚举数”
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1243) : 参见“TIBES_NORMAL”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(765): error C2365: “TIBES_HOT”: 重定义；以前的定义是“枚举数”
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1244) : 参见“TIBES_HOT”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(766): error C2365: “TIBES_SELECTED”: 重定义；以前的定义是“枚举数”
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1245) : 参见“TIBES_SELECTED”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(767): error C2365: “TIBES_DISABLED”: 重定义；以前的定义是“枚举数”
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1246) : 参见“TIBES_DISABLED”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(768): error C2365: “TIBES_FOCUSED”: 重定义；以前的定义是“枚举数”
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1247) : 参见“TIBES_FOCUSED”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(771): error C2011: “TOPTABITEMSTATES”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1250) : 参见“TOPTABITEMSTATES”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(779): error C2011: “TOPTABITEMLEFTEDGESTATES”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1258) : 参见“TOPTABITEMLEFTEDGESTATES”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(787): error C2011: “TOPTABITEMRIGHTEDGESTATES”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1266) : 参见“TOPTABITEMRIGHTEDGESTATES”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(796): error C2365: “TTIBES_NORMAL”: 重定义；以前的定义是“枚举数”
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1275) : 参见“TTIBES_NORMAL”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(797): error C2365: “TTIBES_HOT”: 重定义；以前的定义是“枚举数”
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1276) : 参见“TTIBES_HOT”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(798): error C2365: “TTIBES_SELECTED”: 重定义；以前的定义是“枚举数”
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1277) : 参见“TTIBES_SELECTED”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(799): error C2365: “TTIBES_DISABLED”: 重定义；以前的定义是“枚举数”
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1278) : 参见“TTIBES_DISABLED”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(800): error C2365: “TTIBES_FOCUSED”: 重定义；以前的定义是“枚举数”
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1279) : 参见“TTIBES_FOCUSED”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(806): error C2011: “TRACKBARPARTS”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1469) : 参见“TRACKBARPARTS”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(820): error C2365: “TKS_NORMAL”: 重定义；以前的定义是“枚举数”
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1485) : 参见“TKS_NORMAL”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(823): error C2011: “TRACKSTATES”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1488) : 参见“TRACKSTATES”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(827): error C2011: “TRACKVERTSTATES”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1492) : 参见“TRACKVERTSTATES”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(831): error C2011: “THUMBSTATES”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1496) : 参见“THUMBSTATES”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(839): error C2011: “THUMBBOTTOMSTATES”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1504) : 参见“THUMBBOTTOMSTATES”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(847): error C2011: “THUMBTOPSTATES”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1512) : 参见“THUMBTOPSTATES”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(855): error C2011: “THUMBVERTSTATES”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1520) : 参见“THUMBVERTSTATES”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(863): error C2011: “THUMBLEFTSTATES”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1528) : 参见“THUMBLEFTSTATES”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(871): error C2011: “THUMBRIGHTSTATES”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1536) : 参见“THUMBRIGHTSTATES”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(879): error C2011: “TICSSTATES”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1544) : 参见“TICSSTATES”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(883): error C2011: “TICSVERTSTATES”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1548) : 参见“TICSVERTSTATES”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(890): error C2011: “TOOLTIPPARTS”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1414) : 参见“TOOLTIPPARTS”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(898): error C2011: “CLOSESTATES”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1426) : 参见“CLOSESTATES”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(904): error C2011: “STANDARDSTATES”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1432) : 参见“STANDARDSTATES”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(909): error C2011: “BALLOONSTATES”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1437) : 参见“BALLOONSTATES”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(917): error C2011: “TREEVIEWPARTS”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1564) : 参见“TREEVIEWPARTS”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(923): error C2011: “TREEITEMSTATES”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1573) : 参见“TREEITEMSTATES”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(931): error C2011: “GLYPHSTATES”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1582) : 参见“GLYPHSTATES”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(939): error C2011: “SPINPARTS”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1133) : 参见“SPINPARTS”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(946): error C2011: “UPSTATES”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1142) : 参见“UPSTATES”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(953): error C2011: “DOWNSTATES”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1149) : 参见“DOWNSTATES”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(960): error C2011: “UPHORZSTATES”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1156) : 参见“UPHORZSTATES”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(967): error C2011: “DOWNHORZSTATES”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1163) : 参见“DOWNHORZSTATES”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(977): error C2011: “PAGEPARTS”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vssym32.h(499) : 参见“PAGEPARTS”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(989): error C2011: “SCROLLBARPARTS”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1064) : 参见“SCROLLBARPARTS”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(1004): error C2011: “ARROWBTNSTATES”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1079) : 参见“ARROWBTNSTATES”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(1024): error C2365: “SCRBS_NORMAL”: 重定义；以前的定义是“枚举数”
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1103) : 参见“SCRBS_NORMAL”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(1024): fatal error C1003: 错误计数超过 100；正在停止编译
+         CustomTabCtrlDemoMDIDoc.cpp
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(27): error C2011: “BGTYPE”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vssym32.h(14) : 参见“BGTYPE”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(33): error C2011: “IMAGELAYOUT”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vssym32.h(25) : 参见“IMAGELAYOUT”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(38): error C2011: “BORDERTYPE”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vssym32.h(35) : 参见“BORDERTYPE”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(44): error C2011: “FILLTYPE”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vssym32.h(46) : 参见“FILLTYPE”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(52): error C2011: “SIZINGTYPE”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vssym32.h(59) : 参见“SIZINGTYPE”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(58): error C2011: “HALIGN”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vssym32.h(70) : 参见“HALIGN”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(64): error C2011: “CONTENTALIGNMENT”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vssym32.h(81) : 参见“CONTENTALIGNMENT”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(70): error C2011: “VALIGN”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vssym32.h(92) : 参见“VALIGN”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(76): error C2011: “OFFSETTYPE”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vssym32.h(103) : 参见“OFFSETTYPE”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(93): error C2011: “ICONEFFECT”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vssym32.h(125) : 参见“ICONEFFECT”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(101): error C2011: “TEXTSHADOWTYPE”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vssym32.h(138) : 参见“TEXTSHADOWTYPE”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(107): error C2011: “GLYPHTYPE”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vssym32.h(149) : 参见“GLYPHTYPE”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(113): error C2011: “IMAGESELECTTYPE”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vssym32.h(160) : 参见“IMAGESELECTTYPE”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(119): error C2011: “TRUESIZESCALINGTYPE”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vssym32.h(171) : 参见“TRUESIZESCALINGTYPE”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(125): error C2011: “GLYPHFONTSIZINGTYPE”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vssym32.h(182) : 参见“GLYPHFONTSIZINGTYPE”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(139): error C2059: 语法错误:“常量”
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(139): error C3805: “常量”: 意外标记，应输入“}”或者“,”
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(173): warning C4005: “TMT_LASTFONT”: 宏重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vssym32.h(239) : 参见“TMT_LASTFONT”的前一个定义
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(192): warning C4005: “TMT_LASTSIZE”: 宏重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vssym32.h(254) : 参见“TMT_LASTSIZE”的前一个定义
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(214): warning C4005: “TMT_LASTSTRING”: 宏重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vssym32.h(263) : 参见“TMT_LASTSTRING”的前一个定义
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(410): error C2011: “WINDOWPARTS”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1640) : 参见“WINDOWPARTS”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(454): error C2011: “FRAMESTATES”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1683) : 参见“FRAMESTATES”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(459): error C2011: “CAPTIONSTATES”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1688) : 参见“CAPTIONSTATES”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(465): error C2011: “MAXCAPTIONSTATES”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1694) : 参见“MAXCAPTIONSTATES”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(471): error C2011: “MINCAPTIONSTATES”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1700) : 参见“MINCAPTIONSTATES”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(477): error C2011: “HORZSCROLLSTATES”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1706) : 参见“HORZSCROLLSTATES”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(484): error C2011: “HORZTHUMBSTATES”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1713) : 参见“HORZTHUMBSTATES”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(491): error C2011: “VERTSCROLLSTATES”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1720) : 参见“VERTSCROLLSTATES”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(498): error C2011: “VERTTHUMBSTATES”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1727) : 参见“VERTTHUMBSTATES”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(505): error C2011: “SYSBUTTONSTATES”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1734) : 参见“SYSBUTTONSTATES”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(512): error C2011: “MINBUTTONSTATES”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1741) : 参见“MINBUTTONSTATES”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(519): error C2011: “MAXBUTTONSTATES”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1748) : 参见“MAXBUTTONSTATES”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(526): error C2011: “RESTOREBUTTONSTATES”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1755) : 参见“RESTOREBUTTONSTATES”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(533): error C2011: “HELPBUTTONSTATES”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1762) : 参见“HELPBUTTONSTATES”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(540): error C2011: “CLOSEBUTTONSTATES”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1769) : 参见“CLOSEBUTTONSTATES”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(550): error C2011: “BUTTONPARTS”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(63) : 参见“BUTTONPARTS”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(558): error C2011: “PUSHBUTTONSTATES”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(75) : 参见“PUSHBUTTONSTATES”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(566): error C2011: “RADIOBUTTONSTATES”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(84) : 参见“RADIOBUTTONSTATES”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(577): error C2011: “CHECKBOXSTATES”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(95) : 参见“CHECKBOXSTATES”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(592): error C2011: “GROUPBOXSTATES”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(118) : 参见“GROUPBOXSTATES”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(600): error C2011: “REBARPARTS”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1015) : 参见“REBARPARTS”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(608): error C2011: “CHEVRONSTATES”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1028) : 参见“CHEVRONSTATES”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(617): error C2011: “TOOLBARPARTS”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1379) : 参见“TOOLBARPARTS”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(627): error C2365: “TS_NORMAL”: 重定义；以前的定义是“枚举数”
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1392) : 参见“TS_NORMAL”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(628): error C2365: “TS_HOT”: 重定义；以前的定义是“枚举数”
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1393) : 参见“TS_HOT”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(629): error C2365: “TS_PRESSED”: 重定义；以前的定义是“枚举数”
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1394) : 参见“TS_PRESSED”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(630): error C2365: “TS_DISABLED”: 重定义；以前的定义是“枚举数”
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1395) : 参见“TS_DISABLED”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(631): error C2365: “TS_CHECKED”: 重定义；以前的定义是“枚举数”
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1396) : 参见“TS_CHECKED”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(632): error C2365: “TS_HOTCHECKED”: 重定义；以前的定义是“枚举数”
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1397) : 参见“TS_HOTCHECKED”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(638): error C2011: “STATUSPARTS”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1182) : 参见“STATUSPARTS”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(647): error C2011: “MENUPARTS”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(831) : 参见“MENUPARTS”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(665): error C2011: “LISTVIEWPARTS”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(745) : 参见“LISTVIEWPARTS”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(673): error C2011: “LISTITEMSTATES”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(760) : 参见“LISTITEMSTATES”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(684): error C2011: “HEADERPARTS”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(610) : 参见“HEADERPARTS”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(691): error C2011: “HEADERITEMSTATES”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(627) : 参见“HEADERITEMSTATES”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(697): error C2011: “HEADERITEMLEFTSTATES”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(642) : 参见“HEADERITEMLEFTSTATES”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(703): error C2011: “HEADERITEMRIGHTSTATES”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(648) : 参见“HEADERITEMRIGHTSTATES”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(709): error C2011: “HEADERSORTARROWSTATES”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(654) : 参见“HEADERSORTARROWSTATES”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(716): error C2011: “PROGRESSPARTS”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(962) : 参见“PROGRESSPARTS”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(726): error C2011: “TABPARTS”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1202) : 参见“TABPARTS”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(739): error C2011: “TABITEMSTATES”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1218) : 参见“TABITEMSTATES”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(747): error C2011: “TABITEMLEFTEDGESTATES”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1226) : 参见“TABITEMLEFTEDGESTATES”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(755): error C2011: “TABITEMRIGHTEDGESTATES”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1234) : 参见“TABITEMRIGHTEDGESTATES”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(764): error C2365: “TIBES_NORMAL”: 重定义；以前的定义是“枚举数”
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1243) : 参见“TIBES_NORMAL”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(765): error C2365: “TIBES_HOT”: 重定义；以前的定义是“枚举数”
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1244) : 参见“TIBES_HOT”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(766): error C2365: “TIBES_SELECTED”: 重定义；以前的定义是“枚举数”
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1245) : 参见“TIBES_SELECTED”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(767): error C2365: “TIBES_DISABLED”: 重定义；以前的定义是“枚举数”
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1246) : 参见“TIBES_DISABLED”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(768): error C2365: “TIBES_FOCUSED”: 重定义；以前的定义是“枚举数”
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1247) : 参见“TIBES_FOCUSED”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(771): error C2011: “TOPTABITEMSTATES”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1250) : 参见“TOPTABITEMSTATES”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(779): error C2011: “TOPTABITEMLEFTEDGESTATES”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1258) : 参见“TOPTABITEMLEFTEDGESTATES”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(787): error C2011: “TOPTABITEMRIGHTEDGESTATES”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1266) : 参见“TOPTABITEMRIGHTEDGESTATES”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(796): error C2365: “TTIBES_NORMAL”: 重定义；以前的定义是“枚举数”
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1275) : 参见“TTIBES_NORMAL”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(797): error C2365: “TTIBES_HOT”: 重定义；以前的定义是“枚举数”
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1276) : 参见“TTIBES_HOT”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(798): error C2365: “TTIBES_SELECTED”: 重定义；以前的定义是“枚举数”
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1277) : 参见“TTIBES_SELECTED”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(799): error C2365: “TTIBES_DISABLED”: 重定义；以前的定义是“枚举数”
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1278) : 参见“TTIBES_DISABLED”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(800): error C2365: “TTIBES_FOCUSED”: 重定义；以前的定义是“枚举数”
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1279) : 参见“TTIBES_FOCUSED”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(806): error C2011: “TRACKBARPARTS”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1469) : 参见“TRACKBARPARTS”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(820): error C2365: “TKS_NORMAL”: 重定义；以前的定义是“枚举数”
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1485) : 参见“TKS_NORMAL”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(823): error C2011: “TRACKSTATES”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1488) : 参见“TRACKSTATES”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(827): error C2011: “TRACKVERTSTATES”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1492) : 参见“TRACKVERTSTATES”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(831): error C2011: “THUMBSTATES”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1496) : 参见“THUMBSTATES”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(839): error C2011: “THUMBBOTTOMSTATES”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1504) : 参见“THUMBBOTTOMSTATES”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(847): error C2011: “THUMBTOPSTATES”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1512) : 参见“THUMBTOPSTATES”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(855): error C2011: “THUMBVERTSTATES”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1520) : 参见“THUMBVERTSTATES”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(863): error C2011: “THUMBLEFTSTATES”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1528) : 参见“THUMBLEFTSTATES”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(871): error C2011: “THUMBRIGHTSTATES”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1536) : 参见“THUMBRIGHTSTATES”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(879): error C2011: “TICSSTATES”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1544) : 参见“TICSSTATES”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(883): error C2011: “TICSVERTSTATES”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1548) : 参见“TICSVERTSTATES”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(890): error C2011: “TOOLTIPPARTS”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1414) : 参见“TOOLTIPPARTS”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(898): error C2011: “CLOSESTATES”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1426) : 参见“CLOSESTATES”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(904): error C2011: “STANDARDSTATES”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1432) : 参见“STANDARDSTATES”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(909): error C2011: “BALLOONSTATES”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1437) : 参见“BALLOONSTATES”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(917): error C2011: “TREEVIEWPARTS”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1564) : 参见“TREEVIEWPARTS”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(923): error C2011: “TREEITEMSTATES”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1573) : 参见“TREEITEMSTATES”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(931): error C2011: “GLYPHSTATES”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1582) : 参见“GLYPHSTATES”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(939): error C2011: “SPINPARTS”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1133) : 参见“SPINPARTS”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(946): error C2011: “UPSTATES”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1142) : 参见“UPSTATES”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(953): error C2011: “DOWNSTATES”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1149) : 参见“DOWNSTATES”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(960): error C2011: “UPHORZSTATES”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1156) : 参见“UPHORZSTATES”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(967): error C2011: “DOWNHORZSTATES”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1163) : 参见“DOWNHORZSTATES”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(977): error C2011: “PAGEPARTS”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vssym32.h(499) : 参见“PAGEPARTS”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(989): error C2011: “SCROLLBARPARTS”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1064) : 参见“SCROLLBARPARTS”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(1004): error C2011: “ARROWBTNSTATES”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1079) : 参见“ARROWBTNSTATES”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(1024): error C2365: “SCRBS_NORMAL”: 重定义；以前的定义是“枚举数”
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1103) : 参见“SCRBS_NORMAL”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(1024): fatal error C1003: 错误计数超过 100；正在停止编译
+         CustomTabCtrlDemoMDI.cpp
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(27): error C2011: “BGTYPE”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vssym32.h(14) : 参见“BGTYPE”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(33): error C2011: “IMAGELAYOUT”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vssym32.h(25) : 参见“IMAGELAYOUT”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(38): error C2011: “BORDERTYPE”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vssym32.h(35) : 参见“BORDERTYPE”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(44): error C2011: “FILLTYPE”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vssym32.h(46) : 参见“FILLTYPE”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(52): error C2011: “SIZINGTYPE”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vssym32.h(59) : 参见“SIZINGTYPE”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(58): error C2011: “HALIGN”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vssym32.h(70) : 参见“HALIGN”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(64): error C2011: “CONTENTALIGNMENT”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vssym32.h(81) : 参见“CONTENTALIGNMENT”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(70): error C2011: “VALIGN”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vssym32.h(92) : 参见“VALIGN”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(76): error C2011: “OFFSETTYPE”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vssym32.h(103) : 参见“OFFSETTYPE”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(93): error C2011: “ICONEFFECT”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vssym32.h(125) : 参见“ICONEFFECT”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(101): error C2011: “TEXTSHADOWTYPE”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vssym32.h(138) : 参见“TEXTSHADOWTYPE”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(107): error C2011: “GLYPHTYPE”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vssym32.h(149) : 参见“GLYPHTYPE”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(113): error C2011: “IMAGESELECTTYPE”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vssym32.h(160) : 参见“IMAGESELECTTYPE”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(119): error C2011: “TRUESIZESCALINGTYPE”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vssym32.h(171) : 参见“TRUESIZESCALINGTYPE”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(125): error C2011: “GLYPHFONTSIZINGTYPE”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vssym32.h(182) : 参见“GLYPHFONTSIZINGTYPE”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(139): error C2059: 语法错误:“常量”
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(139): error C3805: “常量”: 意外标记，应输入“}”或者“,”
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(173): warning C4005: “TMT_LASTFONT”: 宏重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vssym32.h(239) : 参见“TMT_LASTFONT”的前一个定义
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(192): warning C4005: “TMT_LASTSIZE”: 宏重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vssym32.h(254) : 参见“TMT_LASTSIZE”的前一个定义
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(214): warning C4005: “TMT_LASTSTRING”: 宏重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vssym32.h(263) : 参见“TMT_LASTSTRING”的前一个定义
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(410): error C2011: “WINDOWPARTS”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1640) : 参见“WINDOWPARTS”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(454): error C2011: “FRAMESTATES”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1683) : 参见“FRAMESTATES”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(459): error C2011: “CAPTIONSTATES”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1688) : 参见“CAPTIONSTATES”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(465): error C2011: “MAXCAPTIONSTATES”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1694) : 参见“MAXCAPTIONSTATES”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(471): error C2011: “MINCAPTIONSTATES”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1700) : 参见“MINCAPTIONSTATES”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(477): error C2011: “HORZSCROLLSTATES”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1706) : 参见“HORZSCROLLSTATES”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(484): error C2011: “HORZTHUMBSTATES”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1713) : 参见“HORZTHUMBSTATES”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(491): error C2011: “VERTSCROLLSTATES”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1720) : 参见“VERTSCROLLSTATES”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(498): error C2011: “VERTTHUMBSTATES”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1727) : 参见“VERTTHUMBSTATES”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(505): error C2011: “SYSBUTTONSTATES”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1734) : 参见“SYSBUTTONSTATES”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(512): error C2011: “MINBUTTONSTATES”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1741) : 参见“MINBUTTONSTATES”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(519): error C2011: “MAXBUTTONSTATES”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1748) : 参见“MAXBUTTONSTATES”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(526): error C2011: “RESTOREBUTTONSTATES”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1755) : 参见“RESTOREBUTTONSTATES”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(533): error C2011: “HELPBUTTONSTATES”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1762) : 参见“HELPBUTTONSTATES”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(540): error C2011: “CLOSEBUTTONSTATES”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1769) : 参见“CLOSEBUTTONSTATES”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(550): error C2011: “BUTTONPARTS”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(63) : 参见“BUTTONPARTS”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(558): error C2011: “PUSHBUTTONSTATES”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(75) : 参见“PUSHBUTTONSTATES”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(566): error C2011: “RADIOBUTTONSTATES”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(84) : 参见“RADIOBUTTONSTATES”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(577): error C2011: “CHECKBOXSTATES”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(95) : 参见“CHECKBOXSTATES”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(592): error C2011: “GROUPBOXSTATES”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(118) : 参见“GROUPBOXSTATES”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(600): error C2011: “REBARPARTS”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1015) : 参见“REBARPARTS”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(608): error C2011: “CHEVRONSTATES”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1028) : 参见“CHEVRONSTATES”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(617): error C2011: “TOOLBARPARTS”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1379) : 参见“TOOLBARPARTS”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(627): error C2365: “TS_NORMAL”: 重定义；以前的定义是“枚举数”
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1392) : 参见“TS_NORMAL”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(628): error C2365: “TS_HOT”: 重定义；以前的定义是“枚举数”
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1393) : 参见“TS_HOT”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(629): error C2365: “TS_PRESSED”: 重定义；以前的定义是“枚举数”
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1394) : 参见“TS_PRESSED”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(630): error C2365: “TS_DISABLED”: 重定义；以前的定义是“枚举数”
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1395) : 参见“TS_DISABLED”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(631): error C2365: “TS_CHECKED”: 重定义；以前的定义是“枚举数”
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1396) : 参见“TS_CHECKED”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(632): error C2365: “TS_HOTCHECKED”: 重定义；以前的定义是“枚举数”
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1397) : 参见“TS_HOTCHECKED”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(638): error C2011: “STATUSPARTS”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1182) : 参见“STATUSPARTS”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(647): error C2011: “MENUPARTS”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(831) : 参见“MENUPARTS”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(665): error C2011: “LISTVIEWPARTS”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(745) : 参见“LISTVIEWPARTS”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(673): error C2011: “LISTITEMSTATES”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(760) : 参见“LISTITEMSTATES”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(684): error C2011: “HEADERPARTS”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(610) : 参见“HEADERPARTS”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(691): error C2011: “HEADERITEMSTATES”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(627) : 参见“HEADERITEMSTATES”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(697): error C2011: “HEADERITEMLEFTSTATES”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(642) : 参见“HEADERITEMLEFTSTATES”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(703): error C2011: “HEADERITEMRIGHTSTATES”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(648) : 参见“HEADERITEMRIGHTSTATES”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(709): error C2011: “HEADERSORTARROWSTATES”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(654) : 参见“HEADERSORTARROWSTATES”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(716): error C2011: “PROGRESSPARTS”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(962) : 参见“PROGRESSPARTS”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(726): error C2011: “TABPARTS”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1202) : 参见“TABPARTS”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(739): error C2011: “TABITEMSTATES”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1218) : 参见“TABITEMSTATES”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(747): error C2011: “TABITEMLEFTEDGESTATES”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1226) : 参见“TABITEMLEFTEDGESTATES”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(755): error C2011: “TABITEMRIGHTEDGESTATES”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1234) : 参见“TABITEMRIGHTEDGESTATES”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(764): error C2365: “TIBES_NORMAL”: 重定义；以前的定义是“枚举数”
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1243) : 参见“TIBES_NORMAL”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(765): error C2365: “TIBES_HOT”: 重定义；以前的定义是“枚举数”
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1244) : 参见“TIBES_HOT”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(766): error C2365: “TIBES_SELECTED”: 重定义；以前的定义是“枚举数”
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1245) : 参见“TIBES_SELECTED”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(767): error C2365: “TIBES_DISABLED”: 重定义；以前的定义是“枚举数”
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1246) : 参见“TIBES_DISABLED”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(768): error C2365: “TIBES_FOCUSED”: 重定义；以前的定义是“枚举数”
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1247) : 参见“TIBES_FOCUSED”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(771): error C2011: “TOPTABITEMSTATES”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1250) : 参见“TOPTABITEMSTATES”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(779): error C2011: “TOPTABITEMLEFTEDGESTATES”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1258) : 参见“TOPTABITEMLEFTEDGESTATES”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(787): error C2011: “TOPTABITEMRIGHTEDGESTATES”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1266) : 参见“TOPTABITEMRIGHTEDGESTATES”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(796): error C2365: “TTIBES_NORMAL”: 重定义；以前的定义是“枚举数”
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1275) : 参见“TTIBES_NORMAL”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(797): error C2365: “TTIBES_HOT”: 重定义；以前的定义是“枚举数”
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1276) : 参见“TTIBES_HOT”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(798): error C2365: “TTIBES_SELECTED”: 重定义；以前的定义是“枚举数”
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1277) : 参见“TTIBES_SELECTED”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(799): error C2365: “TTIBES_DISABLED”: 重定义；以前的定义是“枚举数”
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1278) : 参见“TTIBES_DISABLED”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(800): error C2365: “TTIBES_FOCUSED”: 重定义；以前的定义是“枚举数”
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1279) : 参见“TTIBES_FOCUSED”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(806): error C2011: “TRACKBARPARTS”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1469) : 参见“TRACKBARPARTS”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(820): error C2365: “TKS_NORMAL”: 重定义；以前的定义是“枚举数”
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1485) : 参见“TKS_NORMAL”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(823): error C2011: “TRACKSTATES”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1488) : 参见“TRACKSTATES”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(827): error C2011: “TRACKVERTSTATES”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1492) : 参见“TRACKVERTSTATES”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(831): error C2011: “THUMBSTATES”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1496) : 参见“THUMBSTATES”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(839): error C2011: “THUMBBOTTOMSTATES”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1504) : 参见“THUMBBOTTOMSTATES”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(847): error C2011: “THUMBTOPSTATES”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1512) : 参见“THUMBTOPSTATES”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(855): error C2011: “THUMBVERTSTATES”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1520) : 参见“THUMBVERTSTATES”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(863): error C2011: “THUMBLEFTSTATES”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1528) : 参见“THUMBLEFTSTATES”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(871): error C2011: “THUMBRIGHTSTATES”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1536) : 参见“THUMBRIGHTSTATES”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(879): error C2011: “TICSSTATES”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1544) : 参见“TICSSTATES”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(883): error C2011: “TICSVERTSTATES”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1548) : 参见“TICSVERTSTATES”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(890): error C2011: “TOOLTIPPARTS”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1414) : 参见“TOOLTIPPARTS”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(898): error C2011: “CLOSESTATES”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1426) : 参见“CLOSESTATES”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(904): error C2011: “STANDARDSTATES”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1432) : 参见“STANDARDSTATES”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(909): error C2011: “BALLOONSTATES”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1437) : 参见“BALLOONSTATES”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(917): error C2011: “TREEVIEWPARTS”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1564) : 参见“TREEVIEWPARTS”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(923): error C2011: “TREEITEMSTATES”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1573) : 参见“TREEITEMSTATES”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(931): error C2011: “GLYPHSTATES”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1582) : 参见“GLYPHSTATES”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(939): error C2011: “SPINPARTS”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1133) : 参见“SPINPARTS”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(946): error C2011: “UPSTATES”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1142) : 参见“UPSTATES”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(953): error C2011: “DOWNSTATES”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1149) : 参见“DOWNSTATES”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(960): error C2011: “UPHORZSTATES”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1156) : 参见“UPHORZSTATES”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(967): error C2011: “DOWNHORZSTATES”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1163) : 参见“DOWNHORZSTATES”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(977): error C2011: “PAGEPARTS”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vssym32.h(499) : 参见“PAGEPARTS”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(989): error C2011: “SCROLLBARPARTS”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1064) : 参见“SCROLLBARPARTS”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(1004): error C2011: “ARROWBTNSTATES”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1079) : 参见“ARROWBTNSTATES”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(1024): error C2365: “SCRBS_NORMAL”: 重定义；以前的定义是“枚举数”
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1103) : 参见“SCRBS_NORMAL”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(1024): fatal error C1003: 错误计数超过 100；正在停止编译
+         ChildFrm.cpp
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(27): error C2011: “BGTYPE”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vssym32.h(14) : 参见“BGTYPE”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(33): error C2011: “IMAGELAYOUT”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vssym32.h(25) : 参见“IMAGELAYOUT”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(38): error C2011: “BORDERTYPE”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vssym32.h(35) : 参见“BORDERTYPE”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(44): error C2011: “FILLTYPE”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vssym32.h(46) : 参见“FILLTYPE”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(52): error C2011: “SIZINGTYPE”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vssym32.h(59) : 参见“SIZINGTYPE”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(58): error C2011: “HALIGN”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vssym32.h(70) : 参见“HALIGN”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(64): error C2011: “CONTENTALIGNMENT”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vssym32.h(81) : 参见“CONTENTALIGNMENT”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(70): error C2011: “VALIGN”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vssym32.h(92) : 参见“VALIGN”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(76): error C2011: “OFFSETTYPE”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vssym32.h(103) : 参见“OFFSETTYPE”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(93): error C2011: “ICONEFFECT”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vssym32.h(125) : 参见“ICONEFFECT”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(101): error C2011: “TEXTSHADOWTYPE”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vssym32.h(138) : 参见“TEXTSHADOWTYPE”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(107): error C2011: “GLYPHTYPE”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vssym32.h(149) : 参见“GLYPHTYPE”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(113): error C2011: “IMAGESELECTTYPE”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vssym32.h(160) : 参见“IMAGESELECTTYPE”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(119): error C2011: “TRUESIZESCALINGTYPE”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vssym32.h(171) : 参见“TRUESIZESCALINGTYPE”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(125): error C2011: “GLYPHFONTSIZINGTYPE”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vssym32.h(182) : 参见“GLYPHFONTSIZINGTYPE”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(139): error C2059: 语法错误:“常量”
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(139): error C3805: “常量”: 意外标记，应输入“}”或者“,”
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(173): warning C4005: “TMT_LASTFONT”: 宏重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vssym32.h(239) : 参见“TMT_LASTFONT”的前一个定义
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(192): warning C4005: “TMT_LASTSIZE”: 宏重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vssym32.h(254) : 参见“TMT_LASTSIZE”的前一个定义
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(214): warning C4005: “TMT_LASTSTRING”: 宏重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vssym32.h(263) : 参见“TMT_LASTSTRING”的前一个定义
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(410): error C2011: “WINDOWPARTS”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1640) : 参见“WINDOWPARTS”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(454): error C2011: “FRAMESTATES”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1683) : 参见“FRAMESTATES”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(459): error C2011: “CAPTIONSTATES”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1688) : 参见“CAPTIONSTATES”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(465): error C2011: “MAXCAPTIONSTATES”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1694) : 参见“MAXCAPTIONSTATES”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(471): error C2011: “MINCAPTIONSTATES”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1700) : 参见“MINCAPTIONSTATES”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(477): error C2011: “HORZSCROLLSTATES”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1706) : 参见“HORZSCROLLSTATES”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(484): error C2011: “HORZTHUMBSTATES”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1713) : 参见“HORZTHUMBSTATES”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(491): error C2011: “VERTSCROLLSTATES”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1720) : 参见“VERTSCROLLSTATES”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(498): error C2011: “VERTTHUMBSTATES”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1727) : 参见“VERTTHUMBSTATES”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(505): error C2011: “SYSBUTTONSTATES”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1734) : 参见“SYSBUTTONSTATES”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(512): error C2011: “MINBUTTONSTATES”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1741) : 参见“MINBUTTONSTATES”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(519): error C2011: “MAXBUTTONSTATES”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1748) : 参见“MAXBUTTONSTATES”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(526): error C2011: “RESTOREBUTTONSTATES”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1755) : 参见“RESTOREBUTTONSTATES”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(533): error C2011: “HELPBUTTONSTATES”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1762) : 参见“HELPBUTTONSTATES”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(540): error C2011: “CLOSEBUTTONSTATES”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1769) : 参见“CLOSEBUTTONSTATES”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(550): error C2011: “BUTTONPARTS”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(63) : 参见“BUTTONPARTS”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(558): error C2011: “PUSHBUTTONSTATES”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(75) : 参见“PUSHBUTTONSTATES”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(566): error C2011: “RADIOBUTTONSTATES”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(84) : 参见“RADIOBUTTONSTATES”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(577): error C2011: “CHECKBOXSTATES”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(95) : 参见“CHECKBOXSTATES”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(592): error C2011: “GROUPBOXSTATES”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(118) : 参见“GROUPBOXSTATES”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(600): error C2011: “REBARPARTS”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1015) : 参见“REBARPARTS”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(608): error C2011: “CHEVRONSTATES”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1028) : 参见“CHEVRONSTATES”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(617): error C2011: “TOOLBARPARTS”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1379) : 参见“TOOLBARPARTS”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(627): error C2365: “TS_NORMAL”: 重定义；以前的定义是“枚举数”
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1392) : 参见“TS_NORMAL”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(628): error C2365: “TS_HOT”: 重定义；以前的定义是“枚举数”
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1393) : 参见“TS_HOT”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(629): error C2365: “TS_PRESSED”: 重定义；以前的定义是“枚举数”
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1394) : 参见“TS_PRESSED”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(630): error C2365: “TS_DISABLED”: 重定义；以前的定义是“枚举数”
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1395) : 参见“TS_DISABLED”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(631): error C2365: “TS_CHECKED”: 重定义；以前的定义是“枚举数”
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1396) : 参见“TS_CHECKED”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(632): error C2365: “TS_HOTCHECKED”: 重定义；以前的定义是“枚举数”
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1397) : 参见“TS_HOTCHECKED”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(638): error C2011: “STATUSPARTS”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1182) : 参见“STATUSPARTS”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(647): error C2011: “MENUPARTS”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(831) : 参见“MENUPARTS”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(665): error C2011: “LISTVIEWPARTS”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(745) : 参见“LISTVIEWPARTS”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(673): error C2011: “LISTITEMSTATES”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(760) : 参见“LISTITEMSTATES”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(684): error C2011: “HEADERPARTS”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(610) : 参见“HEADERPARTS”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(691): error C2011: “HEADERITEMSTATES”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(627) : 参见“HEADERITEMSTATES”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(697): error C2011: “HEADERITEMLEFTSTATES”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(642) : 参见“HEADERITEMLEFTSTATES”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(703): error C2011: “HEADERITEMRIGHTSTATES”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(648) : 参见“HEADERITEMRIGHTSTATES”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(709): error C2011: “HEADERSORTARROWSTATES”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(654) : 参见“HEADERSORTARROWSTATES”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(716): error C2011: “PROGRESSPARTS”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(962) : 参见“PROGRESSPARTS”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(726): error C2011: “TABPARTS”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1202) : 参见“TABPARTS”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(739): error C2011: “TABITEMSTATES”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1218) : 参见“TABITEMSTATES”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(747): error C2011: “TABITEMLEFTEDGESTATES”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1226) : 参见“TABITEMLEFTEDGESTATES”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(755): error C2011: “TABITEMRIGHTEDGESTATES”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1234) : 参见“TABITEMRIGHTEDGESTATES”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(764): error C2365: “TIBES_NORMAL”: 重定义；以前的定义是“枚举数”
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1243) : 参见“TIBES_NORMAL”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(765): error C2365: “TIBES_HOT”: 重定义；以前的定义是“枚举数”
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1244) : 参见“TIBES_HOT”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(766): error C2365: “TIBES_SELECTED”: 重定义；以前的定义是“枚举数”
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1245) : 参见“TIBES_SELECTED”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(767): error C2365: “TIBES_DISABLED”: 重定义；以前的定义是“枚举数”
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1246) : 参见“TIBES_DISABLED”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(768): error C2365: “TIBES_FOCUSED”: 重定义；以前的定义是“枚举数”
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1247) : 参见“TIBES_FOCUSED”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(771): error C2011: “TOPTABITEMSTATES”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1250) : 参见“TOPTABITEMSTATES”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(779): error C2011: “TOPTABITEMLEFTEDGESTATES”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1258) : 参见“TOPTABITEMLEFTEDGESTATES”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(787): error C2011: “TOPTABITEMRIGHTEDGESTATES”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1266) : 参见“TOPTABITEMRIGHTEDGESTATES”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(796): error C2365: “TTIBES_NORMAL”: 重定义；以前的定义是“枚举数”
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1275) : 参见“TTIBES_NORMAL”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(797): error C2365: “TTIBES_HOT”: 重定义；以前的定义是“枚举数”
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1276) : 参见“TTIBES_HOT”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(798): error C2365: “TTIBES_SELECTED”: 重定义；以前的定义是“枚举数”
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1277) : 参见“TTIBES_SELECTED”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(799): error C2365: “TTIBES_DISABLED”: 重定义；以前的定义是“枚举数”
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1278) : 参见“TTIBES_DISABLED”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(800): error C2365: “TTIBES_FOCUSED”: 重定义；以前的定义是“枚举数”
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1279) : 参见“TTIBES_FOCUSED”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(806): error C2011: “TRACKBARPARTS”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1469) : 参见“TRACKBARPARTS”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(820): error C2365: “TKS_NORMAL”: 重定义；以前的定义是“枚举数”
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1485) : 参见“TKS_NORMAL”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(823): error C2011: “TRACKSTATES”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1488) : 参见“TRACKSTATES”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(827): error C2011: “TRACKVERTSTATES”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1492) : 参见“TRACKVERTSTATES”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(831): error C2011: “THUMBSTATES”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1496) : 参见“THUMBSTATES”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(839): error C2011: “THUMBBOTTOMSTATES”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1504) : 参见“THUMBBOTTOMSTATES”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(847): error C2011: “THUMBTOPSTATES”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1512) : 参见“THUMBTOPSTATES”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(855): error C2011: “THUMBVERTSTATES”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1520) : 参见“THUMBVERTSTATES”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(863): error C2011: “THUMBLEFTSTATES”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1528) : 参见“THUMBLEFTSTATES”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(871): error C2011: “THUMBRIGHTSTATES”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1536) : 参见“THUMBRIGHTSTATES”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(879): error C2011: “TICSSTATES”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1544) : 参见“TICSSTATES”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(883): error C2011: “TICSVERTSTATES”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1548) : 参见“TICSVERTSTATES”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(890): error C2011: “TOOLTIPPARTS”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1414) : 参见“TOOLTIPPARTS”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(898): error C2011: “CLOSESTATES”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1426) : 参见“CLOSESTATES”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(904): error C2011: “STANDARDSTATES”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1432) : 参见“STANDARDSTATES”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(909): error C2011: “BALLOONSTATES”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1437) : 参见“BALLOONSTATES”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(917): error C2011: “TREEVIEWPARTS”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1564) : 参见“TREEVIEWPARTS”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(923): error C2011: “TREEITEMSTATES”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1573) : 参见“TREEITEMSTATES”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(931): error C2011: “GLYPHSTATES”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1582) : 参见“GLYPHSTATES”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(939): error C2011: “SPINPARTS”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1133) : 参见“SPINPARTS”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(946): error C2011: “UPSTATES”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1142) : 参见“UPSTATES”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(953): error C2011: “DOWNSTATES”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1149) : 参见“DOWNSTATES”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(960): error C2011: “UPHORZSTATES”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1156) : 参见“UPHORZSTATES”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(967): error C2011: “DOWNHORZSTATES”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1163) : 参见“DOWNHORZSTATES”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(977): error C2011: “PAGEPARTS”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vssym32.h(499) : 参见“PAGEPARTS”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(989): error C2011: “SCROLLBARPARTS”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1064) : 参见“SCROLLBARPARTS”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(1004): error C2011: “ARROWBTNSTATES”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1079) : 参见“ARROWBTNSTATES”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(1024): error C2365: “SCRBS_NORMAL”: 重定义；以前的定义是“枚举数”
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1103) : 参见“SCRBS_NORMAL”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(1024): fatal error C1003: 错误计数超过 100；正在停止编译
+         ThemeUtil.cpp
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(27): error C2011: “BGTYPE”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vssym32.h(14) : 参见“BGTYPE”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(33): error C2011: “IMAGELAYOUT”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vssym32.h(25) : 参见“IMAGELAYOUT”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(38): error C2011: “BORDERTYPE”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vssym32.h(35) : 参见“BORDERTYPE”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(44): error C2011: “FILLTYPE”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vssym32.h(46) : 参见“FILLTYPE”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(52): error C2011: “SIZINGTYPE”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vssym32.h(59) : 参见“SIZINGTYPE”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(58): error C2011: “HALIGN”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vssym32.h(70) : 参见“HALIGN”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(64): error C2011: “CONTENTALIGNMENT”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vssym32.h(81) : 参见“CONTENTALIGNMENT”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(70): error C2011: “VALIGN”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vssym32.h(92) : 参见“VALIGN”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(76): error C2011: “OFFSETTYPE”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vssym32.h(103) : 参见“OFFSETTYPE”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(93): error C2011: “ICONEFFECT”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vssym32.h(125) : 参见“ICONEFFECT”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(101): error C2011: “TEXTSHADOWTYPE”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vssym32.h(138) : 参见“TEXTSHADOWTYPE”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(107): error C2011: “GLYPHTYPE”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vssym32.h(149) : 参见“GLYPHTYPE”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(113): error C2011: “IMAGESELECTTYPE”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vssym32.h(160) : 参见“IMAGESELECTTYPE”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(119): error C2011: “TRUESIZESCALINGTYPE”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vssym32.h(171) : 参见“TRUESIZESCALINGTYPE”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(125): error C2011: “GLYPHFONTSIZINGTYPE”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vssym32.h(182) : 参见“GLYPHFONTSIZINGTYPE”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(139): error C2059: 语法错误:“常量”
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(139): error C3805: “常量”: 意外标记，应输入“}”或者“,”
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(173): warning C4005: “TMT_LASTFONT”: 宏重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vssym32.h(239) : 参见“TMT_LASTFONT”的前一个定义
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(192): warning C4005: “TMT_LASTSIZE”: 宏重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vssym32.h(254) : 参见“TMT_LASTSIZE”的前一个定义
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(214): warning C4005: “TMT_LASTSTRING”: 宏重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vssym32.h(263) : 参见“TMT_LASTSTRING”的前一个定义
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(410): error C2011: “WINDOWPARTS”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1640) : 参见“WINDOWPARTS”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(454): error C2011: “FRAMESTATES”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1683) : 参见“FRAMESTATES”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(459): error C2011: “CAPTIONSTATES”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1688) : 参见“CAPTIONSTATES”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(465): error C2011: “MAXCAPTIONSTATES”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1694) : 参见“MAXCAPTIONSTATES”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(471): error C2011: “MINCAPTIONSTATES”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1700) : 参见“MINCAPTIONSTATES”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(477): error C2011: “HORZSCROLLSTATES”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1706) : 参见“HORZSCROLLSTATES”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(484): error C2011: “HORZTHUMBSTATES”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1713) : 参见“HORZTHUMBSTATES”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(491): error C2011: “VERTSCROLLSTATES”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1720) : 参见“VERTSCROLLSTATES”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(498): error C2011: “VERTTHUMBSTATES”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1727) : 参见“VERTTHUMBSTATES”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(505): error C2011: “SYSBUTTONSTATES”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1734) : 参见“SYSBUTTONSTATES”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(512): error C2011: “MINBUTTONSTATES”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1741) : 参见“MINBUTTONSTATES”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(519): error C2011: “MAXBUTTONSTATES”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1748) : 参见“MAXBUTTONSTATES”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(526): error C2011: “RESTOREBUTTONSTATES”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1755) : 参见“RESTOREBUTTONSTATES”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(533): error C2011: “HELPBUTTONSTATES”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1762) : 参见“HELPBUTTONSTATES”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(540): error C2011: “CLOSEBUTTONSTATES”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1769) : 参见“CLOSEBUTTONSTATES”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(550): error C2011: “BUTTONPARTS”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(63) : 参见“BUTTONPARTS”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(558): error C2011: “PUSHBUTTONSTATES”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(75) : 参见“PUSHBUTTONSTATES”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(566): error C2011: “RADIOBUTTONSTATES”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(84) : 参见“RADIOBUTTONSTATES”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(577): error C2011: “CHECKBOXSTATES”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(95) : 参见“CHECKBOXSTATES”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(592): error C2011: “GROUPBOXSTATES”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(118) : 参见“GROUPBOXSTATES”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(600): error C2011: “REBARPARTS”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1015) : 参见“REBARPARTS”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(608): error C2011: “CHEVRONSTATES”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1028) : 参见“CHEVRONSTATES”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(617): error C2011: “TOOLBARPARTS”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1379) : 参见“TOOLBARPARTS”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(627): error C2365: “TS_NORMAL”: 重定义；以前的定义是“枚举数”
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1392) : 参见“TS_NORMAL”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(628): error C2365: “TS_HOT”: 重定义；以前的定义是“枚举数”
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1393) : 参见“TS_HOT”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(629): error C2365: “TS_PRESSED”: 重定义；以前的定义是“枚举数”
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1394) : 参见“TS_PRESSED”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(630): error C2365: “TS_DISABLED”: 重定义；以前的定义是“枚举数”
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1395) : 参见“TS_DISABLED”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(631): error C2365: “TS_CHECKED”: 重定义；以前的定义是“枚举数”
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1396) : 参见“TS_CHECKED”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(632): error C2365: “TS_HOTCHECKED”: 重定义；以前的定义是“枚举数”
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1397) : 参见“TS_HOTCHECKED”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(638): error C2011: “STATUSPARTS”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1182) : 参见“STATUSPARTS”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(647): error C2011: “MENUPARTS”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(831) : 参见“MENUPARTS”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(665): error C2011: “LISTVIEWPARTS”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(745) : 参见“LISTVIEWPARTS”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(673): error C2011: “LISTITEMSTATES”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(760) : 参见“LISTITEMSTATES”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(684): error C2011: “HEADERPARTS”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(610) : 参见“HEADERPARTS”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(691): error C2011: “HEADERITEMSTATES”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(627) : 参见“HEADERITEMSTATES”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(697): error C2011: “HEADERITEMLEFTSTATES”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(642) : 参见“HEADERITEMLEFTSTATES”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(703): error C2011: “HEADERITEMRIGHTSTATES”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(648) : 参见“HEADERITEMRIGHTSTATES”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(709): error C2011: “HEADERSORTARROWSTATES”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(654) : 参见“HEADERSORTARROWSTATES”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(716): error C2011: “PROGRESSPARTS”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(962) : 参见“PROGRESSPARTS”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(726): error C2011: “TABPARTS”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1202) : 参见“TABPARTS”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(739): error C2011: “TABITEMSTATES”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1218) : 参见“TABITEMSTATES”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(747): error C2011: “TABITEMLEFTEDGESTATES”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1226) : 参见“TABITEMLEFTEDGESTATES”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(755): error C2011: “TABITEMRIGHTEDGESTATES”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1234) : 参见“TABITEMRIGHTEDGESTATES”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(764): error C2365: “TIBES_NORMAL”: 重定义；以前的定义是“枚举数”
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1243) : 参见“TIBES_NORMAL”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(765): error C2365: “TIBES_HOT”: 重定义；以前的定义是“枚举数”
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1244) : 参见“TIBES_HOT”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(766): error C2365: “TIBES_SELECTED”: 重定义；以前的定义是“枚举数”
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1245) : 参见“TIBES_SELECTED”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(767): error C2365: “TIBES_DISABLED”: 重定义；以前的定义是“枚举数”
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1246) : 参见“TIBES_DISABLED”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(768): error C2365: “TIBES_FOCUSED”: 重定义；以前的定义是“枚举数”
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1247) : 参见“TIBES_FOCUSED”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(771): error C2011: “TOPTABITEMSTATES”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1250) : 参见“TOPTABITEMSTATES”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(779): error C2011: “TOPTABITEMLEFTEDGESTATES”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1258) : 参见“TOPTABITEMLEFTEDGESTATES”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(787): error C2011: “TOPTABITEMRIGHTEDGESTATES”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1266) : 参见“TOPTABITEMRIGHTEDGESTATES”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(796): error C2365: “TTIBES_NORMAL”: 重定义；以前的定义是“枚举数”
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1275) : 参见“TTIBES_NORMAL”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(797): error C2365: “TTIBES_HOT”: 重定义；以前的定义是“枚举数”
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1276) : 参见“TTIBES_HOT”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(798): error C2365: “TTIBES_SELECTED”: 重定义；以前的定义是“枚举数”
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1277) : 参见“TTIBES_SELECTED”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(799): error C2365: “TTIBES_DISABLED”: 重定义；以前的定义是“枚举数”
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1278) : 参见“TTIBES_DISABLED”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(800): error C2365: “TTIBES_FOCUSED”: 重定义；以前的定义是“枚举数”
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1279) : 参见“TTIBES_FOCUSED”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(806): error C2011: “TRACKBARPARTS”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1469) : 参见“TRACKBARPARTS”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(820): error C2365: “TKS_NORMAL”: 重定义；以前的定义是“枚举数”
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1485) : 参见“TKS_NORMAL”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(823): error C2011: “TRACKSTATES”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1488) : 参见“TRACKSTATES”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(827): error C2011: “TRACKVERTSTATES”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1492) : 参见“TRACKVERTSTATES”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(831): error C2011: “THUMBSTATES”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1496) : 参见“THUMBSTATES”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(839): error C2011: “THUMBBOTTOMSTATES”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1504) : 参见“THUMBBOTTOMSTATES”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(847): error C2011: “THUMBTOPSTATES”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1512) : 参见“THUMBTOPSTATES”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(855): error C2011: “THUMBVERTSTATES”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1520) : 参见“THUMBVERTSTATES”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(863): error C2011: “THUMBLEFTSTATES”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1528) : 参见“THUMBLEFTSTATES”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(871): error C2011: “THUMBRIGHTSTATES”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1536) : 参见“THUMBRIGHTSTATES”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(879): error C2011: “TICSSTATES”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1544) : 参见“TICSSTATES”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(883): error C2011: “TICSVERTSTATES”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1548) : 参见“TICSVERTSTATES”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(890): error C2011: “TOOLTIPPARTS”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1414) : 参见“TOOLTIPPARTS”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(898): error C2011: “CLOSESTATES”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1426) : 参见“CLOSESTATES”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(904): error C2011: “STANDARDSTATES”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1432) : 参见“STANDARDSTATES”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(909): error C2011: “BALLOONSTATES”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1437) : 参见“BALLOONSTATES”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(917): error C2011: “TREEVIEWPARTS”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1564) : 参见“TREEVIEWPARTS”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(923): error C2011: “TREEITEMSTATES”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1573) : 参见“TREEITEMSTATES”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(931): error C2011: “GLYPHSTATES”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1582) : 参见“GLYPHSTATES”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(939): error C2011: “SPINPARTS”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1133) : 参见“SPINPARTS”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(946): error C2011: “UPSTATES”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1142) : 参见“UPSTATES”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(953): error C2011: “DOWNSTATES”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1149) : 参见“DOWNSTATES”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(960): error C2011: “UPHORZSTATES”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1156) : 参见“UPHORZSTATES”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(967): error C2011: “DOWNHORZSTATES”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1163) : 参见“DOWNHORZSTATES”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(977): error C2011: “PAGEPARTS”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vssym32.h(499) : 参见“PAGEPARTS”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(989): error C2011: “SCROLLBARPARTS”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1064) : 参见“SCROLLBARPARTS”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(1004): error C2011: “ARROWBTNSTATES”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1079) : 参见“ARROWBTNSTATES”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(1024): error C2365: “SCRBS_NORMAL”: 重定义；以前的定义是“枚举数”
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1103) : 参见“SCRBS_NORMAL”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(1024): fatal error C1003: 错误计数超过 100；正在停止编译
+         TabMDIFrameWnd.cpp
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(27): error C2011: “BGTYPE”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vssym32.h(14) : 参见“BGTYPE”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(33): error C2011: “IMAGELAYOUT”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vssym32.h(25) : 参见“IMAGELAYOUT”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(38): error C2011: “BORDERTYPE”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vssym32.h(35) : 参见“BORDERTYPE”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(44): error C2011: “FILLTYPE”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vssym32.h(46) : 参见“FILLTYPE”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(52): error C2011: “SIZINGTYPE”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vssym32.h(59) : 参见“SIZINGTYPE”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(58): error C2011: “HALIGN”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vssym32.h(70) : 参见“HALIGN”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(64): error C2011: “CONTENTALIGNMENT”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vssym32.h(81) : 参见“CONTENTALIGNMENT”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(70): error C2011: “VALIGN”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vssym32.h(92) : 参见“VALIGN”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(76): error C2011: “OFFSETTYPE”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vssym32.h(103) : 参见“OFFSETTYPE”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(93): error C2011: “ICONEFFECT”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vssym32.h(125) : 参见“ICONEFFECT”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(101): error C2011: “TEXTSHADOWTYPE”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vssym32.h(138) : 参见“TEXTSHADOWTYPE”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(107): error C2011: “GLYPHTYPE”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vssym32.h(149) : 参见“GLYPHTYPE”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(113): error C2011: “IMAGESELECTTYPE”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vssym32.h(160) : 参见“IMAGESELECTTYPE”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(119): error C2011: “TRUESIZESCALINGTYPE”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vssym32.h(171) : 参见“TRUESIZESCALINGTYPE”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(125): error C2011: “GLYPHFONTSIZINGTYPE”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vssym32.h(182) : 参见“GLYPHFONTSIZINGTYPE”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(139): error C2059: 语法错误:“常量”
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(139): error C3805: “常量”: 意外标记，应输入“}”或者“,”
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(173): warning C4005: “TMT_LASTFONT”: 宏重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vssym32.h(239) : 参见“TMT_LASTFONT”的前一个定义
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(192): warning C4005: “TMT_LASTSIZE”: 宏重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vssym32.h(254) : 参见“TMT_LASTSIZE”的前一个定义
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(214): warning C4005: “TMT_LASTSTRING”: 宏重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vssym32.h(263) : 参见“TMT_LASTSTRING”的前一个定义
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(410): error C2011: “WINDOWPARTS”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1640) : 参见“WINDOWPARTS”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(454): error C2011: “FRAMESTATES”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1683) : 参见“FRAMESTATES”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(459): error C2011: “CAPTIONSTATES”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1688) : 参见“CAPTIONSTATES”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(465): error C2011: “MAXCAPTIONSTATES”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1694) : 参见“MAXCAPTIONSTATES”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(471): error C2011: “MINCAPTIONSTATES”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1700) : 参见“MINCAPTIONSTATES”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(477): error C2011: “HORZSCROLLSTATES”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1706) : 参见“HORZSCROLLSTATES”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(484): error C2011: “HORZTHUMBSTATES”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1713) : 参见“HORZTHUMBSTATES”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(491): error C2011: “VERTSCROLLSTATES”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1720) : 参见“VERTSCROLLSTATES”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(498): error C2011: “VERTTHUMBSTATES”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1727) : 参见“VERTTHUMBSTATES”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(505): error C2011: “SYSBUTTONSTATES”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1734) : 参见“SYSBUTTONSTATES”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(512): error C2011: “MINBUTTONSTATES”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1741) : 参见“MINBUTTONSTATES”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(519): error C2011: “MAXBUTTONSTATES”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1748) : 参见“MAXBUTTONSTATES”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(526): error C2011: “RESTOREBUTTONSTATES”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1755) : 参见“RESTOREBUTTONSTATES”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(533): error C2011: “HELPBUTTONSTATES”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1762) : 参见“HELPBUTTONSTATES”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(540): error C2011: “CLOSEBUTTONSTATES”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1769) : 参见“CLOSEBUTTONSTATES”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(550): error C2011: “BUTTONPARTS”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(63) : 参见“BUTTONPARTS”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(558): error C2011: “PUSHBUTTONSTATES”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(75) : 参见“PUSHBUTTONSTATES”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(566): error C2011: “RADIOBUTTONSTATES”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(84) : 参见“RADIOBUTTONSTATES”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(577): error C2011: “CHECKBOXSTATES”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(95) : 参见“CHECKBOXSTATES”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(592): error C2011: “GROUPBOXSTATES”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(118) : 参见“GROUPBOXSTATES”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(600): error C2011: “REBARPARTS”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1015) : 参见“REBARPARTS”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(608): error C2011: “CHEVRONSTATES”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1028) : 参见“CHEVRONSTATES”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(617): error C2011: “TOOLBARPARTS”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1379) : 参见“TOOLBARPARTS”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(627): error C2365: “TS_NORMAL”: 重定义；以前的定义是“枚举数”
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1392) : 参见“TS_NORMAL”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(628): error C2365: “TS_HOT”: 重定义；以前的定义是“枚举数”
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1393) : 参见“TS_HOT”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(629): error C2365: “TS_PRESSED”: 重定义；以前的定义是“枚举数”
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1394) : 参见“TS_PRESSED”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(630): error C2365: “TS_DISABLED”: 重定义；以前的定义是“枚举数”
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1395) : 参见“TS_DISABLED”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(631): error C2365: “TS_CHECKED”: 重定义；以前的定义是“枚举数”
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1396) : 参见“TS_CHECKED”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(632): error C2365: “TS_HOTCHECKED”: 重定义；以前的定义是“枚举数”
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1397) : 参见“TS_HOTCHECKED”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(638): error C2011: “STATUSPARTS”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1182) : 参见“STATUSPARTS”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(647): error C2011: “MENUPARTS”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(831) : 参见“MENUPARTS”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(665): error C2011: “LISTVIEWPARTS”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(745) : 参见“LISTVIEWPARTS”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(673): error C2011: “LISTITEMSTATES”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(760) : 参见“LISTITEMSTATES”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(684): error C2011: “HEADERPARTS”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(610) : 参见“HEADERPARTS”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(691): error C2011: “HEADERITEMSTATES”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(627) : 参见“HEADERITEMSTATES”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(697): error C2011: “HEADERITEMLEFTSTATES”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(642) : 参见“HEADERITEMLEFTSTATES”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(703): error C2011: “HEADERITEMRIGHTSTATES”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(648) : 参见“HEADERITEMRIGHTSTATES”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(709): error C2011: “HEADERSORTARROWSTATES”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(654) : 参见“HEADERSORTARROWSTATES”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(716): error C2011: “PROGRESSPARTS”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(962) : 参见“PROGRESSPARTS”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(726): error C2011: “TABPARTS”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1202) : 参见“TABPARTS”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(739): error C2011: “TABITEMSTATES”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1218) : 参见“TABITEMSTATES”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(747): error C2011: “TABITEMLEFTEDGESTATES”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1226) : 参见“TABITEMLEFTEDGESTATES”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(755): error C2011: “TABITEMRIGHTEDGESTATES”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1234) : 参见“TABITEMRIGHTEDGESTATES”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(764): error C2365: “TIBES_NORMAL”: 重定义；以前的定义是“枚举数”
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1243) : 参见“TIBES_NORMAL”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(765): error C2365: “TIBES_HOT”: 重定义；以前的定义是“枚举数”
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1244) : 参见“TIBES_HOT”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(766): error C2365: “TIBES_SELECTED”: 重定义；以前的定义是“枚举数”
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1245) : 参见“TIBES_SELECTED”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(767): error C2365: “TIBES_DISABLED”: 重定义；以前的定义是“枚举数”
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1246) : 参见“TIBES_DISABLED”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(768): error C2365: “TIBES_FOCUSED”: 重定义；以前的定义是“枚举数”
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1247) : 参见“TIBES_FOCUSED”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(771): error C2011: “TOPTABITEMSTATES”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1250) : 参见“TOPTABITEMSTATES”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(779): error C2011: “TOPTABITEMLEFTEDGESTATES”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1258) : 参见“TOPTABITEMLEFTEDGESTATES”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(787): error C2011: “TOPTABITEMRIGHTEDGESTATES”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1266) : 参见“TOPTABITEMRIGHTEDGESTATES”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(796): error C2365: “TTIBES_NORMAL”: 重定义；以前的定义是“枚举数”
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1275) : 参见“TTIBES_NORMAL”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(797): error C2365: “TTIBES_HOT”: 重定义；以前的定义是“枚举数”
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1276) : 参见“TTIBES_HOT”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(798): error C2365: “TTIBES_SELECTED”: 重定义；以前的定义是“枚举数”
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1277) : 参见“TTIBES_SELECTED”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(799): error C2365: “TTIBES_DISABLED”: 重定义；以前的定义是“枚举数”
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1278) : 参见“TTIBES_DISABLED”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(800): error C2365: “TTIBES_FOCUSED”: 重定义；以前的定义是“枚举数”
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1279) : 参见“TTIBES_FOCUSED”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(806): error C2011: “TRACKBARPARTS”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1469) : 参见“TRACKBARPARTS”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(820): error C2365: “TKS_NORMAL”: 重定义；以前的定义是“枚举数”
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1485) : 参见“TKS_NORMAL”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(823): error C2011: “TRACKSTATES”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1488) : 参见“TRACKSTATES”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(827): error C2011: “TRACKVERTSTATES”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1492) : 参见“TRACKVERTSTATES”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(831): error C2011: “THUMBSTATES”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1496) : 参见“THUMBSTATES”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(839): error C2011: “THUMBBOTTOMSTATES”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1504) : 参见“THUMBBOTTOMSTATES”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(847): error C2011: “THUMBTOPSTATES”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1512) : 参见“THUMBTOPSTATES”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(855): error C2011: “THUMBVERTSTATES”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1520) : 参见“THUMBVERTSTATES”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(863): error C2011: “THUMBLEFTSTATES”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1528) : 参见“THUMBLEFTSTATES”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(871): error C2011: “THUMBRIGHTSTATES”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1536) : 参见“THUMBRIGHTSTATES”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(879): error C2011: “TICSSTATES”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1544) : 参见“TICSSTATES”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(883): error C2011: “TICSVERTSTATES”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1548) : 参见“TICSVERTSTATES”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(890): error C2011: “TOOLTIPPARTS”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1414) : 参见“TOOLTIPPARTS”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(898): error C2011: “CLOSESTATES”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1426) : 参见“CLOSESTATES”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(904): error C2011: “STANDARDSTATES”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1432) : 参见“STANDARDSTATES”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(909): error C2011: “BALLOONSTATES”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1437) : 参见“BALLOONSTATES”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(917): error C2011: “TREEVIEWPARTS”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1564) : 参见“TREEVIEWPARTS”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(923): error C2011: “TREEITEMSTATES”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1573) : 参见“TREEITEMSTATES”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(931): error C2011: “GLYPHSTATES”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1582) : 参见“GLYPHSTATES”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(939): error C2011: “SPINPARTS”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1133) : 参见“SPINPARTS”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(946): error C2011: “UPSTATES”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1142) : 参见“UPSTATES”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(953): error C2011: “DOWNSTATES”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1149) : 参见“DOWNSTATES”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(960): error C2011: “UPHORZSTATES”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1156) : 参见“UPHORZSTATES”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(967): error C2011: “DOWNHORZSTATES”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1163) : 参见“DOWNHORZSTATES”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(977): error C2011: “PAGEPARTS”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vssym32.h(499) : 参见“PAGEPARTS”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(989): error C2011: “SCROLLBARPARTS”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1064) : 参见“SCROLLBARPARTS”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(1004): error C2011: “ARROWBTNSTATES”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1079) : 参见“ARROWBTNSTATES”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(1024): error C2365: “SCRBS_NORMAL”: 重定义；以前的定义是“枚举数”
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1103) : 参见“SCRBS_NORMAL”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(1024): fatal error C1003: 错误计数超过 100；正在停止编译
+         CustomTabCtrl.cpp
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(27): error C2011: “BGTYPE”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vssym32.h(14) : 参见“BGTYPE”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(33): error C2011: “IMAGELAYOUT”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vssym32.h(25) : 参见“IMAGELAYOUT”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(38): error C2011: “BORDERTYPE”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vssym32.h(35) : 参见“BORDERTYPE”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(44): error C2011: “FILLTYPE”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vssym32.h(46) : 参见“FILLTYPE”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(52): error C2011: “SIZINGTYPE”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vssym32.h(59) : 参见“SIZINGTYPE”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(58): error C2011: “HALIGN”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vssym32.h(70) : 参见“HALIGN”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(64): error C2011: “CONTENTALIGNMENT”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vssym32.h(81) : 参见“CONTENTALIGNMENT”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(70): error C2011: “VALIGN”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vssym32.h(92) : 参见“VALIGN”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(76): error C2011: “OFFSETTYPE”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vssym32.h(103) : 参见“OFFSETTYPE”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(93): error C2011: “ICONEFFECT”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vssym32.h(125) : 参见“ICONEFFECT”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(101): error C2011: “TEXTSHADOWTYPE”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vssym32.h(138) : 参见“TEXTSHADOWTYPE”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(107): error C2011: “GLYPHTYPE”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vssym32.h(149) : 参见“GLYPHTYPE”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(113): error C2011: “IMAGESELECTTYPE”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vssym32.h(160) : 参见“IMAGESELECTTYPE”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(119): error C2011: “TRUESIZESCALINGTYPE”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vssym32.h(171) : 参见“TRUESIZESCALINGTYPE”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(125): error C2011: “GLYPHFONTSIZINGTYPE”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vssym32.h(182) : 参见“GLYPHFONTSIZINGTYPE”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(139): error C2059: 语法错误:“常量”
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(139): error C3805: “常量”: 意外标记，应输入“}”或者“,”
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(173): warning C4005: “TMT_LASTFONT”: 宏重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vssym32.h(239) : 参见“TMT_LASTFONT”的前一个定义
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(192): warning C4005: “TMT_LASTSIZE”: 宏重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vssym32.h(254) : 参见“TMT_LASTSIZE”的前一个定义
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(214): warning C4005: “TMT_LASTSTRING”: 宏重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vssym32.h(263) : 参见“TMT_LASTSTRING”的前一个定义
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(410): error C2011: “WINDOWPARTS”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1640) : 参见“WINDOWPARTS”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(454): error C2011: “FRAMESTATES”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1683) : 参见“FRAMESTATES”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(459): error C2011: “CAPTIONSTATES”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1688) : 参见“CAPTIONSTATES”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(465): error C2011: “MAXCAPTIONSTATES”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1694) : 参见“MAXCAPTIONSTATES”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(471): error C2011: “MINCAPTIONSTATES”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1700) : 参见“MINCAPTIONSTATES”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(477): error C2011: “HORZSCROLLSTATES”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1706) : 参见“HORZSCROLLSTATES”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(484): error C2011: “HORZTHUMBSTATES”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1713) : 参见“HORZTHUMBSTATES”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(491): error C2011: “VERTSCROLLSTATES”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1720) : 参见“VERTSCROLLSTATES”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(498): error C2011: “VERTTHUMBSTATES”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1727) : 参见“VERTTHUMBSTATES”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(505): error C2011: “SYSBUTTONSTATES”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1734) : 参见“SYSBUTTONSTATES”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(512): error C2011: “MINBUTTONSTATES”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1741) : 参见“MINBUTTONSTATES”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(519): error C2011: “MAXBUTTONSTATES”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1748) : 参见“MAXBUTTONSTATES”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(526): error C2011: “RESTOREBUTTONSTATES”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1755) : 参见“RESTOREBUTTONSTATES”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(533): error C2011: “HELPBUTTONSTATES”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1762) : 参见“HELPBUTTONSTATES”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(540): error C2011: “CLOSEBUTTONSTATES”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1769) : 参见“CLOSEBUTTONSTATES”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(550): error C2011: “BUTTONPARTS”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(63) : 参见“BUTTONPARTS”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(558): error C2011: “PUSHBUTTONSTATES”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(75) : 参见“PUSHBUTTONSTATES”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(566): error C2011: “RADIOBUTTONSTATES”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(84) : 参见“RADIOBUTTONSTATES”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(577): error C2011: “CHECKBOXSTATES”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(95) : 参见“CHECKBOXSTATES”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(592): error C2011: “GROUPBOXSTATES”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(118) : 参见“GROUPBOXSTATES”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(600): error C2011: “REBARPARTS”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1015) : 参见“REBARPARTS”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(608): error C2011: “CHEVRONSTATES”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1028) : 参见“CHEVRONSTATES”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(617): error C2011: “TOOLBARPARTS”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1379) : 参见“TOOLBARPARTS”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(627): error C2365: “TS_NORMAL”: 重定义；以前的定义是“枚举数”
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1392) : 参见“TS_NORMAL”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(628): error C2365: “TS_HOT”: 重定义；以前的定义是“枚举数”
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1393) : 参见“TS_HOT”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(629): error C2365: “TS_PRESSED”: 重定义；以前的定义是“枚举数”
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1394) : 参见“TS_PRESSED”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(630): error C2365: “TS_DISABLED”: 重定义；以前的定义是“枚举数”
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1395) : 参见“TS_DISABLED”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(631): error C2365: “TS_CHECKED”: 重定义；以前的定义是“枚举数”
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1396) : 参见“TS_CHECKED”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(632): error C2365: “TS_HOTCHECKED”: 重定义；以前的定义是“枚举数”
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1397) : 参见“TS_HOTCHECKED”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(638): error C2011: “STATUSPARTS”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1182) : 参见“STATUSPARTS”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(647): error C2011: “MENUPARTS”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(831) : 参见“MENUPARTS”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(665): error C2011: “LISTVIEWPARTS”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(745) : 参见“LISTVIEWPARTS”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(673): error C2011: “LISTITEMSTATES”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(760) : 参见“LISTITEMSTATES”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(684): error C2011: “HEADERPARTS”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(610) : 参见“HEADERPARTS”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(691): error C2011: “HEADERITEMSTATES”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(627) : 参见“HEADERITEMSTATES”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(697): error C2011: “HEADERITEMLEFTSTATES”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(642) : 参见“HEADERITEMLEFTSTATES”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(703): error C2011: “HEADERITEMRIGHTSTATES”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(648) : 参见“HEADERITEMRIGHTSTATES”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(709): error C2011: “HEADERSORTARROWSTATES”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(654) : 参见“HEADERSORTARROWSTATES”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(716): error C2011: “PROGRESSPARTS”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(962) : 参见“PROGRESSPARTS”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(726): error C2011: “TABPARTS”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1202) : 参见“TABPARTS”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(739): error C2011: “TABITEMSTATES”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1218) : 参见“TABITEMSTATES”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(747): error C2011: “TABITEMLEFTEDGESTATES”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1226) : 参见“TABITEMLEFTEDGESTATES”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(755): error C2011: “TABITEMRIGHTEDGESTATES”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1234) : 参见“TABITEMRIGHTEDGESTATES”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(764): error C2365: “TIBES_NORMAL”: 重定义；以前的定义是“枚举数”
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1243) : 参见“TIBES_NORMAL”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(765): error C2365: “TIBES_HOT”: 重定义；以前的定义是“枚举数”
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1244) : 参见“TIBES_HOT”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(766): error C2365: “TIBES_SELECTED”: 重定义；以前的定义是“枚举数”
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1245) : 参见“TIBES_SELECTED”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(767): error C2365: “TIBES_DISABLED”: 重定义；以前的定义是“枚举数”
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1246) : 参见“TIBES_DISABLED”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(768): error C2365: “TIBES_FOCUSED”: 重定义；以前的定义是“枚举数”
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1247) : 参见“TIBES_FOCUSED”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(771): error C2011: “TOPTABITEMSTATES”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1250) : 参见“TOPTABITEMSTATES”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(779): error C2011: “TOPTABITEMLEFTEDGESTATES”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1258) : 参见“TOPTABITEMLEFTEDGESTATES”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(787): error C2011: “TOPTABITEMRIGHTEDGESTATES”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1266) : 参见“TOPTABITEMRIGHTEDGESTATES”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(796): error C2365: “TTIBES_NORMAL”: 重定义；以前的定义是“枚举数”
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1275) : 参见“TTIBES_NORMAL”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(797): error C2365: “TTIBES_HOT”: 重定义；以前的定义是“枚举数”
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1276) : 参见“TTIBES_HOT”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(798): error C2365: “TTIBES_SELECTED”: 重定义；以前的定义是“枚举数”
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1277) : 参见“TTIBES_SELECTED”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(799): error C2365: “TTIBES_DISABLED”: 重定义；以前的定义是“枚举数”
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1278) : 参见“TTIBES_DISABLED”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(800): error C2365: “TTIBES_FOCUSED”: 重定义；以前的定义是“枚举数”
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1279) : 参见“TTIBES_FOCUSED”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(806): error C2011: “TRACKBARPARTS”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1469) : 参见“TRACKBARPARTS”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(820): error C2365: “TKS_NORMAL”: 重定义；以前的定义是“枚举数”
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1485) : 参见“TKS_NORMAL”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(823): error C2011: “TRACKSTATES”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1488) : 参见“TRACKSTATES”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(827): error C2011: “TRACKVERTSTATES”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1492) : 参见“TRACKVERTSTATES”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(831): error C2011: “THUMBSTATES”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1496) : 参见“THUMBSTATES”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(839): error C2011: “THUMBBOTTOMSTATES”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1504) : 参见“THUMBBOTTOMSTATES”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(847): error C2011: “THUMBTOPSTATES”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1512) : 参见“THUMBTOPSTATES”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(855): error C2011: “THUMBVERTSTATES”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1520) : 参见“THUMBVERTSTATES”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(863): error C2011: “THUMBLEFTSTATES”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1528) : 参见“THUMBLEFTSTATES”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(871): error C2011: “THUMBRIGHTSTATES”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1536) : 参见“THUMBRIGHTSTATES”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(879): error C2011: “TICSSTATES”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1544) : 参见“TICSSTATES”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(883): error C2011: “TICSVERTSTATES”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1548) : 参见“TICSVERTSTATES”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(890): error C2011: “TOOLTIPPARTS”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1414) : 参见“TOOLTIPPARTS”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(898): error C2011: “CLOSESTATES”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1426) : 参见“CLOSESTATES”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(904): error C2011: “STANDARDSTATES”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1432) : 参见“STANDARDSTATES”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(909): error C2011: “BALLOONSTATES”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1437) : 参见“BALLOONSTATES”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(917): error C2011: “TREEVIEWPARTS”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1564) : 参见“TREEVIEWPARTS”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(923): error C2011: “TREEITEMSTATES”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1573) : 参见“TREEITEMSTATES”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(931): error C2011: “GLYPHSTATES”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1582) : 参见“GLYPHSTATES”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(939): error C2011: “SPINPARTS”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1133) : 参见“SPINPARTS”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(946): error C2011: “UPSTATES”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1142) : 参见“UPSTATES”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(953): error C2011: “DOWNSTATES”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1149) : 参见“DOWNSTATES”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(960): error C2011: “UPHORZSTATES”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1156) : 参见“UPHORZSTATES”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(967): error C2011: “DOWNHORZSTATES”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1163) : 参见“DOWNHORZSTATES”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(977): error C2011: “PAGEPARTS”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vssym32.h(499) : 参见“PAGEPARTS”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(989): error C2011: “SCROLLBARPARTS”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1064) : 参见“SCROLLBARPARTS”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(1004): error C2011: “ARROWBTNSTATES”:“enum”类型重定义
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1079) : 参见“ARROWBTNSTATES”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(1024): error C2365: “SCRBS_NORMAL”: 重定义；以前的定义是“枚举数”
+                 c:\program files (x86)\windows kits\8.0\include\um\vsstyle.h(1103) : 参见“SCRBS_NORMAL”的声明
+     1>u:\project4test\helloworld\customtabctrldemo\tmschema.h(1024): fatal error C1003: 错误计数超过 100；正在停止编译
+         正在生成代码...
+     1>已完成生成项目“U:\Project4Test\HelloWorld\CustomTabCtrlDemo\CustomTabCtrlDemoMDI\CustomTabCtrlDemoMDI.vcxproj”(Build 个目标)的操作 - 失败。
+
+生成失败。
+
+已用时间 00:00:00.37

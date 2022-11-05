@@ -1,0 +1,29 @@
+﻿生成启动时间为 2021-8-31 11:24:37。
+     1>项目“U:\Project4Test\HelloWorld\CppSQLite3_2\CppSQLiteDemo\CppSQLiteDemo.vcxproj”在节点 2 上(Rebuild 个目标)。
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /I..\Common /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _MBCS /Gm- /EHsc /RTC1 /MTd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo".\Debug/" /Fd".\Debug/vc110.pdb" /Gd /TP /analyze- /errorReport:prompt ..\Common\CppSQLite3.cpp CppSQLite3Demo.cpp
+         CppSQLite3.cpp
+     1>u:\project4test\helloworld\cppsqlite3_2\common\cppsqlite3.cpp(1078): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(357) : 参见“sprintf”的声明
+     1>u:\project4test\helloworld\cppsqlite3_2\common\cppsqlite3.cpp(1254): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(357) : 参见“sprintf”的声明
+         CppSQLite3Demo.cpp
+     1>u:\project4test\helloworld\cppsqlite3_2\cppsqlitedemo\cppsqlite3demo.cpp(84): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(357) : 参见“sprintf”的声明
+     1>u:\project4test\helloworld\cppsqlite3_2\cppsqlitedemo\cppsqlite3demo.cpp(109): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(357) : 参见“sprintf”的声明
+     1>u:\project4test\helloworld\cppsqlite3_2\cppsqlitedemo\cppsqlite3demo.cpp(227): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(357) : 参见“sprintf”的声明
+     1>u:\project4test\helloworld\cppsqlite3_2\cppsqlitedemo\cppsqlite3demo.cpp(239): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(357) : 参见“sprintf”的声明
+         正在生成代码...
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:".\Debug/CppSQLiteDemo.exe" /INCREMENTAL:NO /NOLOGO ..\Common\sqlite3.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:".\Debug/CppSQLiteDemo.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:".\Debug\CppSQLiteDemo.lib" /MACHINE:X86 /SAFESEH .\Debug/CppSQLite3.obj
+         .\Debug/CppSQLite3Demo.obj
+     1>CppSQLite3.obj : warning LNK4075: 忽略“/EDITANDCONTINUE”(由于“/OPT:LBR”规范)
+         CppSQLiteDemo.vcxproj -> U:\Project4Test\HelloWorld\CppSQLite3_2\CppSQLiteDemo\.\Debug\CppSQLiteDemo.exe
+     1>已完成生成项目“U:\Project4Test\HelloWorld\CppSQLite3_2\CppSQLiteDemo\CppSQLiteDemo.vcxproj”(Rebuild 个目标)的操作。
+
+生成成功。
+
+已用时间 00:00:01.94
