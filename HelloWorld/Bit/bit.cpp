@@ -20,15 +20,33 @@ typedef union tagStatusVacConvertor
 }StatusVacConvertor;
 
 
+
+typedef struct tagLRCCheck{
+	char	cHigh	: 4;	// 0000????
+	char	cLow	: 4;	// ????0000
+}LRCCheck;
+
+
+typedef union tagLRC
+{
+	BYTE	bData;
+	LRCCheck status;	
+}LRC;
+
+
 int main()
 {
-	StatusVacConvertor v;
-	v.wStatus = 29;
+	//StatusVacConvertor v;
+	//v.wStatus = 29;
 
-	int status1 = 0x98;
-	BYTE	bX = (status1 & 0xF0) >> 4;					// 高4位中的低3位表示X
-	int n = bX;
-	BOOL	bYm = ( (status1 & 0x08) == 0x08 );	// 低4位表示Y，其中最高位为1表示枪真空错误状态
-	BOOL	bYk = ( (status1 & 0x04) == 0x04 );	// 低4位表示Y，其中次高位为1表示样品室真空错误状态
+	//int status1 = 0x98;
+	//BYTE	bX = (status1 & 0xF0) >> 4;					// 高4位中的低3位表示X
+	//int n = bX;
+	//BOOL	bYm = ( (status1 & 0x08) == 0x08 );	// 低4位表示Y，其中最高位为1表示枪真空错误状态
+	//BOOL	bYk = ( (status1 & 0x04) == 0x04 );	// 低4位表示Y，其中次高位为1表示样品室真空错误状态
+
+	LRC rc;
+	rc.bData = 0x45;
+
 	return 0;
 }

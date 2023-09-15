@@ -98,20 +98,20 @@ void PlusDelta3(float src[], const int nCount, const float fFactor)
 	pDest = NULL;
 }
 
-//int main()
-//{
-//	char* s = NULL;
-//	s = GetName(MACRO1);
-//	cout<<s<<endl;
-//
-//	s = GetName(M2);
-//	cout<<s<<endl;
-//
-//	//s = GetName(TestTempFunc_int_float);
-//	//cout<<s<<endl;
-//
-//	return 0;
-//}
+int main()
+{
+	char* s = NULL;
+	s = GetName(MACRO1);
+	cout<<s<<endl;
+
+	s = GetName(M2);
+	cout<<s<<endl;
+
+	//s = GetName(TestTempFunc_int_float);
+	//cout<<s<<endl;
+
+	return 0;
+}
 
 template<class T>
 float Avg(T* src,const int nCount)
@@ -147,15 +147,15 @@ void  Adjust(T* src, const int nCount, const float fFactor)
 	pDest = NULL;
 }
 
-int main()
-{
-	//float src[16] = {40,60,80,100,160,180,205,190,185,170,160,100,80,60,40,0};
-	float src[16] = {40,60,80,100,160,20,205,190,50,10,160,190,80,60,40,0};
-	float dest[16] = {0};
-	float dest2[16] = {0};
-	float delta[16] = {0};
-	//PlusDelta2(src,dest,delta,dest2,16,2);
-	//PlusDelta3(src,16,2.3);
-	Adjust<float>(src,16,1.0);
-	return 0;
-}
+//int main()
+//{
+//	//float src[16] = {40,60,80,100,160,180,205,190,185,170,160,100,80,60,40,0};
+//	float src[16] = {40,60,80,100,160,20,205,190,50,10,160,190,80,60,40,0};
+//	float dest[16] = {0};
+//	float dest2[16] = {0};
+//	float delta[16] = {0};
+//	//PlusDelta2(src,dest,delta,dest2,16,2);
+//	//PlusDelta3(src,16,2.3);
+//	Adjust<float>(src,16,1.0);
+//	return 0;
+//}

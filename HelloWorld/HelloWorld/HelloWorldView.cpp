@@ -9,6 +9,9 @@
 #include "HelloWorld.h"
 #endif
 
+#include <string>
+#include <iostream>
+using namespace std;
 #include "HelloWorldDoc.h"
 #include "HelloWorldView.h"
 
@@ -74,6 +77,15 @@ DWORD HexStringToDword(char* szBuf)
 }
 
 
+long long string_to_bit(const string& str)//transfer hex-string to bit
+{
+
+	long long result = strtol(str.c_str(), NULL, 16);//第三个参数base为合法字符范围，base=2,为0、1，base=16，合法字符则为0-F，开头的0x自动忽略
+	return result;
+}
+
+
+
 // CHelloWorldView
 
 IMPLEMENT_DYNCREATE(CHelloWorldView, CView)
@@ -96,6 +108,9 @@ CHelloWorldView::CHelloWorldView()
 	DWORD dValue = HexStringToDword(sHex);
 	delete sHex;
 	sHex = NULL;
+	long long h1 = string_to_bit("0A");
+	long long h2 = string_to_bit("FF");
+	long long h3 = string_to_bit("AF");
 }
 
 CHelloWorldView::~CHelloWorldView()
